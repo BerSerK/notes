@@ -1,0 +1,4 @@
+make html
+echo " "
+echo "Coping files to Apache directory..."
+sudo cp ./build/html/* /srv/http/ -rf

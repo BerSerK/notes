@@ -1,0 +1,608 @@
+**************************************************
+Applied PDE's home work 1: Home Work for ODE
+**************************************************
+
+No.1
+==============================
+
+(a)
+--------------------
+
+.. math::
+
+    A = T
+    \left(
+    \begin{array}{ccc}
+      1 & 0 & 0\\
+      1 & 1 & 0\\
+      0 & 1 & 1\\
+    \end{array}
+    \right)
+    T^{-1},
+    Where T =
+    \left(
+      \begin{array}{ccc}
+        1 & 0 &3\\
+        0 & -2 &1\\
+        0 & -1 & 1\\
+      \end{array}
+    \right)
+
+So:
+
+.. math::
+
+    A^n = 
+    T
+    \left(
+    \begin{array}{ccc}
+      1 & 0 & 0\\
+      1 & 1 & 0\\
+      0 & 1 & 1\\
+    \end{array}
+    \right)^n T^{-1}
+
+and:
+
+.. math::
+
+    \left(
+    \begin{array}{ccc}
+      1 & 0 & 0\\
+      1 & 1 & 0\\
+      0 & 1 & 1\\
+    \end{array}
+    \right)^n =
+    \left(
+    \begin{array}{ccc}
+      1 & 0 & 0\\
+      n & 1 & 0\\
+      \frac{n(n-1)}{2} & n & 1\\
+    \end{array}
+    \right)
+
+Then:
+
+.. math::
+
+   e^{At}
+   &=
+   T ( \sum_{n=0}^{\infty} \frac{t^n}{n!}     
+   \left(
+    \begin{array}{ccc}
+      1 & 0 & 0\\
+      n & 1 & 0\\
+      \frac{n(n-1)}{2} & n & 1\\
+    \end{array}
+    \right)
+    )T^{-1} \\
+    &= 
+   T
+   \left(
+    \begin{array}{ccc}
+      e^t & 0 & 0\\
+      te^t & e^t & 0\\
+      t^2e^t & t e^t & e^t\\
+    \end{array}
+    \right)
+    )T^{-1}
+
+(b)
+-------------------
+
+.. math::
+
+   A^n = 
+   \left(
+    \begin{array}{ccc}
+      \alpha^n & 0 & 0\\
+      0 & \alpha^n & 0\\
+      n \alpha^{n} & 0 & \alpha^n\\
+    \end{array}
+    \right)
+
+So:
+
+.. math::
+
+    e^{At} &= \sum_{n=0}^{\infty}\frac{(At)^n}{n!}\\
+           &= \sum_{n=0}^{\infty}\frac{(t)^n}{n!}   
+           \left(
+             \begin{array}{ccc}
+               \alpha^n & 0 & 0\\
+               0 & \alpha^n & 0\\
+               n \alpha^{n} & 0 & \alpha^n\\
+             \end{array}
+           \right)\\
+           &=   
+           \left(
+             \begin{array}{ccc}
+               e^{\alpha t} & 0 & 0\\
+               0 & e^{\alpha t} & 0\\
+               \alpha{t}e^{\alpha{t}} & 0 & e^{\alpha t}\\
+             \end{array}
+           \right)
+    
+
+No.2
+========================
+
+a.
+-------------
+
+.. math::
+
+   A_1^n = (-1)^n
+   \left(
+     \begin{array}{cc}
+       1&-n\\
+       0&1\\
+     \end{array}
+   \right)
+
+So 
+
+.. math::
+
+    e^{tA_1}=
+    e^{-t} 
+    \left(
+      \begin{array}{cc}
+        1&t\\
+        0&1\\
+      \end{array}
+    \right)
+
+Let :math:`x=(\cos{\theta{}}\,\sin{\theta{}})^T`
+
+.. math::
+
+    \Vert{e^{tA_1}}\Vert
+    &=e^{-t}\max_{-\pi \leq \theta \leq \pi} \sqrt{\text{Sin}[\theta ]^2+(\text{Cos}[\theta ]+t \text{Sin}[\theta ])^2}\\
+    G(\theta)
+    &=\text{Sin}[\theta ]^2+(\text{Cos}[\theta ]+t \text{Sin}[\theta ])^2\\
+    G(\theta)=H(x)
+    &= \frac{1}{2} \left(2+t^2-t^2 \text{Cos}[x]+2 t \text{Sin}[x]\right), (x = 2 \theta{})\\
+    H'(x)
+    &=\frac{1}{2} \left(2 t \text{Cos}[x]+t^2 \text{Sin}[x]\right)\\
+    H''(x)
+    &=\frac{1}{2} \left(t^2 \text{Cos}[x]-2 t \text{Sin}[x]\right)\\
+
+assume :math:`H'(x)=0` , we get :math:`\tan{x}=-\frac{2}{t}` ,
+
+
+Consider :math:`H''(x)<0` , we get:
+
+.. math::
+
+    \cos{x} &= -\frac{1}{\sqrt{\frac{4}{t^2}+1}}\\
+    \sin{x} &= \frac{\frac{2}{t}}{\sqrt{\frac{4}{t^2}+1}}\\
+
+then:
+
+.. math::
+
+
+    \max_{-\pi \leq \theta \leq \pi}G(\theta)
+    &=1+\frac{t^2-t \sqrt{t^2+4}}{2}\\
+    \Vert{e^{tA_1}}\Vert
+    &=e^{-t}\sqrt{1+\frac{t^2+t \sqrt{t^2+4}}{2}}
+
+Finally, we get the plot:
+
+
+.. image:: hw1_2_1.png
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
+
+
+
+b
+--------------
+
+.. math::
+
+   A_2^n = (-1)^n
+   \left(
+     \begin{array}{cc}
+       1&5-5\ 2^{n}\\
+       0&2^n\\
+     \end{array}
+   \right)
+
+So 
+
+.. math::
+
+    e^{tA_2}=
+    \left(
+      \begin{array}{cc}
+        e^{-t} &5e^{-t}-5e^{-2t}  \\
+        0&e^{-2t} \\
+      \end{array}
+    \right)
+
+As :math:`\Vert M \Vert _{l2}=\sqrt{\lambda_{max}(M^T M)}`
+
+.. math::
+
+    \Vert e^{tA_2}\Vert =
+    \sqrt{e^{-6 t} \left(13 e^{2 t}-25 e^{3 t}+13 e^{4 t}+\sqrt{13} \sqrt{e^{4 t} \left(-1+e^t\right)^2 \left(13-24 e^t+13 e^{2 t}\right)}\right)}
+
+Finally, we get the plot:
+
+
+.. image:: hw1_2_2.png
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
+
+No.3
+=======================
+
+(a)
+---------------------
+
+ Set :math:`y_1=y,y_2=y'` , We get:
+
+.. math:: \dot x = A(t)x+g(t)
+    :label: for1
+
+Here 
+
+.. math::
+
+
+    x=\left(
+    \begin{array}{c}
+      y_1\\
+      y_2
+    \end{array}\right),
+    A(t) =\left(
+    \begin{array}{cc}
+      0 & 1\\
+      -q(t)&-p(t)\\
+    \end{array}\right),
+    g(t)=\left(
+    \begin{array}{c}
+      0\\
+      f(t)
+    \end{array}\right)
+
+It's easy to check that.
+
+.. math::
+
+    \left(
+    \begin{array}{c}
+      \varphi_{1}(t)\\
+      \varphi_{1}'(t)\\
+    \end{array}\right) and
+    \left(
+    \begin{array}{c}
+      \varphi_{2}(t)\\
+      \varphi_{2}'(t)\\
+    \end{array}
+    \right)
+
+is the solution of :eq:`for1` ,and:
+
+.. math::
+
+    \left(
+    \begin{array}{c}
+      \phi_{1}(t)\\
+      \phi_{1}'(t)\\
+    \end{array}
+    \right)=
+    \left(
+    \begin{array}{c}
+      \varphi_{1}(t)-\varphi_{2}(t)\\
+      \varphi_{1}'(t)-\varphi_{2}'(t)\\
+    \end{array}\right) 
+
+is the soluntion of :eq:`for2`
+
+.. math:: \dot x = A(t)x
+    :label: for2
+
+Assume that :math:`y(t)` is solution of the original equation.
+With the Liouville equation for Wronsky determine we get:
+
+.. math::
+
+    \phi_1 y' - \phi_1 ' y =C e^{-\int_0^{t} p(x) dx}
+
+so,
+
+.. math::
+
+    \frac{d}{dx}(\frac{y}{\phi_1}) =\frac{C}{\phi_1^2} e^{-\int_0^t p(x) dx}
+
+finally:
+
+.. math::
+
+    y(t) = \phi_1(t) ( C_1  + C_2 \int_{t_0}^{t} \frac{1}{\phi_1(s)^2} e^{-\int_0^{s} p(x) dx}ds)
+
+Let:
+
+.. math::
+
+    \phi_2(t) =  \phi_1(t)\int_{t_0}^{t} \frac{1}{\phi_1(s)^2} e^{-\int_0^{s} p(x) dx}ds
+
+We get the fundamental matrix:
+
+.. math::
+
+    \Phi(t)=\left(
+    \begin{array}{cc}
+      \phi_{1}(t)& \phi_{2}(t)\\
+      \phi_{1}'(t)& \phi_{2}'(t)\\
+    \end{array}
+    \right)
+
+(b) 
+------------------
+
+Not clear how to solve this, still trying.
+
+No.4
+=========
+
+(a)
+-----------------------
+
+The Characteristic equation is:
+
+.. math::
+
+    m \lambda^{2} + \gamma{} \lambda{} + k =0
+
+It's soluntion is:
+
+.. math::
+
+    \lambda{} = \frac{-\gamma \pm \sqrt{\lambda^{2} - 4 k m}}{2m}
+
+
+if :math:`\lambda^{2} - 4 k m = 0` , the general solution is:
+
+.. math::
+
+    x = C_1 e^{ \frac{-\gamma}{2m} t} + C_2 t e^{ \frac{-\gamma}{2m} t} 
+
+else the solution is:
+
+.. math::
+
+    x = C_1 e^{ \frac{-\gamma + \sqrt{\lambda^{2} - 4 k m}}{2m} t} + C_2 e^{ \frac{-\gamma - \sqrt{\lambda^{2} - 4 k m}}{2m} t} 
+
+(b)
+-----------------
+
+for :math:`\lambda^{2} - 4 k m = 0` , the general solution is:
+
+.. math::
+
+    x = C_1 e^{ \frac{-\gamma}{2m} t} + C_2 t e^{ \frac{-\gamma}{2m} t} 
+
+And the shape of it is like
+
+.. image:: hw1_4_1.png
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
+
+So the ball will just get back to the original point with dropping
+speed.
+
+else the solution is:
+
+.. math::
+
+    x = C_1 e^{ \frac{-\gamma + \sqrt{\lambda^{2} - 4 k m}}{2m} t} + C_2 e^{ \frac{-\gamma - \sqrt{\lambda^{2} - 4 k m}}{2m} t} 
+ 
+if :math:`\lambda^{2} - 4 k m<0` , the solution is of the form:
+
+.. math::
+
+    x = C_1 e^{(-b+c \textit{i})t} + C_2 e^{(-b-c \textit{i})t},b>0,c>0
+
+When :math:`C_1\neq C_2` there will be imaginary part. If :math:`C_1 = C_2` the soluntion reduce to be:
+
+.. math::
+
+    x = C e^{-bt}\cos(ct),b>0,c>0
+
+And the plot is like:
+
+.. image:: hw1_4_2.png
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
+
+
+else if :math:`\lambda^{2} - 4 k m>0` 
+
+.. math::
+
+    x = C_1 e^{ \frac{-\gamma + \sqrt{\lambda^{2} - 4 k m}}{2m} t} + C_2 e^{ \frac{-\gamma - \sqrt{\lambda^{2} - 4 k m}}{2m} t} 
+
+
+
+The shape of the soluntion is looks like one of the following images.
+
+.. image:: hw1_4_3-1.png
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
+
+.. image:: hw1_4_3-2.png
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
+
+.. image:: hw1_4_3-3.png
+   :scale: 100 %
+   :alt: alternate text
+   :align: center
+
+
+No.5
+===================
+
+Let :math:`y_n = x_{n-1}` , and we get:
+
+.. math:: X_n= AX_{n-1}+f(n),
+    :label: eq5
+
+.. math::
+
+    X_n=
+    \left(
+    \begin{array}{c}
+      x_n\\
+      y_n\\
+    \end{array}
+    \right),
+    A = 
+    \left(
+    \begin{array}{cc}
+      1&2\\
+      1&0\\
+    \end{array}
+    \right),
+    f(n)=
+    \left(
+    \begin{array}{c}
+      n\\
+      0\\
+    \end{array}
+    \right).
+
+Now, I try to rewrite equation :eq:`eq5` to the form:
+
+.. math:: X_n+F(n)= A(X_{n-1}+F(n-1)),
+    :label: eq5-1
+
+Try to find :math:`F(x)` such that:
+
+.. math:: f(n)= AF(n-1)-F(n)
+    :label: eqf
+
+As f(n) is a order-1 polynomial, we can find F(n) as an
+order-1 polynomial by method of undeterminated coefficients.
+
+.. math::
+
+    F(n)=
+    \left(
+    \begin{array}{c}
+      \frac{n}{2}-\frac{1}{4}\\
+      \frac{n}{2}+\frac{3}{4}\\
+    \end{array}
+    \right).
+    
+Then the soluntion is:
+
+.. math::
+    
+    X_n = A^{n-2}(X_2+F(2))-F(n).
+
+If you want to get :math:`x_n` just use the Jacob of A.
+
+ 
+And, if we can solve :eq:`eqf` we will get the solution of 
+the difference equation, otherwise we can only get the solution in
+the form of series. Anyway, if f(n) is polynomial this method works.
+
+No.6
+=======================
+
+Since :math:`\frac{dAA^{-1}}{dt}=0` , we get:
+
+.. math::
+
+    \frac{dA}{dt} A^{-1}+A\frac{dA^{-1}}{t}&=0\\
+    \frac{dA^{-1}}{dt}&=-A^{-1}\frac{dA}{dt} A^{-1}
+
+Since,
+
+.. math::
+
+    \frac{d \det X }{dt} = \det X Tr( X^{-1} \frac{d X}{dt})
+
+We get:
+ 
+.. math::
+
+    \frac{d \det (A A^{-T})}{dt}=
+    \det(A A^{-T}) Tr( A^TA^{-1}\frac{dA}{dt}A^{-T}-\frac{d A^T}{dt}A^{-T})
+
+No.7
+==============
+
+(a)
+--------------------
+
+For simplicity I assume that the Jordan form of A is:
+
+.. math::
+
+    J=
+    \left(
+      \begin{array}{ccccc}
+        \lambda{}&1&\cdots&0&0\\
+        0&\lambda{}&\cdots&0&0\\
+        \vdots&\vdots&\ddots&\vdots&\vdots\\
+        0&0&\cdots&\lambda{}&1\\        
+        0&0&\cdots&0&\lambda{}\\        
+      \end{array}
+    \right)
+    and A = P^{-1}JP
+
+Then 
+
+.. math::
+
+    e^A&= \sum_{i=0}^{\infty} \frac{A^i}{i!}\\
+       &= P\sum_{i=0}^{\infty} \frac{J^i}{i!} P^{-1}\\
+       &= P
+       \sum_{i=0}^{\infty} \frac{1}{i!}
+       \left(
+         \begin{array}{cccc}
+           \lambda^{i}& C_i^1 \lambda^{i-1}& C_i^2\lambda^{i-2} &\cdots\\ 
+           0&\lambda^{i}&C_i^1 \lambda^{i-1}&\cdots\\
+           \vdots&\vdots&\ddots&\vdots\\
+           0&0&\cdots&\lambda^{i}\\
+         \end{array}
+       \right)
+       P^{-1}
+
+and,
+
+.. math::
+
+    (I+\frac{A}{m})^m&=P(I+\frac{J}{m})^mP^{-1}\\
+                     &=P(\sum_{i=0}^{m}C_m^i(\frac{J}{m})^i)P^{-1}
+
+Compare the matrix above element-wise we can find that two prove
+the limit is equal to prove the following equation, witch is easy to check:
+
+.. math::
+
+    \sum_{i=0}^{\infty{}} \frac{1}{i!} C_i^j \lambda^{i-j} =
+    \lim_{m\rightarrow{} \infty{}}\frac{1}{m^i}C_i^j\lambda^{i-j} 
+
+(b)
+----------------
+
+As 
+
+.. math::
+
+    \det{e^A}&=\lim_{m\rightarrow{} \infty{}}\det{(I+\frac{A}{m})^m}\\
+             &=\lim_{m\rightarrow{} \infty{}}(1+tr(A)/m+O(1/m^2))^m\\
+             &=e^{tr(A)}

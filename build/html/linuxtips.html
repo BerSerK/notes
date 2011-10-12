@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>3. A collection of my linux tips &mdash; Alex&#39;s Notes</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Alex&#39;s Notes" href="index.html" />
+    <link rel="prev" title="2. Learning notes on fly!" href="fly.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="fly.html" title="2. Learning notes on fly!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Alex&#39;s Notes</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">3. A collection of my linux tips</a><ul>
+<li><a class="reference internal" href="#setup-commands-for-service-on-my-desktop">3.1. Setup commands for Service on my desktop</a></li>
+<li><a class="reference internal" href="#ubuntu-tips">3.2. Ubuntu tips</a></li>
+<li><a class="reference internal" href="#archlinux-tips">3.3. Archlinux tips</a></li>
+<li><a class="reference internal" href="#squid-tips">3.4. Squid Tips</a><ul>
+<li><a class="reference internal" href="#set-reverse-proxy">3.4.1. Set Reverse proxy</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#little-softwares">3.5. Little softwares</a></li>
+<li><a class="reference internal" href="#doxygen">3.6. Doxygen</a><ul>
+<li><a class="reference internal" href="#use-chinse-in-doxygen-latex">3.6.1. Use Chinse in Doxygen Latex:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#emacs-tips">3.7. Emacs tips</a><ul>
+<li><a class="reference internal" href="#doxymacs">3.7.1. doxymacs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#texlive-tips">3.8. TexLive Tips</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="fly.html"
+                        title="previous chapter">2. Learning notes on fly!</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/linuxtips.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="a-collection-of-my-linux-tips">
+<h1>3. A collection of my linux tips<a class="headerlink" href="#a-collection-of-my-linux-tips" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="setup-commands-for-service-on-my-desktop">
+<h2>3.1. Setup commands for Service on my desktop<a class="headerlink" href="#setup-commands-for-service-on-my-desktop" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>vsftpd:</li>
+</ul>
+<div class="highlight-none"><div class="highlight"><pre>sudo /etc/rc.d/vsftpd start
+</pre></div>
+</div>
+<ul class="simple">
+<li>mysqld:</li>
+</ul>
+<div class="highlight-none"><div class="highlight"><pre>sudo /etc/rc.d/mysqld start
+</pre></div>
+</div>
+<ul class="simple">
+<li>apache</li>
+</ul>
+<div class="highlight-none"><div class="highlight"><pre>sudo apachectl start
+</pre></div>
+</div>
+<ul>
+<li><p class="first">squid:</p>
+<div class="highlight-python"><pre>sudo squid
+sudo squid -k reconfigure</pre>
+</div>
+</li>
+<li><p class="first">Starting Squid</p>
+</li>
+</ul>
+<p>After you&#8217;ve finished editing the configuration file, you can start Squid for the first time. First, you must create the swap directories. Do this by running Squid with the -z option:</p>
+<div class="highlight-python"><pre>/usr/local/squid/sbin/squid -z</pre>
+</div>
+<p>Once that completes, you can start Squid and try it out. Probably the best thing to do is run it from your terminal and watch the debugging output. Use this command:</p>
+<div class="highlight-python"><pre>/usr/local/squid/sbin/squid -NCd1</pre>
+</div>
+<p>If everything is working fine, then your console displays: &#8220;Ready to serve requests&#8221;.</p>
+<p>If you want to run squid in the background, as a daemon process:</p>
+<div class="highlight-python"><pre>/usr/local/squid/sbin/squid</pre>
+</div>
+<p>You should be a privileged user to start/stop squid..</p>
+<ul class="simple">
+<li>goagent</li>
+</ul>
+<div class="highlight-none"><div class="highlight"><pre>goagent start
+</pre></div>
+</div>
+<ul class="simple">
+<li>gappproxy</li>
+</ul>
+<div class="highlight-none"><div class="highlight"><pre>gapproxy start
+</pre></div>
+</div>
+</div>
+<div class="section" id="ubuntu-tips">
+<h2>3.2. Ubuntu tips<a class="headerlink" href="#ubuntu-tips" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Delete the ubuntu 11.04 file usage history:</p>
+<div class="highlight-python"><pre>rm ~/.local/share/zeitgeist/activity.sqlite
+zeitgeist-daemon --replace</pre>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="archlinux-tips">
+<h2>3.3. Archlinux tips<a class="headerlink" href="#archlinux-tips" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first"><a class="reference external" href="https://wiki.archlinux.org/index.php/Disable_PC_Speaker_Beep#In_console">Disable_PC_Speaker_Beep</a></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">xset</span> <span class="o">-</span><span class="n">b</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">If you want to auto start some service like</p>
+<ol class="arabic simple">
+<li>squid</li>
+<li>vsftp</li>
+<li>apache</li>
+<li>mysqld</li>
+</ol>
+<p>Just put it into rc.conf as below:</p>
+<div class="highlight-python"><pre>DAEMONS=(squid vsftpd httpd mysqld sshd hwclock syslog-ng network netfs crond dbus kdm cupsd)</pre>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="squid-tips">
+<h2>3.4. Squid Tips<a class="headerlink" href="#squid-tips" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="set-reverse-proxy">
+<h3>3.4.1. Set Reverse proxy<a class="headerlink" href="#set-reverse-proxy" title="Permalink to this headline">¶</a></h3>
+<p>Add the following lines to squid.conf:</p>
+<div class="highlight-python"><pre>#Reverse
+http_port &lt;local ip&gt;:80 accel defaultsite=www.cnmath.org
+
+cache_peer &lt;ip.of.webserver1&gt; parent 80 0 no-query originserver name=server_2
+acl sites_server_2 dstdomain &lt;domain.for.webserver1&gt;
+cache_peer_access server_2 allow all
+
+cache_peer &lt;ip.of.webserver2&gt; parent 80 0 no-query originserver name=server_1
+acl sites_server_1 dstdomain &lt;domain.for.webserver2&gt;
+cache_peer_access server_1 allow all</pre>
+</div>
+</div>
+</div>
+<div class="section" id="little-softwares">
+<h2>3.5. Little softwares<a class="headerlink" href="#little-softwares" title="Permalink to this headline">¶</a></h2>
+<ol class="upperroman simple">
+<li><a class="reference external" href="http://menumaker.sourceforge.net/">menumaker</a> for IceWM:</li>
+</ol>
+<div class="highlight-none"><div class="highlight"><pre>mmaker IceWM
+</pre></div>
+</div>
+</div>
+<div class="section" id="doxygen">
+<span id="id1"></span><h2>3.6. Doxygen<a class="headerlink" href="#doxygen" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Chinese Guide of Doxygen for <a class="reference external" href="http://www.fmddlmyy.cn/text21.html">chm</a></li>
+<li>Chinese <a class="reference external" href="http://cpp.ezbty.org/content/science_doc/doxygen%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3">Manual of Doxygen</a></li>
+</ul>
+<div class="section" id="use-chinse-in-doxygen-latex">
+<h3>3.6.1. Use Chinse in Doxygen Latex:<a class="headerlink" href="#use-chinse-in-doxygen-latex" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">set LANGUAGE in Doxyfile as Chinese</p>
+</li>
+<li><p class="first">add xeCJK settings at the very previous lines of &#8220;\begin{document}&#8221;:</p>
+<div class="highlight-python"><pre>\usepackage{xeCJK}
+\setCJKmainfont{AR PL UKai CN}
+\begin{document}</pre>
+</div>
+<p>Or use my package <a class="reference external" href="ftp://lab.yeshiwei.com/tex/berserk.sty">berserk.sty</a> , put it into the direcotry, and:</p>
+<div class="highlight-python"><pre>\usepackage{berserk}
+\begin{document}</pre>
+</div>
+</li>
+<li><p class="first">finally edit the Makefile change &#8220;pdflatex&#8221; to &#8220;xelatex&#8221;.</p>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="emacs-tips">
+<h2>3.7. Emacs tips<a class="headerlink" href="#emacs-tips" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="doxymacs">
+<h3>3.7.1. doxymacs<a class="headerlink" href="#doxymacs" title="Permalink to this headline">¶</a></h3>
+<p>Active it and set the user email in .emacs:</p>
+<div class="highlight-python"><pre>(require 'doxymacs)
+(setq-default user-mail-address "...")</pre>
+</div>
+</div>
+</div>
+<div class="section" id="texlive-tips">
+<h2>3.8. TexLive Tips<a class="headerlink" href="#texlive-tips" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Solve:</p>
+<div class="highlight-python"><pre>Error: Missing language pack for 'Adobe-GB1' mapping</pre>
+</div>
+</li>
+</ul>
+<p>with:</p>
+<div class="highlight-python"><pre>apt-get install poppler-data</pre>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="fly.html" title="2. Learning notes on fly!"
+             >previous</a> |</li>
+        <li><a href="index.html">Alex&#39;s Notes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Ye Shiwei.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

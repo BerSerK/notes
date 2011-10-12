@@ -1,0 +1,248 @@
+@charset "gb2312";
+H2{margin:0,3;font-family:"宋体";font-size:9pt;font-weight:normal;color:darkred;line-height:150%; letter-spacing:1pt}
+H3{margin:10,0;font-family:"宋体";font-size:11pt;font-weight:normal;color:#000080;text-align:left;text-indent:30;line-height:14pt;font-weight: bold;font-style:italic}
+H4{margin:10,0;font-family:"宋体";font-size:11pt;font-weight:normal;color:darkred;text-align:left;text-indent:32;line-height:14pt}
+H5{margin:10,0;font-family:"宋体";font-size:11pt;font-weight:normal;color:#000080;text-align:left;text-indent:30;line-height:14pt}
+H6{margin:10,0;font-family:"宋体";font-size:11pt;font-weight:normal;color:#000080;text-align:left;text-indent:30;line-height:14pt;font-weight: bold}
+body {
+	font-family : "Lucida Grande", Verdana, Lucida, Arial, Helvetica, 宋体,sans-serif;
+	background-color: #FFFFFF;
+	margin-top: 2px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	top: 2px;
+}
+td,table {
+	font-size: 12px;
+	color: #000000;
+}
+TD.TableBody1 {
+	BACKGROUND-COLOR: #ffffff
+}
+.tableBorder1 {
+	BORDER-RIGHT: 1px; BORDER-TOP: 1px; BORDER-LEFT: 1px; WIDTH: 95%; BORDER-BOTTOM: 1px; BACKGROUND-COLOR: #bbb9b9
+}
+.bold {
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+}
+.bold14 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+.bold16 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #000000;
+}
+.bold18 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #000000;
+	}
+.bold24 {
+	font-size: 24px;
+	font-weight: bold;
+	color: #000000;
+	}
+.bold36 {
+	font-size: 36px;
+	font-weight: bold;
+	color: #000000;
+}
+.red {
+	color: #FF0000;
+}
+.redbold {
+	font-weight: bold;
+	color: #FF0000;
+}
+.redJ {
+	color: #990000;
+}
+.redJbold {
+	font-weight: bold;
+	color: #990000;
+}.redbold14 {
+	font-size: 14.7px;
+	font-weight: bold;
+	color: #FF0000;
+}
+.redJbold14 {
+	font-size: 14.7px;
+	font-weight: bold;
+	color: #990000;
+}
+.maintable {
+	BORDER-RIGHT: #dedede 1px solid; BORDER-TOP: #dedede 1px solid; MARGIN-TOP: 1px; MARGIN-BOTTOM: 1px; BORDER-LEFT: #dedede 1px solid; BORDER-BOTTOM: #dedede 1px solid; BACKGROUND-COLOR: #c2c9d3
+}
+a:link {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-WEIGHT: normal; FONT-SIZE: 12px; BORDER-LEFT: medium none; COLOR: #990000; BORDER-BOTTOM: medium none; TEXT-DECORATION: none
+}
+a:visited {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #990000; TEXT-DECORATION: none
+}
+a:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #666666; TEXT-DECORATION: none
+}
+a:active {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none
+}
+A.awhite:link,A.awhite:active,A.awhite:visited{
+	FONT-WEIGHT: bold; COLOR: #FFFFFF; TEXT-DECORATION: none
+}
+A.awhite:hover{
+	FONT-WEIGHT: bold; COLOR: #FFFFFF; TEXT-DECORATION: none
+}
+A.ablue:link,A.ablue:active,A.ablue:visited{
+	FONT-WEIGHT: bold; COLOR: #000093; TEXT-DECORATION: none
+}
+A.ablue:hover{
+	FONT-WEIGHT: bold; COLOR: #999999; TEXT-DECORATION: none
+}
+A.agray:link,A.agray:active,A.agray:visited{
+	FONT-WEIGHT: bold; COLOR: #999999; TEXT-DECORATION: none
+}
+A.agray:hover{
+	FONT-WEIGHT: bold; COLOR: #000093; TEXT-DECORATION: none
+}
+A.map:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #3333cc; TEXT-DECORATION: underline
+}
+A.map:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #3333cc; TEXT-DECORATION: underline
+}
+A.map:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #3333cc; TEXT-DECORATION: underline
+}
+A.map:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #3333cc; TEXT-DECORATION: underline
+}
+A.mf100:link,A.mf100:active,A.mf100:visited{
+	COLOR: #000000;
+	TEXT-DECORATION: none;
+	font-size: 12px;
+}
+A.mf100:hover{
+	FONT-WEIGHT: normal; COLOR: #000000; TEXT-DECORATION: none
+}
+A.title16:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #3333cc; TEXT-DECORATION: underline
+}
+A.title16:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #3333cc; TEXT-DECORATION: underline
+}
+A.title16:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #3333cc; TEXT-DECORATION: underline
+}
+A.title16:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #3333cc; TEXT-DECORATION: underline
+}
+
+A.title14:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #3333cc; TEXT-DECORATION: underline
+}
+A.title14:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #3333cc; TEXT-DECORATION: underline
+}
+A.title14:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #3333cc; TEXT-DECORATION: underline
+}
+A.title14:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #3333cc; TEXT-DECORATION: underline
+}
+
+A.aLeft:link,A.aLeft:active,A.aLeft:visited{
+TEXT-DECORATION: none
+}
+A.aLeft:hover{
+	FONT-WEIGHT: bold; COLOR: #000033; TEXT-DECORATION: none
+}
+A.aRight:link,A.aRight:active,A.aRight:visited{
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; TEXT-DECORATION: none
+}
+A.aRight:hover{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 14px;
+	COLOR: #330066;
+	TEXT-DECORATION: none;
+	border: none;
+}
+select {
+	height: 20px;
+	font-size: 12px;
+	color: #000000;
+}
+.bottom {
+	font-size: 12px;
+	color: #990000;
+	height: 20px;
+	font-weight: bold;
+	border: 1px solid #999999;
+	background-color: #FFFFFF;
+}
+.bottomColor {
+	font-size: 12px;
+	color: #330066;
+	height: 20px;
+	border: 1px solid #999999;
+	background-color: #FBFFEE;
+}
+.white {
+	color: #FFFFFF;
+}
+.whitebild {
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.gray {
+	color: #CCCCCC;
+}
+.graybild {
+	font-weight: bold;
+	color: #CCCCCC;
+}
+.blue {
+	color: #039;
+}
+.bluebold {
+	font-weight: bold;
+	color: #039;
+}
+.bluebold14 {
+    font-size: 14px;
+	font-weight: bold;
+	color: #039;
+}
+.bluebold16 {
+    font-size: 16px;
+	font-weight: bold;
+	color: #039;
+}
+.bluebold_line {
+	font-weight: bold;
+	color: #039;
+	text-decoration: underline;
+}
+.bgblue {
+	background-color: #336699;
+}
+.bgyellow {
+	background-color: #DDAD08;
+}
+.bggreen {
+	background-color: #339966;
+}.bgred {
+	background-color: #AA1002;
+}.bgblack {
+	background-color: #000000;
+}
+.2hang {
+	line-height: 200%;
+}
+.1hang {
+	line-height: 150%;
+}

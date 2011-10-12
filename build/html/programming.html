@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>5. My Programming Notes &mdash; Alex&#39;s Notes</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Alex&#39;s Notes" href="index.html" />
+    <link rel="next" title="6. 用python的Sphinx工具整理笔记" href="sphinx.html" />
+    <link rel="prev" title="4. Math Notes" href="mathnotes.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sphinx.html" title="6. 用python的Sphinx工具整理笔记"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mathnotes.html" title="4. Math Notes"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Alex&#39;s Notes</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">5. My Programming Notes</a><ul>
+<li><a class="reference internal" href="#mpi">5.1. MPI</a><ul>
+<li><a class="reference internal" href="#lecture-1-basic-functions">5.1.1. Lecture 1 Basic Functions</a></li>
+<li><a class="reference internal" href="#lecture-2">5.1.2. Lecture 2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="mathnotes.html"
+                        title="previous chapter">4. Math Notes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sphinx.html"
+                        title="next chapter">6. 用python的Sphinx工具整理笔记</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/programming.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="my-programming-notes">
+<h1>5. My Programming Notes<a class="headerlink" href="#my-programming-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="mpi">
+<h2>5.1. MPI<a class="headerlink" href="#mpi" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www.mcs.anl.gov/research/projects/mpi/usingmpi2/examples/main.htm">Example Codes</a> from Book &#8220;Using MPI&#8221;</p>
+<div class="section" id="lecture-1-basic-functions">
+<h3>5.1.1. Lecture 1 Basic Functions<a class="headerlink" href="#lecture-1-basic-functions" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><pre>MPI_Init(&amp;argc,&amp;argv);
+MPI_Comm_rank(MPI_COMM_WORLD,&amp;rank);
+MPI_Comm_size(MPI_COMM_WORLD,&amp;pro_num);
+MPI_Send(&amp;mynumber,1,MPI_INT,(rank+1)%pro_num,99,MPI_COMM_WORLD);
+MPI_Recv(&amp;get_number,1,MPI_INT,(rank-1+pro_num)%pro_num,99,MPI_COMM_WORLD,&amp;status);
+MPI_Finalize();</pre>
+</div>
+<p>Take attention about the message block.</p>
+<div class="highlight-python"><pre>MPI_ISend(&amp;mynumber,1,MPI_INT,(rank+1)%pro_num,99,MPI_COMM_WORLD);
+MPI_IRecv(&amp;get_number,1,MPI_INT,(rank-1+pro_num)%pro_num,99,MPI_COMM_WORLD,&amp;status);</pre>
+</div>
+</div>
+<div class="section" id="lecture-2">
+<h3>5.1.2. Lecture 2<a class="headerlink" href="#lecture-2" title="Permalink to this headline">¶</a></h3>
+<p>Wait all message sent or received:</p>
+<div class="highlight-python"><pre>MPI_Isend(buffer[i],buffer_size, MPI_INT,1,i+99, MPI_COMM_WORLD, &amp;request[i]);
+MPI_Irecv(buffer[i],buffer_size, MPI_INT,0,i+99, MPI_COMM_WORLD, &amp;request[i]);
+MPI_Waitall(n_buffer, request, status);</pre>
+</div>
+<p>Probe:</p>
+<div class="highlight-python"><pre>int MPI_Iprobe(int source, int tag, MPI_Comm comm, int *flag, MPI_Status *status)</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sphinx.html" title="6. 用python的Sphinx工具整理笔记"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mathnotes.html" title="4. Math Notes"
+             >previous</a> |</li>
+        <li><a href="index.html">Alex&#39;s Notes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Ye Shiwei.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

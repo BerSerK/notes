@@ -1,0 +1,556 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>3. Applied PDE’s home work 1: Home Work for ODE &mdash; Alex&#39;s Notes</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Alex&#39;s Notes" href="../index.html" />
+    <link rel="prev" title="2. Learning notes on fly!" href="../fly.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../fly.html" title="2. Learning notes on fly!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Alex&#39;s Notes</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">3. Applied PDE&#8217;s home work 1: Home Work for ODE</a><ul>
+<li><a class="reference internal" href="#no-1">3.1. No.1</a><ul>
+<li><a class="reference internal" href="#a">3.1.1. (a)</a></li>
+<li><a class="reference internal" href="#b">3.1.2. (b)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#no-2">3.2. No.2</a><ul>
+<li><a class="reference internal" href="#id1">3.2.1. a.</a></li>
+<li><a class="reference internal" href="#id2">3.2.2. b</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#no-3">3.3. No.3</a><ul>
+<li><a class="reference internal" href="#id3">3.3.1. (a)</a></li>
+<li><a class="reference internal" href="#id4">3.3.2. (b)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#no-4">3.4. No.4</a><ul>
+<li><a class="reference internal" href="#id5">3.4.1. (a)</a></li>
+<li><a class="reference internal" href="#id6">3.4.2. (b)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#no-5">3.5. No.5</a></li>
+<li><a class="reference internal" href="#no-6">3.6. No.6</a></li>
+<li><a class="reference internal" href="#no-7">3.7. No.7</a><ul>
+<li><a class="reference internal" href="#id7">3.7.1. (a)</a></li>
+<li><a class="reference internal" href="#id8">3.7.2. (b)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../fly.html"
+                        title="previous chapter">2. Learning notes on fly!</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/APDE/hw1.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="applied-pde-s-home-work-1-home-work-for-ode">
+<h1>3. Applied PDE&#8217;s home work 1: Home Work for ODE<a class="headerlink" href="#applied-pde-s-home-work-1-home-work-for-ode" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="no-1">
+<h2>3.1. No.1<a class="headerlink" href="#no-1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a">
+<h3>3.1.1. (a)<a class="headerlink" href="#a" title="Permalink to this headline">¶</a></h3>
+<div class="math">
+<p><img src="../_images/math/30896b82f0b0cb9a6b012a41ed1be57e8c6b49ff.png" alt="A = T
+\left(
+\begin{array}{ccc}
+  1 &amp; 0 &amp; 0\\
+  1 &amp; 1 &amp; 0\\
+  0 &amp; 1 &amp; 1\\
+\end{array}
+\right)
+T^{-1},
+Where T =
+\left(
+  \begin{array}{ccc}
+    1 &amp; 0 &amp;3\\
+    0 &amp; -2 &amp;1\\
+    0 &amp; -1 &amp; 1\\
+  \end{array}
+\right)" /></p>
+</div><p>So:</p>
+<div class="math">
+<p><img src="../_images/math/a6f8184b7bc91708e05ead8939721b0fbec0d50f.png" alt="A^n =
+T
+\left(
+\begin{array}{ccc}
+  1 &amp; 0 &amp; 0\\
+  1 &amp; 1 &amp; 0\\
+  0 &amp; 1 &amp; 1\\
+\end{array}
+\right)^n T^{-1}" /></p>
+</div><p>and:</p>
+<div class="math">
+<p><img src="../_images/math/f20cdfbdec0e41b632c70316bd1e1fba4edec52d.png" alt="\left(
+\begin{array}{ccc}
+  1 &amp; 0 &amp; 0\\
+  1 &amp; 1 &amp; 0\\
+  0 &amp; 1 &amp; 1\\
+\end{array}
+\right)^n =
+\left(
+\begin{array}{ccc}
+  1 &amp; 0 &amp; 0\\
+  n &amp; 1 &amp; 0\\
+  \frac{n(n-1)}{2} &amp; n &amp; 1\\
+\end{array}
+\right)" /></p>
+</div><p>Then:</p>
+<div class="math">
+<p><img src="../_images/math/0122c917d0082e95d523315d0b733fcd3c68e949.png" alt="e^{At}
+&amp;=
+T ( \sum_{n=0}^{\infty} \frac{t^n}{n!}
+\left(
+ \begin{array}{ccc}
+   1 &amp; 0 &amp; 0\\
+   n &amp; 1 &amp; 0\\
+   \frac{n(n-1)}{2} &amp; n &amp; 1\\
+ \end{array}
+ \right)
+ )T^{-1} \\
+ &amp;=
+T
+\left(
+ \begin{array}{ccc}
+   e^t &amp; 0 &amp; 0\\
+   te^t &amp; e^t &amp; 0\\
+   t^2e^t &amp; t e^t &amp; e^t\\
+ \end{array}
+ \right)
+ )T^{-1}" /></p>
+</div></div>
+<div class="section" id="b">
+<h3>3.1.2. (b)<a class="headerlink" href="#b" title="Permalink to this headline">¶</a></h3>
+<div class="math">
+<p><img src="../_images/math/c53291c62c7d812e5cb5bb287e3d10993c81257f.png" alt="A^n =
+\left(
+ \begin{array}{ccc}
+   \alpha^n &amp; 0 &amp; 0\\
+   0 &amp; \alpha^n &amp; 0\\
+   n \alpha^{n} &amp; 0 &amp; \alpha^n\\
+ \end{array}
+ \right)" /></p>
+</div><p>So:</p>
+<div class="math">
+<p><img src="../_images/math/fb3341b1f02845d34bf749f92afd5a52113c3c1e.png" alt="e^{At} &amp;= \sum_{n=0}^{\infty}\frac{(At)^n}{n!}\\
+       &amp;= \sum_{n=0}^{\infty}\frac{(t)^n}{n!}
+       \left(
+         \begin{array}{ccc}
+           \alpha^n &amp; 0 &amp; 0\\
+           0 &amp; \alpha^n &amp; 0\\
+           n \alpha^{n} &amp; 0 &amp; \alpha^n\\
+         \end{array}
+       \right)\\
+       &amp;=
+       \left(
+         \begin{array}{ccc}
+           e^{\alpha t} &amp; 0 &amp; 0\\
+           0 &amp; e^{\alpha t} &amp; 0\\
+           \alpha{t}e^{\alpha{t}} &amp; 0 &amp; e^{\alpha t}\\
+         \end{array}
+       \right)" /></p>
+</div></div>
+</div>
+<div class="section" id="no-2">
+<h2>3.2. No.2<a class="headerlink" href="#no-2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>3.2.1. a.<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="math">
+<p><img src="../_images/math/6531165f4b052228d6ef9dedf547611d268ffddb.png" alt="A_1^n = (-1)^n
+\left(
+  \begin{array}{cc}
+    1&amp;-n\\
+    0&amp;1\\
+  \end{array}
+\right)" /></p>
+</div><p>So</p>
+<div class="math">
+<p><img src="../_images/math/7ec63f6a0aaec1d00526380c0d95674d1fe6ac81.png" alt="e^{tA_1}=
+e^{-t}
+\left(
+  \begin{array}{cc}
+    1&amp;t\\
+    0&amp;1\\
+  \end{array}
+\right)" /></p>
+</div><p>Let <img class="math" src="../_images/math/0fff06b9d5a1d0c2b7cee3a8e70635a05b38a5af.png" alt="x=(\cos{\theta{}}\,\sin{\theta{}})^T"/></p>
+<div class="math">
+<p><img src="../_images/math/54dda02699cab3558d7e9f92ac232699a19f16a8.png" alt="\Vert{e^{tA_1}}\Vert
+&amp;=e^{-t}\max_{-\pi \leq \theta \leq \pi} \sqrt{\text{Sin}[\theta ]^2+(\text{Cos}[\theta ]+t \text{Sin}[\theta ])^2}\\
+G(\theta)
+&amp;=\text{Sin}[\theta ]^2+(\text{Cos}[\theta ]+t \text{Sin}[\theta ])^2\\
+G(\theta)=H(x)
+&amp;= \frac{1}{2} \left(2+t^2-t^2 \text{Cos}[x]+2 t \text{Sin}[x]\right), (x = 2 \theta{})\\
+H'(x)
+&amp;=\frac{1}{2} \left(2 t \text{Cos}[x]+t^2 \text{Sin}[x]\right)\\
+H''(x)
+&amp;=\frac{1}{2} \left(t^2 \text{Cos}[x]-2 t \text{Sin}[x]\right)\\" /></p>
+</div><p>assume <img class="math" src="../_images/math/29512aad0ac4cc534e122de6f3df2e3da971b92c.png" alt="H'(x)=0"/> , we get <img class="math" src="../_images/math/840e4ef77f203ef1ccdac0a44b1abdf8141670bb.png" alt="\tan{x}=-\frac{2}{t}"/> ,</p>
+<p>Consider <img class="math" src="../_images/math/5702078750e5a39636ffda8c4b0c9b375a1e244e.png" alt="H''(x)&lt;0"/> , we get:</p>
+<div class="math">
+<p><img src="../_images/math/4e44be066473180882acd1b2575b5d2308855165.png" alt="\cos{x} &amp;= -\frac{1}{\sqrt{\frac{4}{t^2}+1}}\\
+\sin{x} &amp;= \frac{\frac{2}{t}}{\sqrt{\frac{4}{t^2}+1}}\\" /></p>
+</div><p>then:</p>
+<div class="math">
+<p><img src="../_images/math/a90f0968fb11493fc3128826ea4a2b39fe354f44.png" alt="\max_{-\pi \leq \theta \leq \pi}G(\theta)
+&amp;=1+\frac{t^2-t \sqrt{t^2+4}}{2}\\
+\Vert{e^{tA_1}}\Vert
+&amp;=e^{-t}\sqrt{1+\frac{t^2+t \sqrt{t^2+4}}{2}}" /></p>
+</div><p>Finally, we get the plot:</p>
+<a class="reference internal image-reference" href="../_images/hw1_2_12.png"><img alt="alternate text" class="align-center" src="../_images/hw1_2_12.png" /></a>
+</div>
+<div class="section" id="id2">
+<h3>3.2.2. b<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="math">
+<p><img src="../_images/math/71ac78f73e343c6fa269f044e8ab3b9cf1404a4b.png" alt="A_2^n = (-1)^n
+\left(
+  \begin{array}{cc}
+    1&amp;5-5\ 2^{n}\\
+    0&amp;2^n\\
+  \end{array}
+\right)" /></p>
+</div><p>So</p>
+<div class="math">
+<p><img src="../_images/math/55f8face1f2cb8f1e8326f060b376c0ac2072cd2.png" alt="e^{tA_2}=
+\left(
+  \begin{array}{cc}
+    e^{-t} &amp;5e^{-t}-5e^{-2t}  \\
+    0&amp;e^{-2t} \\
+  \end{array}
+\right)" /></p>
+</div><p>As <img class="math" src="../_images/math/261f7214b198c109a39bf18ffd7f1a0297921764.png" alt="\Vert M \Vert _{l2}=\sqrt{\lambda_{max}(M^T M)}"/></p>
+<div class="math">
+<p><img src="../_images/math/b08312b82eb93d3f49801e4b5a93e56b0fb143c2.png" alt="\Vert e^{tA_2}\Vert =
+\sqrt{e^{-6 t} \left(13 e^{2 t}-25 e^{3 t}+13 e^{4 t}+\sqrt{13} \sqrt{e^{4 t} \left(-1+e^t\right)^2 \left(13-24 e^t+13 e^{2 t}\right)}\right)}" /></p>
+</div><p>Finally, we get the plot:</p>
+<a class="reference internal image-reference" href="../_images/hw1_2_22.png"><img alt="alternate text" class="align-center" src="../_images/hw1_2_22.png" /></a>
+</div>
+</div>
+<div class="section" id="no-3">
+<h2>3.3. No.3<a class="headerlink" href="#no-3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>3.3.1. (a)<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Set <img class="math" src="../_images/math/5d83b20ef61617305bceceb325ab48fbb9acacf0.png" alt="y_1=y,y_2=y'"/> , We get:</div></blockquote>
+<div class="math" id="equation-for1">
+<p><span class="eqno">(1)</span><img src="../_images/math/032d2796b282098575d7782528a169bd4bf3ae52.png" alt="\dot x = A(t)x+g(t)" /></p>
+</div><p>Here</p>
+<div class="math">
+<p><img src="../_images/math/8a3771db61dd31428e07b6b50f07b679a1940082.png" alt="x=\left(
+\begin{array}{c}
+  y_1\\
+  y_2
+\end{array}\right),
+A(t) =\left(
+\begin{array}{cc}
+  0 &amp; 1\\
+  -q(t)&amp;-p(t)\\
+\end{array}\right),
+g(t)=\left(
+\begin{array}{c}
+  0\\
+  f(t)
+\end{array}\right)" /></p>
+</div><p>It&#8217;s easy to check that.</p>
+<div class="math">
+<p><img src="../_images/math/7b7a5d61af75f610f45f12a1697cf2c8a383fef7.png" alt="\left(
+\begin{array}{c}
+  \varphi_{1}(t)\\
+  \varphi_{1}'(t)\\
+\end{array}\right) and
+\left(
+\begin{array}{c}
+  \varphi_{2}(t)\\
+  \varphi_{2}'(t)\\
+\end{array}
+\right)" /></p>
+</div><p>is the solution of <a href="#equation-for1">(1)</a> ,and:</p>
+<div class="math">
+<p><img src="../_images/math/677d55d79d4915ac160aaebf4b8126a34a2acc4b.png" alt="\left(
+\begin{array}{c}
+  \phi_{1}(t)\\
+  \phi_{1}'(t)\\
+\end{array}
+\right)=
+\left(
+\begin{array}{c}
+  \varphi_{1}(t)-\varphi_{2}(t)\\
+  \varphi_{1}'(t)-\varphi_{2}'(t)\\
+\end{array}\right)" /></p>
+</div><p>is the soluntion of <a href="#equation-for2">(2)</a></p>
+<div class="math" id="equation-for2">
+<p><span class="eqno">(2)</span><img src="../_images/math/1dd3db2a587cdf269d3cd5b5c5b08fe3bba49eb8.png" alt="\dot x = A(t)x" /></p>
+</div><p>Assume that <img class="math" src="../_images/math/1340561888dcb4122a0844f6edc3acaa4dfc4a63.png" alt="y(t)"/> is solution of the original equation.
+With the Liouville equation for Wronsky determine we get:</p>
+<div class="math">
+<p><img src="../_images/math/67742950a67d61e83f53247fd516604cf6601750.png" alt="\phi_1 y' - \phi_1 ' y =C e^{-\int_0^{t} p(x) dx}" /></p>
+</div><p>so,</p>
+<div class="math">
+<p><img src="../_images/math/793b968df3cb0e4b743a2d6a92acd0e58f6353be.png" alt="\frac{d}{dx}(\frac{y}{\phi_1}) =\frac{C}{\phi_1^2} e^{-\int_0^t p(x) dx}" /></p>
+</div><p>finally:</p>
+<div class="math">
+<p><img src="../_images/math/9c8dfd2358e29ba22850deb81b684a123c692e55.png" alt="y(t) = \phi_1(t) ( C_1  + C_2 \int_{t_0}^{t} \frac{1}{\phi_1(s)^2} e^{-\int_0^{s} p(x) dx}ds)" /></p>
+</div><p>Let:</p>
+<div class="math">
+<p><img src="../_images/math/6e739d23e03ddc46939f4ca2d9b6058b93d0fa51.png" alt="\phi_2(t) =  \phi_1(t)\int_{t_0}^{t} \frac{1}{\phi_1(s)^2} e^{-\int_0^{s} p(x) dx}ds" /></p>
+</div><p>We get the fundamental matrix:</p>
+<div class="math">
+<p><img src="../_images/math/051df1711f575f3d74552d3e7db8da38197b5b1b.png" alt="\Phi(t)=\left(
+\begin{array}{cc}
+  \phi_{1}(t)&amp; \phi_{2}(t)\\
+  \phi_{1}'(t)&amp; \phi_{2}'(t)\\
+\end{array}
+\right)" /></p>
+</div></div>
+<div class="section" id="id4">
+<h3>3.3.2. (b)<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Not clear how to solve this, still trying.</p>
+</div>
+</div>
+<div class="section" id="no-4">
+<h2>3.4. No.4<a class="headerlink" href="#no-4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>3.4.1. (a)<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>The Characteristic equation is:</p>
+<div class="math">
+<p><img src="../_images/math/d3e7b2da870034e5406d8b6ed9910a5caabcfffc.png" alt="m \lambda^{2} + \gamma{} \lambda{} + k =0" /></p>
+</div><p>It&#8217;s soluntion is:</p>
+<div class="math">
+<p><img src="../_images/math/06a2dbd8e634b23a68b95e3e93dc678f90ded8f2.png" alt="\lambda{} = \frac{-\gamma \pm \sqrt{\lambda^{2} - 4 k m}}{2m}" /></p>
+</div><p>if <img class="math" src="../_images/math/1262a94005001625fca550264e4aba9dacc9d6ec.png" alt="\lambda^{2} - 4 k m = 0"/> , the general solution is:</p>
+<div class="math">
+<p><img src="../_images/math/1a1eb7d4365d0cc0cf3214bbf6af9d26b7a77c96.png" alt="x = C_1 e^{ \frac{-\gamma}{2m} t} + C_2 t e^{ \frac{-\gamma}{2m} t}" /></p>
+</div><p>else the solution is:</p>
+<div class="math">
+<p><img src="../_images/math/4bf1febc6af0eb79ab046356fa95957931c5189c.png" alt="x = C_1 e^{ \frac{-\gamma + \sqrt{\lambda^{2} - 4 k m}}{2m} t} + C_2 e^{ \frac{-\gamma - \sqrt{\lambda^{2} - 4 k m}}{2m} t}" /></p>
+</div></div>
+<div class="section" id="id6">
+<h3>3.4.2. (b)<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>for <img class="math" src="../_images/math/1262a94005001625fca550264e4aba9dacc9d6ec.png" alt="\lambda^{2} - 4 k m = 0"/> , the general solution is:</p>
+<div class="math">
+<p><img src="../_images/math/1a1eb7d4365d0cc0cf3214bbf6af9d26b7a77c96.png" alt="x = C_1 e^{ \frac{-\gamma}{2m} t} + C_2 t e^{ \frac{-\gamma}{2m} t}" /></p>
+</div><p>And the shape of it is like</p>
+<a class="reference internal image-reference" href="../_images/hw1_4_12.png"><img alt="alternate text" class="align-center" src="../_images/hw1_4_12.png" /></a>
+<p>So the ball will just get back to the original point with dropping
+speed.</p>
+<p>else the solution is:</p>
+<div class="math">
+<p><img src="../_images/math/4bf1febc6af0eb79ab046356fa95957931c5189c.png" alt="x = C_1 e^{ \frac{-\gamma + \sqrt{\lambda^{2} - 4 k m}}{2m} t} + C_2 e^{ \frac{-\gamma - \sqrt{\lambda^{2} - 4 k m}}{2m} t}" /></p>
+</div><p>if <img class="math" src="../_images/math/0ae36608f50902380f7052208510068c2c3e9632.png" alt="\lambda^{2} - 4 k m&lt;0"/> , the solution is of the form:</p>
+<div class="math">
+<p><img src="../_images/math/4214dd6b553e6800a284539bc3a24d249400aa0d.png" alt="x = C_1 e^{(-b+c \textit{i})t} + C_2 e^{(-b-c \textit{i})t},b&gt;0,c&gt;0" /></p>
+</div><p>When <img class="math" src="../_images/math/61c20efff5d306c605b244668b5311a8fa17dddd.png" alt="C_1\neq C_2"/> there will be imaginary part. If <img class="math" src="../_images/math/7bccecf45767b4f3382ce06913375d6f6cde48ca.png" alt="C_1 = C_2"/> the soluntion reduce to be:</p>
+<div class="math">
+<p><img src="../_images/math/5dbad798e2045b2f29b8717be847a69ee1a518e4.png" alt="x = C e^{-bt}\cos(ct),b&gt;0,c&gt;0" /></p>
+</div><p>And the plot is like:</p>
+<a class="reference internal image-reference" href="../_images/hw1_4_22.png"><img alt="alternate text" class="align-center" src="../_images/hw1_4_22.png" /></a>
+<p>else if <img class="math" src="../_images/math/acaa2e5287ed6fd005be8d2c9c6e17710b25799f.png" alt="\lambda^{2} - 4 k m&gt;0"/></p>
+<div class="math">
+<p><img src="../_images/math/4bf1febc6af0eb79ab046356fa95957931c5189c.png" alt="x = C_1 e^{ \frac{-\gamma + \sqrt{\lambda^{2} - 4 k m}}{2m} t} + C_2 e^{ \frac{-\gamma - \sqrt{\lambda^{2} - 4 k m}}{2m} t}" /></p>
+</div><p>The shape of the soluntion is looks like one of the following images.</p>
+<a class="reference internal image-reference" href="../_images/hw1_4_3-12.png"><img alt="alternate text" class="align-center" src="../_images/hw1_4_3-12.png" /></a>
+<a class="reference internal image-reference" href="../_images/hw1_4_3-22.png"><img alt="alternate text" class="align-center" src="../_images/hw1_4_3-22.png" /></a>
+<a class="reference internal image-reference" href="../_images/hw1_4_3-32.png"><img alt="alternate text" class="align-center" src="../_images/hw1_4_3-32.png" /></a>
+</div>
+</div>
+<div class="section" id="no-5">
+<h2>3.5. No.5<a class="headerlink" href="#no-5" title="Permalink to this headline">¶</a></h2>
+<p>Let <img class="math" src="../_images/math/2e31d8cc2d7b0a7e2460a46597f6b42c0d53f05f.png" alt="y_n = x_{n-1}"/> , and we get:</p>
+<div class="math" id="equation-eq5">
+<p><span class="eqno">(3)</span><img src="../_images/math/c2442490f2df17bec2f7c143896731a4203fd56f.png" alt="X_n= AX_{n-1}+f(n)," /></p>
+</div><div class="math">
+<p><img src="../_images/math/c0cc4f02cb614083c5a7c7519fabf35955ae0f8f.png" alt="X_n=
+\left(
+\begin{array}{c}
+  x_n\\
+  y_n\\
+\end{array}
+\right),
+A =
+\left(
+\begin{array}{cc}
+  1&amp;2\\
+  1&amp;0\\
+\end{array}
+\right),
+f(n)=
+\left(
+\begin{array}{c}
+  n\\
+  0\\
+\end{array}
+\right)." /></p>
+</div><p>Now, I try to rewrite equation <a href="#equation-eq5">(3)</a> to the form:</p>
+<div class="math" id="equation-eq5-1">
+<p><span class="eqno">(4)</span><img src="../_images/math/24e3bd052e1a0d9f48e1db25dd3f7465f9656015.png" alt="X_n+F(n)= A(X_{n-1}+F(n-1))," /></p>
+</div><p>Try to find <img class="math" src="../_images/math/de8fdaa56ea5a8940d4bba79faa9e3dea0f6bf7c.png" alt="F(x)"/> such that:</p>
+<div class="math" id="equation-eqf">
+<p><span class="eqno">(5)</span><img src="../_images/math/9118ebf09b3c63e3a9d5a386bdd73f073ecdc06f.png" alt="f(n)= AF(n-1)-F(n)" /></p>
+</div><p>As f(n) is a order-1 polynomial, we can find F(n) as an
+order-1 polynomial by method of undeterminated coefficients.</p>
+<div class="math">
+<p><img src="../_images/math/48551860b7e121c0064b27aaa689ae1dc53ef826.png" alt="F(n)=
+\left(
+\begin{array}{c}
+  \frac{n}{2}-\frac{1}{4}\\
+  \frac{n}{2}+\frac{3}{4}\\
+\end{array}
+\right)." /></p>
+</div><p>Then the soluntion is:</p>
+<div class="math">
+<p><img src="../_images/math/d48011d14097c3209213df1fbe023390a7331001.png" alt="X_n = A^{n-2}(X_2+F(2))-F(n)." /></p>
+</div><p>If you want to get <img class="math" src="../_images/math/195db3e04ee69d85a0aeaedbb1cf9afa97ff4546.png" alt="x_n"/> just use the Jacob of A.</p>
+<p>And, if we can solve <a href="#equation-eqf">(5)</a> we will get the solution of
+the difference equation, otherwise we can only get the solution in
+the form of series. Anyway, if f(n) is polynomial this method works.</p>
+</div>
+<div class="section" id="no-6">
+<h2>3.6. No.6<a class="headerlink" href="#no-6" title="Permalink to this headline">¶</a></h2>
+<p>Since <img class="math" src="../_images/math/0bcb83a7bad755287cf4d7817e0e671c35704ef5.png" alt="\frac{dAA^{-1}}{dt}=0"/> , we get:</p>
+<div class="math">
+<p><img src="../_images/math/7fc7754903765bc6f46edb5cd266ceded06e7824.png" alt="\frac{dA}{dt} A^{-1}+A\frac{dA^{-1}}{t}&amp;=0\\
+\frac{dA^{-1}}{dt}&amp;=-A^{-1}\frac{dA}{dt} A^{-1}" /></p>
+</div><p>Since,</p>
+<div class="math">
+<p><img src="../_images/math/9632c22496ebcb8088959317255da0c0b5dab5a8.png" alt="\frac{d \det X }{dt} = \det X Tr( X^{-1} \frac{d X}{dt})" /></p>
+</div><p>We get:</p>
+<div class="math">
+<p><img src="../_images/math/1fb0c73438842052348ca93e54f5c601dbc3e6ee.png" alt="\frac{d \det (A A^{-T})}{dt}=
+\det(A A^{-T}) Tr( A^TA^{-1}\frac{dA}{dt}A^{-T}-\frac{d A^T}{dt}A^{-T})" /></p>
+</div></div>
+<div class="section" id="no-7">
+<h2>3.7. No.7<a class="headerlink" href="#no-7" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>3.7.1. (a)<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>For simplicity I assume that the Jordan form of A is:</p>
+<div class="math">
+<p><img src="../_images/math/9eb695a46a223e7f497febd09cc8ec3cca24a549.png" alt="J=
+\left(
+  \begin{array}{ccccc}
+    \lambda{}&amp;1&amp;\cdots&amp;0&amp;0\\
+    0&amp;\lambda{}&amp;\cdots&amp;0&amp;0\\
+    \vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots\\
+    0&amp;0&amp;\cdots&amp;\lambda{}&amp;1\\
+    0&amp;0&amp;\cdots&amp;0&amp;\lambda{}\\
+  \end{array}
+\right)
+and A = P^{-1}JP" /></p>
+</div><p>Then</p>
+<div class="math">
+<p><img src="../_images/math/59857088069fe8aa6aec7a36b692fbde84aea6ac.png" alt="e^A&amp;= \sum_{i=0}^{\infty} \frac{A^i}{i!}\\
+   &amp;= P\sum_{i=0}^{\infty} \frac{J^i}{i!} P^{-1}\\
+   &amp;= P
+   \sum_{i=0}^{\infty} \frac{1}{i!}
+   \left(
+     \begin{array}{cccc}
+       \lambda^{i}&amp; C_i^1 \lambda^{i-1}&amp; C_i^2\lambda^{i-2} &amp;\cdots\\
+       0&amp;\lambda^{i}&amp;C_i^1 \lambda^{i-1}&amp;\cdots\\
+       \vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+       0&amp;0&amp;\cdots&amp;\lambda^{i}\\
+     \end{array}
+   \right)
+   P^{-1}" /></p>
+</div><p>and,</p>
+<div class="math">
+<p><img src="../_images/math/ce7399a59202c945192330d61b094203cebdf863.png" alt="(I+\frac{A}{m})^m&amp;=P(I+\frac{J}{m})^mP^{-1}\\
+                 &amp;=P(\sum_{i=0}^{m}C_m^i(\frac{J}{m})^i)P^{-1}" /></p>
+</div><p>Compare the matrix above element-wise we can find that two prove
+the limit is equal to prove the following equation, witch is easy to check:</p>
+<div class="math">
+<p><img src="../_images/math/0fc1bf5ca6366c2b1d733f6ff1314d7965cb2d8c.png" alt="\sum_{i=0}^{\infty{}} \frac{1}{i!} C_i^j \lambda^{i-j} =
+\lim_{m\rightarrow{} \infty{}}\frac{1}{m^i}C_i^j\lambda^{i-j}" /></p>
+</div></div>
+<div class="section" id="id8">
+<h3>3.7.2. (b)<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>As</p>
+<div class="math">
+<p><img src="../_images/math/53b0cd0bf9ad40e72ebd5c4f024789526607d06d.png" alt="\det{e^A}&amp;=\lim_{m\rightarrow{} \infty{}}\det{(I+\frac{A}{m})^m}\\
+         &amp;=\lim_{m\rightarrow{} \infty{}}(1+tr(A)/m+O(1/m^2))^m\\
+         &amp;=e^{tr(A)}" /></p>
+</div></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../fly.html" title="2. Learning notes on fly!"
+             >previous</a> |</li>
+        <li><a href="../index.html">Alex&#39;s Notes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Ye Shiwei.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>
