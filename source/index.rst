@@ -48,9 +48,9 @@ Other Notes
 
 Some home works:
 
-	- `Applied Stotistic Analysis </ASAhomeworks/>`_
-	- `Applied PDE </APDEhomeworks/>`_
-	- `PARLLEL (II) </PARhomeworks/>`_
+	- `Applied Stotistic Analysis <./ASAhomeworks/>`_
+	- `Applied PDE <./APDEhomeworks/>`_
+	- `PARLLEL (II) <./PARhomeworks/>`_
 
 Latex Short: 
  ftp://lab.yeshiwei.com/Ebooks/Tech/lshort-zh-cn/lshort-zh-cn.pdf

@@ -37,3 +37,16 @@ Probe, check without receive::
 
  int MPI_Probe(int source, int tag, MPI_Comm comm, MPI_Status *status)
  int MPI_Iprobe(int source, int tag, MPI_Comm comm, int *flag, MPI_Status *status)
+
+data_type::
+
+ int MPI_Type_vector(int count, int blocklength, int stride,
+ MPI_Datatype oldtype, MPI_Datatype *newtype)
+ int MPI_Type_create_hvector(int count, int blocklength, MPI_Aint stride,
+ MPI_Datatype oldtype, MPI_Datatype *newtype)
+ int MPI_Type_indexed(int count, int *array_of_blocklengths,
+ int *array_of_displacements, MPI_Datatype oldtype,
+ MPI_Datatype *newtype)
+ int MPI_Type_create_hindexed(int count, int array_of_blocklengths[],
+ MPI_Aint array_of_displacements[], MPI_Datatype oldtype,
+ MPI_Datatype *newtype)
