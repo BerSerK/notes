@@ -5,7 +5,13 @@ My Programming Notes
 MPI
 ===========================
 
-`Example Codes <http://www.mcs.anl.gov/research/projects/mpi/usingmpi2/examples/main.htm>`_ from Book "Using MPI"
+- `Example Codes <http://www.mcs.anl.gov/research/projects/mpi/usingmpi2/examples/main.htm>`_ from Book "Using MPI"
+
+- Running MPICH: http://heather.cs.ucdavis.edu/~matloff/MPI/NotesMPICH.NM.html#run2
+
+- Standford mpi toturial: http://www.slac.stanford.edu/comp/unix/farm/mpi.html
+- UCLA MPI examples: http://www.ats.ucla.edu/clusters/common/computing/parallel/mpi.htm
+- MPI exercise: http://www.mcs.anl.gov/research/projects/mpi/tutorial/mpiexmpl/contents.html
 
 Lecture 1 Basic Functions
 -------------------------------------
@@ -50,3 +56,53 @@ data_type::
  int MPI_Type_create_hindexed(int count, int array_of_blocklengths[],
  MPI_Aint array_of_displacements[], MPI_Datatype oldtype,
  MPI_Datatype *newtype)
+
+
+int MPI_Type_struct(...);
+
+Lecture 3： 聚合通信
+========================
+
+聚合通信是所谓的非局部通信。聚合通信有两种方式：
+
+1. 所有进程之间的关系对等。
+2. 其中有一个特殊进程。
+
+- 一对多
+- 多对一
+- 多对多
+
+障碍同步::
+
+ int MPI_Barreier(MPI_Comm comm);
+
+广播::
+
+ int MPI_Bcast(void * buffer, int count, MPI_Datatype data_type, int root, MPI_Comm comm);
+
+ 
+数据收集::
+
+ int MPI_Gather(void *send_buffer, int send_count, MPI_Datatype send_data_type,
+ void * recv_buffer, int recv_count, MPI_Datatype recv_data_type,
+ int root, MPI_Comm comm);
+
+ int MPI_GAtherv(...);
+ int MPI_Allgather(...);
+
+数据散发::
+
+ int MPI_Scatter(...);
+ int MPI_Scatterv(...);
+
+数据全收集散发::
+ 
+ int MPI_Alltoall(...);
+ int MPI_Alltoallv(...);
+
+错误处理::
+
+   MPI_Errhandler errhd1;
+   
+
+
