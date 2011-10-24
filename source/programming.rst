@@ -5,13 +5,21 @@ My Programming Notes
 MPI
 ===========================
 
+Rocommended Materials:
+
+- Introduction to MPI(recommended toturial): http://www.citutor.org/index.php
+- MPI tutorial: https://computing.llnl.gov/tutorials/mpi/ 
+- High Performance Computing Training: https://computing.llnl.gov/?set=training&page=index
+- MPI document: ftp://lab.yeshiwei.com/Ebooks/Prog/mpi/mpi21-report.pdf
+
+Other Materrials:
+
 - `Example Codes <http://www.mcs.anl.gov/research/projects/mpi/usingmpi2/examples/main.htm>`_ from Book "Using MPI"
-
 - Running MPICH: http://heather.cs.ucdavis.edu/~matloff/MPI/NotesMPICH.NM.html#run2
-
 - Standford mpi toturial: http://www.slac.stanford.edu/comp/unix/farm/mpi.html
 - UCLA MPI examples: http://www.ats.ucla.edu/clusters/common/computing/parallel/mpi.htm
 - MPI exercise: http://www.mcs.anl.gov/research/projects/mpi/tutorial/mpiexmpl/contents.html
+
 
 Lecture 1 Basic Functions
 -------------------------------------
@@ -61,7 +69,7 @@ data_type::
 int MPI_Type_struct(...);
 
 Lecture 3： 聚合通信
-========================
+----------------------------
 
 聚合通信是所谓的非局部通信。聚合通信有两种方式：
 
@@ -89,6 +97,7 @@ Lecture 3： 聚合通信
 
  int MPI_GAtherv(...);
  int MPI_Allgather(...);
+ int MPI_Allgatherv(...);
 
 数据散发::
 
@@ -105,4 +114,64 @@ Lecture 3： 聚合通信
    MPI_Errhandler errhd1;
    
 
+进程组和通信其
+------------------------
+
+进程组::
+
+ 一组进程，通过句柄进行操作，
+ 属于进程，不由进程组共享！
+
+上下文::
+
+ 通信器的附属品，消息在一个给定的上下文上传递，以确保不同通信器之间的信息不要相互干扰
+
+域内通信器::
+
+ 进程组和上下问组成
+ 可以在其中组成拓扑连接方式。
+
+域间通信器::
+
+ 用于在分属于不同的进程组之间的进程进行通信。不能定义拓扑，也不能进行聚合通讯。
+
+进程组操作::
+
+ int MPI_Group_size(...);
+ int MPI_Group_translate_ranks(...);
+ int MPI_Group_compare(...);
+
+域内通信的操作::
+
+ int MPI_Comm_compare(...);
+ int MPI_Comm_dup(MPI_Comm comm, MPI_Comm *new_comm);//copy a Communicator
+ int MPI_Comm_create(...);
+ int MPI_Comm_split(...);
+ int MPI_Comm_free(...);
+
+域内通信器的附加属性（Caching）::
+
+ int_MPI_Comm_create_keyval(...);
+ int MPI_Comm_set_attr(...);
+ ...
+
+域间通信器::
+
+ int MPI_Intercomm_create(...); 
+ ...
+
+进程的拓扑结构::
+
+ 这是域内通信的附加属性，描述了进程组中各个进程之间的逻辑连接方式。
+
+笛卡尔拓扑结构::
+
+ int MPI_Cart_create(...);// 创立笛卡尔拓扑结构
+ int MPI_Dims_create(...);//维数划分
+ int MPI_Cart_sub(...);//创建低维子笛卡尔结构
+ int MPI_Cartdim_get(...);
+ int MPI_Cart_get(...);
+ int MPI_Cart_rank(...);
+ ...
+ int MPI_Cart_shift(...);
 
