@@ -185,7 +185,7 @@ Homework
  &-\frac{d}{dx}(a(x)\frac{du}{dx}) \frac{1}{2}(u(x-0.25) + u (x+0.25)) = f(x)\\
  &a(x)=1\\
  &f(x)=exp(x^2(1-x^2))\\
- &periodic boundary condition on [0,1]\\ 
+ &periodic\,boundary\, condition\, on\, [0,1]\\ 
 
 七点中心差分格式
 
@@ -196,6 +196,7 @@ Homework
 文档要求：
 
 怎么得到方程，怎么分割，怎么交换数据。
+
 Dead Line： 2011.11.20
 
 学习其他计算软件：
@@ -209,7 +210,7 @@ Dead Line： 2011.11.20
 
 Dead Line： 考试当天晚上十二点之前。
 
-第四个作业
+最后一个作业
 ````````````````````
 
 对于前面两个软件，需要写个代码求解一个稀疏矩阵。
