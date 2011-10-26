@@ -50,6 +50,9 @@
 <li><a class="reference internal" href="#mpi">5.1. MPI</a><ul>
 <li><a class="reference internal" href="#lecture-1-basic-functions">5.1.1. Lecture 1 Basic Functions</a></li>
 <li><a class="reference internal" href="#lecture-2">5.1.2. Lecture 2</a></li>
+<li><a class="reference internal" href="#lecture-3">5.1.3. Lecture 3： 聚合通信</a></li>
+<li><a class="reference internal" href="#id1">5.1.4. 进程组和通信其</a></li>
+<li><a class="reference internal" href="#homework">5.1.5. Homework</a></li>
 </ul>
 </li>
 </ul>
@@ -92,7 +95,21 @@
 <h1>5. My Programming Notes<a class="headerlink" href="#my-programming-notes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="mpi">
 <h2>5.1. MPI<a class="headerlink" href="#mpi" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="http://www.mcs.anl.gov/research/projects/mpi/usingmpi2/examples/main.htm">Example Codes</a> from Book &#8220;Using MPI&#8221;</p>
+<p>Rocommended Materials:</p>
+<ul class="simple">
+<li>Introduction to MPI(recommended toturial): <a class="reference external" href="http://www.citutor.org/index.php">http://www.citutor.org/index.php</a></li>
+<li>MPI tutorial: <a class="reference external" href="https://computing.llnl.gov/tutorials/mpi/">https://computing.llnl.gov/tutorials/mpi/</a></li>
+<li>High Performance Computing Training: <a class="reference external" href="https://computing.llnl.gov/?set=training&amp;page=index">https://computing.llnl.gov/?set=training&amp;page=index</a></li>
+<li>MPI document: <a class="reference external" href="ftp://lab.yeshiwei.com/Ebooks/Prog/mpi/mpi21-report.pdf">ftp://lab.yeshiwei.com/Ebooks/Prog/mpi/mpi21-report.pdf</a></li>
+</ul>
+<p>Other Materrials:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.mcs.anl.gov/research/projects/mpi/usingmpi2/examples/main.htm">Example Codes</a> from Book &#8220;Using MPI&#8221;</li>
+<li>Running MPICH: <a class="reference external" href="http://heather.cs.ucdavis.edu/~matloff/MPI/NotesMPICH.NM.html#run2">http://heather.cs.ucdavis.edu/~matloff/MPI/NotesMPICH.NM.html#run2</a></li>
+<li>Standford mpi toturial: <a class="reference external" href="http://www.slac.stanford.edu/comp/unix/farm/mpi.html">http://www.slac.stanford.edu/comp/unix/farm/mpi.html</a></li>
+<li>UCLA MPI examples: <a class="reference external" href="http://www.ats.ucla.edu/clusters/common/computing/parallel/mpi.htm">http://www.ats.ucla.edu/clusters/common/computing/parallel/mpi.htm</a></li>
+<li>MPI exercise: <a class="reference external" href="http://www.mcs.anl.gov/research/projects/mpi/tutorial/mpiexmpl/contents.html">http://www.mcs.anl.gov/research/projects/mpi/tutorial/mpiexmpl/contents.html</a></li>
+</ul>
 <div class="section" id="lecture-1-basic-functions">
 <h3>5.1.1. Lecture 1 Basic Functions<a class="headerlink" href="#lecture-1-basic-functions" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><pre>MPI_Init(&amp;argc,&amp;argv);
@@ -114,9 +131,126 @@ MPI_IRecv(&amp;get_number,1,MPI_INT,(rank-1+pro_num)%pro_num,99,MPI_COMM_WORLD,&
 MPI_Irecv(buffer[i],buffer_size, MPI_INT,0,i+99, MPI_COMM_WORLD, &amp;request[i]);
 MPI_Waitall(n_buffer, request, status);</pre>
 </div>
-<p>Probe:</p>
-<div class="highlight-python"><pre>int MPI_Iprobe(int source, int tag, MPI_Comm comm, int *flag, MPI_Status *status)</pre>
+<p>Probe, check without receive:</p>
+<div class="highlight-python"><pre>int MPI_Probe(int source, int tag, MPI_Comm comm, MPI_Status *status)
+int MPI_Iprobe(int source, int tag, MPI_Comm comm, int *flag, MPI_Status *status)</pre>
 </div>
+<p>data_type:</p>
+<div class="highlight-python"><pre>int MPI_Type_vector(int count, int blocklength, int stride,
+MPI_Datatype oldtype, MPI_Datatype *newtype)
+int MPI_Type_create_hvector(int count, int blocklength, MPI_Aint stride,
+MPI_Datatype oldtype, MPI_Datatype *newtype)
+int MPI_Type_indexed(int count, int *array_of_blocklengths,
+int *array_of_displacements, MPI_Datatype oldtype,
+MPI_Datatype *newtype)
+int MPI_Type_create_hindexed(int count, int array_of_blocklengths[],
+MPI_Aint array_of_displacements[], MPI_Datatype oldtype,
+MPI_Datatype *newtype)</pre>
+</div>
+<p>int MPI_Type_struct(...);</p>
+</div>
+<div class="section" id="lecture-3">
+<h3>5.1.3. Lecture 3： 聚合通信<a class="headerlink" href="#lecture-3" title="Permalink to this headline">¶</a></h3>
+<p>聚合通信是所谓的非局部通信。聚合通信有两种方式：</p>
+<ol class="arabic simple">
+<li>所有进程之间的关系对等。</li>
+<li>其中有一个特殊进程。</li>
+</ol>
+<ul class="simple">
+<li>一对多</li>
+<li>多对一</li>
+<li>多对多</li>
+</ul>
+<p>障碍同步:</p>
+<div class="highlight-python"><pre>int MPI_Barreier(MPI_Comm comm);</pre>
+</div>
+<p>广播:</p>
+<div class="highlight-python"><pre>int MPI_Bcast(void * buffer, int count, MPI_Datatype data_type, int root, MPI_Comm comm);</pre>
+</div>
+<p>数据收集:</p>
+<div class="highlight-python"><pre>int MPI_Gather(void *send_buffer, int send_count, MPI_Datatype send_data_type,
+void * recv_buffer, int recv_count, MPI_Datatype recv_data_type,
+int root, MPI_Comm comm);
+
+int MPI_GAtherv(...);
+int MPI_Allgather(...);
+int MPI_Allgatherv(...);</pre>
+</div>
+<p>数据散发:</p>
+<div class="highlight-python"><pre>int MPI_Scatter(...);
+int MPI_Scatterv(...);</pre>
+</div>
+<p>数据全收集散发:</p>
+<div class="highlight-python"><pre>int MPI_Alltoall(...);
+int MPI_Alltoallv(...);</pre>
+</div>
+<p>错误处理:</p>
+<div class="highlight-python"><pre>MPI_Errhandler errhd1;</pre>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>5.1.4. 进程组和通信其<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>进程组:</p>
+<div class="highlight-python"><pre>一组进程，通过句柄进行操作，
+属于进程，不由进程组共享！</pre>
+</div>
+<p>上下文:</p>
+<div class="highlight-python"><pre>通信器的附属品，消息在一个给定的上下文上传递，以确保不同通信器之间的信息不要相互干扰</pre>
+</div>
+<p>域内通信器:</p>
+<div class="highlight-python"><pre>进程组和上下问组成
+可以在其中组成拓扑连接方式。</pre>
+</div>
+<p>域间通信器:</p>
+<div class="highlight-python"><pre>用于在分属于不同的进程组之间的进程进行通信。不能定义拓扑，也不能进行聚合通讯。</pre>
+</div>
+<p>进程组操作:</p>
+<div class="highlight-python"><pre>int MPI_Group_size(...);
+int MPI_Group_translate_ranks(...);
+int MPI_Group_compare(...);</pre>
+</div>
+<p>域内通信的操作:</p>
+<div class="highlight-python"><pre>int MPI_Comm_compare(...);
+int MPI_Comm_dup(MPI_Comm comm, MPI_Comm *new_comm);//copy a Communicator
+int MPI_Comm_create(...);
+int MPI_Comm_split(...);
+int MPI_Comm_free(...);</pre>
+</div>
+<p>域内通信器的附加属性（Caching）:</p>
+<div class="highlight-python"><pre>int_MPI_Comm_create_keyval(...);
+int MPI_Comm_set_attr(...);
+...</pre>
+</div>
+<p>域间通信器:</p>
+<div class="highlight-python"><pre>int MPI_Intercomm_create(...);
+...</pre>
+</div>
+<p>进程的拓扑结构:</p>
+<div class="highlight-python"><pre>这是域内通信的附加属性，描述了进程组中各个进程之间的逻辑连接方式。</pre>
+</div>
+<p>笛卡尔拓扑结构:</p>
+<div class="highlight-python"><pre>int MPI_Cart_create(...);// 创立笛卡尔拓扑结构
+int MPI_Dims_create(...);//维数划分
+int MPI_Cart_sub(...);//创建低维子笛卡尔结构
+int MPI_Cartdim_get(...);
+int MPI_Cart_get(...);
+int MPI_Cart_rank(...);
+...
+int MPI_Cart_shift(...);</pre>
+</div>
+</div>
+<div class="section" id="homework">
+<h3>5.1.5. Homework<a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h3>
+<div class="math">
+<p><img src="_images/math/b0c6cfe9dcbc934754c12532085c065c2ae756e7.png" alt="-\frac{d}{dx}(a(x)\frac{du}{dx}) \frac{1}{2}(u(x-0.25) + u (x+0.25)) = f(x)\\
+a(x)=1\\
+f(x)=exp(x^2(1-x^2))\\" /></p>
+</div><p>periodic boundary condition on [0,1]</p>
+<p>七点中心差分格式</p>
+<div class="math">
+<p><img src="_images/math/9c7ae91ba8f45e29c33fbf627968cd3659dfab7a.png" alt="\frac{d^2u(x_i)}{dx^2}=\sum_{i=-3}^{i=3}\alpha^i u_i +o(\Delta x^6)" /></p>
+</div><p>文档要求：</p>
+<p>怎么得到方程，怎么分割，怎么交换数据。</p>
 </div>
 </div>
 </div>

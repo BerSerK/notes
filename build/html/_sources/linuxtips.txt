@@ -153,6 +153,11 @@ Active it and set the user email in .emacs::
     (require 'doxymacs)
     (setq-default user-mail-address "...")
     
+auto-complete
+------------------------
+
+http://cx4a.org/software/auto-complete/#Downloads
+
 TexLive Tips
 ==================
 
@@ -163,3 +168,57 @@ TexLive Tips
 with::
 
     apt-get install poppler-data
+
+SVN
+==================================================
+
+`Setup a Subversion Server in 4 Minutes <http://www.tonyspencer.com/2007/03/02/setup-a-subversion-server-in-4-minutes/>`_
+
+You are going to need to type fast but I think you can do it in 4 minutes.   These are my notes on what worked for me on my Fedora core 6 with svn lib already installed by the package manager:
+
+Create a Repository
+--------------------------------------------------
+
+svnadmin create /svnrepos
+
+Create a SVN User
+--------------------------------------------------
+::
+
+ vi /svnrepos/conf/svnserve.conf
+
+In that file add these three lines::
+
+ anon-access = none
+ auth-access = write
+ password-db = passwd
+
+Create a password file::
+
+ vi /svnrepos/conf/passwd
+
+In that file add a line for your user::
+
+ # add users in the format : user = password
+ tony = mypassword
+
+Import Your Project
+--------------------------------------------------
+
+(assuming you’ve put your project files in /projects/myrailsproject)::
+
+ svn import /projects/myrailsproject file:///svnrepos/myrailsproject
+
+Start the SVN Server as Daemon
+--------------------------------------------------
+::
+
+ svnserve -d
+
+Done! You should now have a svn server running with one project named myrailsproject.
+
+Try checking it out of the repository::
+
+ svn co svn://192.168.0.2/svnrepos/myyrailsproject
+
+Since we set anon-access to none you should be prompted for username and password which you created in the file /svnrepos/conf/passwd.

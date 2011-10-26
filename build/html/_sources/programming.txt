@@ -5,7 +5,21 @@ My Programming Notes
 MPI
 ===========================
 
-`Example Codes <http://www.mcs.anl.gov/research/projects/mpi/usingmpi2/examples/main.htm>`_ from Book "Using MPI"
+Rocommended Materials:
+
+- Introduction to MPI(recommended toturial): http://www.citutor.org/index.php
+- MPI tutorial: https://computing.llnl.gov/tutorials/mpi/ 
+- High Performance Computing Training: https://computing.llnl.gov/?set=training&page=index
+- MPI document: ftp://lab.yeshiwei.com/Ebooks/Prog/mpi/mpi21-report.pdf
+
+Other Materrials:
+
+- `Example Codes <http://www.mcs.anl.gov/research/projects/mpi/usingmpi2/examples/main.htm>`_ from Book "Using MPI"
+- Running MPICH: http://heather.cs.ucdavis.edu/~matloff/MPI/NotesMPICH.NM.html#run2
+- Standford mpi toturial: http://www.slac.stanford.edu/comp/unix/farm/mpi.html
+- UCLA MPI examples: http://www.ats.ucla.edu/clusters/common/computing/parallel/mpi.htm
+- MPI exercise: http://www.mcs.anl.gov/research/projects/mpi/tutorial/mpiexmpl/contents.html
+
 
 Lecture 1 Basic Functions
 -------------------------------------
@@ -33,6 +47,154 @@ Wait all message sent or received::
   MPI_Irecv(buffer[i],buffer_size, MPI_INT,0,i+99, MPI_COMM_WORLD, &request[i]);
   MPI_Waitall(n_buffer, request, status);
 
-Probe::
+Probe, check without receive::
 
+ int MPI_Probe(int source, int tag, MPI_Comm comm, MPI_Status *status)
  int MPI_Iprobe(int source, int tag, MPI_Comm comm, int *flag, MPI_Status *status)
+
+data_type::
+
+ int MPI_Type_vector(int count, int blocklength, int stride,
+ MPI_Datatype oldtype, MPI_Datatype *newtype)
+ int MPI_Type_create_hvector(int count, int blocklength, MPI_Aint stride,
+ MPI_Datatype oldtype, MPI_Datatype *newtype)
+ int MPI_Type_indexed(int count, int *array_of_blocklengths,
+ int *array_of_displacements, MPI_Datatype oldtype,
+ MPI_Datatype *newtype)
+ int MPI_Type_create_hindexed(int count, int array_of_blocklengths[],
+ MPI_Aint array_of_displacements[], MPI_Datatype oldtype,
+ MPI_Datatype *newtype)
+
+
+int MPI_Type_struct(...);
+
+Lecture 3： 聚合通信
+----------------------------
+
+聚合通信是所谓的非局部通信。聚合通信有两种方式：
+
+1. 所有进程之间的关系对等。
+2. 其中有一个特殊进程。
+
+- 一对多
+- 多对一
+- 多对多
+
+障碍同步::
+
+ int MPI_Barreier(MPI_Comm comm);
+
+广播::
+
+ int MPI_Bcast(void * buffer, int count, MPI_Datatype data_type, int root, MPI_Comm comm);
+
+ 
+数据收集::
+
+ int MPI_Gather(void *send_buffer, int send_count, MPI_Datatype send_data_type,
+ void * recv_buffer, int recv_count, MPI_Datatype recv_data_type,
+ int root, MPI_Comm comm);
+
+ int MPI_GAtherv(...);
+ int MPI_Allgather(...);
+ int MPI_Allgatherv(...);
+
+数据散发::
+
+ int MPI_Scatter(...);
+ int MPI_Scatterv(...);
+
+数据全收集散发::
+ 
+ int MPI_Alltoall(...);
+ int MPI_Alltoallv(...);
+
+错误处理::
+
+   MPI_Errhandler errhd1;
+   
+
+进程组和通信其
+------------------------
+
+进程组::
+
+ 一组进程，通过句柄进行操作，
+ 属于进程，不由进程组共享！
+
+上下文::
+
+ 通信器的附属品，消息在一个给定的上下文上传递，以确保不同通信器之间的信息不要相互干扰
+
+域内通信器::
+
+ 进程组和上下问组成
+ 可以在其中组成拓扑连接方式。
+
+域间通信器::
+
+ 用于在分属于不同的进程组之间的进程进行通信。不能定义拓扑，也不能进行聚合通讯。
+
+进程组操作::
+
+ int MPI_Group_size(...);
+ int MPI_Group_translate_ranks(...);
+ int MPI_Group_compare(...);
+
+域内通信的操作::
+
+ int MPI_Comm_compare(...);
+ int MPI_Comm_dup(MPI_Comm comm, MPI_Comm *new_comm);//copy a Communicator
+ int MPI_Comm_create(...);
+ int MPI_Comm_split(...);
+ int MPI_Comm_free(...);
+
+域内通信器的附加属性（Caching）::
+
+ int_MPI_Comm_create_keyval(...);
+ int MPI_Comm_set_attr(...);
+ ...
+
+域间通信器::
+
+ int MPI_Intercomm_create(...); 
+ ...
+
+进程的拓扑结构::
+
+ 这是域内通信的附加属性，描述了进程组中各个进程之间的逻辑连接方式。
+
+笛卡尔拓扑结构::
+
+ int MPI_Cart_create(...);// 创立笛卡尔拓扑结构
+ int MPI_Dims_create(...);//维数划分
+ int MPI_Cart_sub(...);//创建低维子笛卡尔结构
+ int MPI_Cartdim_get(...);
+ int MPI_Cart_get(...);
+ int MPI_Cart_rank(...);
+ ...
+ int MPI_Cart_shift(...);
+
+Homework
+-------------------------------------
+
+
+.. math::
+
+ -\frac{d}{dx}(a(x)\frac{du}{dx}) \frac{1}{2}(u(x-0.25) + u (x+0.25)) = f(x)\\
+ a(x)=1\\
+ f(x)=exp(x^2(1-x^2))\\
+
+
+periodic boundary condition on [0,1]
+
+七点中心差分格式
+
+.. math::
+
+ \frac{d^2u(x_i)}{dx^2}=\sum_{i=-3}^{i=3}\alpha^i u_i +o(\Delta x^6)
+
+文档要求：
+
+怎么得到方程，怎么分割，怎么交换数据。
+

@@ -23,6 +23,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="Alex&#39;s Notes" href="index.html" />
+    <link rel="next" title="4. Math Notes" href="mathnotes.html" />
     <link rel="prev" title="2. Learning notes on fly!" href="fly.html" /> 
   </head>
   <body>
@@ -32,6 +33,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mathnotes.html" title="4. Math Notes"
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="fly.html" title="2. Learning notes on fly!"
              accesskey="P">previous</a> |</li>
@@ -57,9 +61,17 @@
 </li>
 <li><a class="reference internal" href="#emacs-tips">3.7. Emacs tips</a><ul>
 <li><a class="reference internal" href="#doxymacs">3.7.1. doxymacs</a></li>
+<li><a class="reference internal" href="#auto-complete">3.7.2. auto-complete</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#texlive-tips">3.8. TexLive Tips</a></li>
+<li><a class="reference internal" href="#svn">3.9. SVN</a><ul>
+<li><a class="reference internal" href="#create-a-repository">3.9.1. Create a Repository</a></li>
+<li><a class="reference internal" href="#create-a-svn-user">3.9.2. Create a SVN User</a></li>
+<li><a class="reference internal" href="#import-your-project">3.9.3. Import Your Project</a></li>
+<li><a class="reference internal" href="#start-the-svn-server-as-daemon">3.9.4. Start the SVN Server as Daemon</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -67,6 +79,9 @@
   <h4>Previous topic</h4>
   <p class="topless"><a href="fly.html"
                         title="previous chapter">2. Learning notes on fly!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="mathnotes.html"
+                        title="next chapter">4. Math Notes</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/linuxtips.txt"
@@ -243,6 +258,10 @@ cache_peer_access server_1 allow all</pre>
 (setq-default user-mail-address "...")</pre>
 </div>
 </div>
+<div class="section" id="auto-complete">
+<h3>3.7.2. auto-complete<a class="headerlink" href="#auto-complete" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://cx4a.org/software/auto-complete/#Downloads">http://cx4a.org/software/auto-complete/#Downloads</a></p>
+</div>
 </div>
 <div class="section" id="texlive-tips">
 <h2>3.8. TexLive Tips<a class="headerlink" href="#texlive-tips" title="Permalink to this headline">¶</a></h2>
@@ -254,6 +273,53 @@ cache_peer_access server_1 allow all</pre>
 </ul>
 <p>with:</p>
 <div class="highlight-python"><pre>apt-get install poppler-data</pre>
+</div>
+</div>
+<div class="section" id="svn">
+<h2>3.9. SVN<a class="headerlink" href="#svn" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www.tonyspencer.com/2007/03/02/setup-a-subversion-server-in-4-minutes/">Setup a Subversion Server in 4 Minutes</a></p>
+<p>You are going to need to type fast but I think you can do it in 4 minutes.   These are my notes on what worked for me on my Fedora core 6 with svn lib already installed by the package manager:</p>
+<div class="section" id="create-a-repository">
+<h3>3.9.1. Create a Repository<a class="headerlink" href="#create-a-repository" title="Permalink to this headline">¶</a></h3>
+<p>svnadmin create /svnrepos</p>
+</div>
+<div class="section" id="create-a-svn-user">
+<h3>3.9.2. Create a SVN User<a class="headerlink" href="#create-a-svn-user" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">vi</span> <span class="o">/</span><span class="n">svnrepos</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">svnserve</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+<p>In that file add these three lines:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">anon</span><span class="o">-</span><span class="n">access</span> <span class="o">=</span> <span class="n">none</span>
+<span class="n">auth</span><span class="o">-</span><span class="n">access</span> <span class="o">=</span> <span class="n">write</span>
+<span class="n">password</span><span class="o">-</span><span class="n">db</span> <span class="o">=</span> <span class="n">passwd</span>
+</pre></div>
+</div>
+<p>Create a password file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">vi</span> <span class="o">/</span><span class="n">svnrepos</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">passwd</span>
+</pre></div>
+</div>
+<p>In that file add a line for your user:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># add users in the format : user = password</span>
+<span class="n">tony</span> <span class="o">=</span> <span class="n">mypassword</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="import-your-project">
+<h3>3.9.3. Import Your Project<a class="headerlink" href="#import-your-project" title="Permalink to this headline">¶</a></h3>
+<p>(assuming you’ve put your project files in /projects/myrailsproject):</p>
+<div class="highlight-python"><pre>svn import /projects/myrailsproject file:///svnrepos/myrailsproject</pre>
+</div>
+</div>
+<div class="section" id="start-the-svn-server-as-daemon">
+<h3>3.9.4. Start the SVN Server as Daemon<a class="headerlink" href="#start-the-svn-server-as-daemon" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">svnserve</span> <span class="o">-</span><span class="n">d</span>
+</pre></div>
+</div>
+<p>Done! You should now have a svn server running with one project named myrailsproject.</p>
+<p>Try checking it out of the repository:</p>
+<div class="highlight-python"><pre>svn co svn://192.168.0.2/svnrepos/myyrailsproject</pre>
+</div>
+<p>Since we set anon-access to none you should be prompted for username and password which you created in the file /svnrepos/conf/passwd.</p>
 </div>
 </div>
 </div>
@@ -270,6 +336,9 @@ cache_peer_access server_1 allow all</pre>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="mathnotes.html" title="4. Math Notes"
+             >next</a> |</li>
         <li class="right" >
           <a href="fly.html" title="2. Learning notes on fly!"
              >previous</a> |</li>
