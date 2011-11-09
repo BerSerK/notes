@@ -222,3 +222,22 @@ Try checking it out of the repository::
  svn co svn://192.168.0.2/svnrepos/myyrailsproject
 
 Since we set anon-access to none you should be prompted for username and password which you created in the file /svnrepos/conf/passwd.
+
+文档查看器（Evince）打开中文PDF显示方块的问题
+==========================================
+
+使用Evince打开部分pdf文件，特别是中国知网上下载的pdf论文时，常常显示为方块。
+evince,okular, epdfview的pdf功能均由xpdf的分支poppler提供。poppler官方网站：http://poppler.freedesktop.org
+
+必须先安装poppler-data::
+ 
+ sudo apt-get install poppler-data
+
+如果已经安装了文泉驿正黑字体，使用下面的方法解决显示方块问题::
+
+ sudo gedit  /etc/fonts/conf.d/49-sansserif.conf
+
+将倒数第四行的sans-serif修改为WenQuanYi Zen Hei就可以了。 
+
+修改为其他的中文字体名称应该也是可以的。
+

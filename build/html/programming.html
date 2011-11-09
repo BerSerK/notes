@@ -52,7 +52,19 @@
 <li><a class="reference internal" href="#lecture-2">5.1.2. Lecture 2</a></li>
 <li><a class="reference internal" href="#lecture-3">5.1.3. Lecture 3： 聚合通信</a></li>
 <li><a class="reference internal" href="#id1">5.1.4. 进程组和通信其</a></li>
-<li><a class="reference internal" href="#homework">5.1.5. Homework</a></li>
+<li><a class="reference internal" href="#id2">5.1.5. 文件输入输出</a></li>
+<li><a class="reference internal" href="#posix">5.1.6. POSIX信号</a></li>
+<li><a class="reference internal" href="#id3">5.1.7. POSIX线程</a></li>
+<li><a class="reference internal" href="#external-data-representation-xdr">5.1.8. External Data Representation(XDR)</a></li>
+<li><a class="reference internal" href="#one-sided-communication">5.1.9. 单边通讯 One-Sided Communication</a></li>
+<li><a class="reference internal" href="#id4">5.1.10. MPI进程管理和域间通信</a></li>
+<li><a class="reference internal" href="#id5">5.1.11. 并行算法的评估</a></li>
+<li><a class="reference internal" href="#homework">5.1.12. Homework</a><ul>
+<li><a class="reference internal" href="#id6">5.1.12.1. 解偏微分方程</a></li>
+<li><a class="reference internal" href="#id8">5.1.12.2. 学习其他计算软件：</a></li>
+<li><a class="reference internal" href="#id9">5.1.12.3. 最后一个作业</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -239,18 +251,361 @@ int MPI_Cart_rank(...);
 int MPI_Cart_shift(...);</pre>
 </div>
 </div>
-<div class="section" id="homework">
-<h3>5.1.5. Homework<a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>5.1.5. 文件输入输出<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Fortran 需要包含头文件： mpiof.h</p>
+<ul class="simple">
+<li>文件： 和进程组想关联，所有进程必须同时对文件进行操作；</li>
+<li>起始位置（dispalcement）：字节数</li>
+<li>基本单元类型（etype）：位移非负且单调上升；</li>
+<li>文件单元类型（filetype）：在基本单元类型上派生出来</li>
+<li>文件视窗（view）：</li>
+<li>位移(offset）：相对于起始位置</li>
+<li>文件大小：</li>
+<li>文件指针</li>
+<li>文件句柄（file handle）：</li>
+</ul>
+<p>打开MPI文件:</p>
+<div class="highlight-python"><pre>int MPI_File_open(...);
+comm:
+filename:
+amode:
+ MPI_MODE_RDONLY,...
+fh: 文件句柄</pre>
+</div>
+<p>关闭MPI文件:</p>
+<div class="highlight-python"><pre>int MPI_File_close(...);</pre>
+</div>
+<p>设定文件长度:</p>
+<div class="highlight-python"><pre>int MPI_File_set_size(...);</pre>
+</div>
+<p>预分配空间:</p>
+<div class="highlight-python"><pre>int MPI_File_preallocate(...);</pre>
+</div>
+<p>设定文件视窗:</p>
+<div class="highlight-python"><pre>int MPI_File_set_view();</pre>
+</div>
+<p>聚合函数:</p>
+<div class="highlight-python"><pre>datarep: native, internal, external32</pre>
+</div>
+<p>定位:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">MPI_File_xxxx_at</span><span class="p">,</span> <span class="n">MPI_File_xxxx_at_all</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>MPI... sub array...</p>
+</div>
+<div class="section" id="posix">
+<h3>5.1.6. POSIX信号<a class="headerlink" href="#posix" title="Permalink to this headline">¶</a></h3>
+<p>kill: send a signal to a process:</p>
+<div class="highlight-python"><pre>#include&lt;signal.h&gt;
+typedef void (*sighandler_t)(int);
+sighandler_t signal(int signum, sighandler_t handler);</pre>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>5.1.7. POSIX线程<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><pre>#include &lt;sys/types.h&gt;
+#include &lt;unistd.h&gt;
+pid_t fork(void);
+
+#include &lt;stded.h&gt;
+int clone(int(*fn)(void*), void *child</pre>
+</div>
+</div>
+<div class="section" id="external-data-representation-xdr">
+<h3>5.1.8. External Data Representation(XDR)<a class="headerlink" href="#external-data-representation-xdr" title="Permalink to this headline">¶</a></h3>
+<p>从文件指针创建:</p>
+<div class="highlight-python"><pre>void xdrstdio_create(xdrs, file, op)
+XDR *xdrs;
+FILE *file;
+enum xdr_op op;</pre>
+</div>
+<p>xdr_op: XDR_ENCODE(输出），XDR_DECODE（输入）</p>
+<p>in bash:</p>
+<div class="highlight-python"><pre>info xdr</pre>
+</div>
+<p>销毁 XDR 对象:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">xdr_destroy</span>
+</pre></div>
+</div>
+<p>header file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#include&lt;rpc/xdr.h&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="one-sided-communication">
+<h3>5.1.9. 单边通讯 One-Sided Communication<a class="headerlink" href="#one-sided-communication" title="Permalink to this headline">¶</a></h3>
+<p>单边通信指的是通信通过一个进程直接读取或者写入另一个进程的内存区完成通信，
+这个操作只和一个进程有关系，所以叫做单边通信。</p>
+<p>单边通信的问题在于在多个进程同时操作同一块内存时需要考虑同步协作的问题。</p>
+<p>MPI 的单边通信通过所谓窗口来完成。某个进程将自己的一块内存区设为窗口，然后其他进程直接来读写这个窗口的内容。</p>
+<p>这种方式也叫做远程内存访问（Remote Memery Access）</p>
+<p>创建窗口:</p>
+<div class="highlight-python"><pre>int MPI_Win_Create(...)</pre>
+</div>
+<p>释放窗口:</p>
+<div class="highlight-python"><pre>int MPI_Win_Free(...)</pre>
+</div>
+<p>三种操作:</p>
+<blockquote>
+<div><ul class="simple">
+<li>读 Get</li>
+<li>写 Put</li>
+<li>累加 （Accumulate）</li>
+</ul>
+</div></blockquote>
+<p>三种同步方式：</p>
+<blockquote>
+<div><ul class="simple">
+<li>Fence</li>
+<li>握手</li>
+<li>Lock</li>
+</ul>
+</div></blockquote>
+<p>Get:</p>
+<div class="highlight-python"><pre>int MPI_Get(...)</pre>
+</div>
+<p>Put:</p>
+<div class="highlight-python"><pre>int MPI_Put(...)</pre>
+</div>
+<p>Accumulate:</p>
+<div class="highlight-python"><pre>int MPI_Accumulate(...)</pre>
+</div>
+<p>Fence:</p>
+<div class="highlight-python"><pre>int MPI_Win_fence(int assert,...)
+
+assert: MPI_MODE_NOSTORE</pre>
+</div>
+<p>聚合操作，松同步</p>
+<p>MPI_Win_fence(0,win);
+//读写窗口
+MPI_Win_fence(0,win);</p>
+<p>General Active Target Synchronization(握手):</p>
+<div class="highlight-python"><pre>int MPI_Win_start(...)
+int MPI_Win_complete(MPI_Win win);
+int MPI_Win_post(MPI_Group group, int assert, MPI_Win win);
+int MPI_Win_wait(MPI_Win win);</pre>
+</div>
+<p>Lock:</p>
+<div class="highlight-python"><pre>int MPI_Win_lock();
+int MPI_Win_unlock():
+state: MPI_LOCK_EXCLUSIVE or MPI_LOCK_SHARED
+MPI_Win_lock()
+//
+MPI_Win_unlock(rank, win);</pre>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>5.1.10. MPI进程管理和域间通信<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>MPI_Comm_spawn</div></blockquote>
+<p>子进程获得域间通信器。</p>
+<p>客户服务器模式（Client/Server）：
+服务器端:</p>
+<div class="highlight-python"><pre>int MPI_Open_port(...)
+int MPI_Close_port(...)
+int MPI_Comm_accept(...)
+int MPI_Publish_name(...)
+int MPI_Unpublish_name(...)</pre>
+</div>
+<p>客户端:</p>
+<div class="highlight-python"><pre>int MPI_Comm_connect(...)
+int MPI_Lookup_name(...)</pre>
+</div>
+<p>Socket 模式:</p>
+<div class="highlight-python"><pre>int MPI_Comm_join(...)</pre>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>5.1.11. 并行算法的评估<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>串行算法：</p>
+<blockquote>
+<div>运行时间/问题规模</div></blockquote>
+<p>并行算法：</p>
+<ul class="simple">
+<li>问题规模</li>
+<li>进程个数</li>
+<li>进程的相对速度</li>
+<li>进程间通信速度</li>
+</ul>
+<p>加速比：</p>
+<blockquote>
+<div>加速比=串行运行时间/运行时间*进程数</div></blockquote>
+<p>加速比作为进程个数的函数不是常数;
+加速比也是依赖与机器硬件；</p>
+<blockquote>
+<div>加速比&lt;=1；</div></blockquote>
+<p>造成加速比小于1的原因：</p>
+<ul class="simple">
+<li>负载不平衡；</li>
+<li>进程交互；</li>
+<li>同步；</li>
+<li>算法缺陷；</li>
+</ul>
+<p>最好的的串行算法几乎总是不能被顺利的并行化，从而能够并行的总是一些效率不高的算法。</p>
+<blockquote>
+<div>加速比&gt;1的情况会在一些特殊硬件架构下发生，或者在一些不确定性情况下发生。</div></blockquote>
+<p>加速比：</p>
+<p>作为问题规模的函数，一般是增函数；
+作为进程个数的函数，一般是减函数；</p>
+<dl class="docutils">
+<dt>所以对于给定的问题规模而言，</dt>
+<dd>计算时间存在一个最小值。</dd>
+</dl>
+<ul class="simple">
+<li><img class="math" src="_images/math/0ffb94c0fa16a9d1a2a3b0e47ed218d773425512.png" alt="t_s"/> : 一个通信的启动时间</li>
+<li><img class="math" src="_images/math/6f30b92e27271668052e0b3e3cd9392fa436e96a.png" alt="t_w"/> : 单个通信时间</li>
+<li>p: 进程数</li>
+<li>m: 消息字数</li>
+</ul>
+<p>超立方体拓扑结构</p>
+<p>All-to-One 归约和One-to-All 广播时间花费：</p>
 <div class="math">
-<p><img src="_images/math/b0c6cfe9dcbc934754c12532085c065c2ae756e7.png" alt="-\frac{d}{dx}(a(x)\frac{du}{dx}) \frac{1}{2}(u(x-0.25) + u (x+0.25)) = f(x)\\
-a(x)=1\\
-f(x)=exp(x^2(1-x^2))\\" /></p>
-</div><p>periodic boundary condition on [0,1]</p>
-<p>七点中心差分格式</p>
+<p><img src="_images/math/e74b98b2bfdf41bdb3cb7f20fb3461af723b2c3b.png" alt="T=(t_s+t_w)log p" /></p>
+</div><p>All-to-All 花费时间:</p>
+<div class="math">
+<p><img src="_images/math/e78a13945d10246842264d6398b3ca274cf45bfb.png" alt="T=\sum_{i=1}^{\log p}(t_s+2^{i-1}t_w m)=t_s log p +t_w m(p-1);" /></p>
+</div></div>
+<div class="section" id="homework">
+<h3>5.1.12. Homework<a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h4>5.1.12.1. 解偏微分方程<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<div class="math">
+<p><img src="_images/math/190f5fe0528eb72701c836fe7affc0a247ff269e.png" alt="&amp;-\frac{d}{dx}(a(x)\frac{du}{dx}) \frac{1}{2}(u(x-0.25) + u (x+0.25)) = f(x)\\
+&amp;a(x)=1\\
+&amp;f(x)=exp(x^2(1-x^2))\\
+&amp;periodic\,boundary\, condition\, on\, [0,1]\\" /></p>
+</div><p><a class="reference external" href="http://www.holoborodko.com/pavel/numerical-methods/numerical-derivative/central-differences/">七点中心差分格式</a></p>
 <div class="math">
 <p><img src="_images/math/9c7ae91ba8f45e29c33fbf627968cd3659dfab7a.png" alt="\frac{d^2u(x_i)}{dx^2}=\sum_{i=-3}^{i=3}\alpha^i u_i +o(\Delta x^6)" /></p>
 </div><p>文档要求：</p>
 <p>怎么得到方程，怎么分割，怎么交换数据。</p>
+<p>Dead Line： 2011.11.20</p>
+</div>
+<div class="section" id="id8">
+<h4>5.1.12.2. 学习其他计算软件：<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Trilinos</li>
+<li>PETsc</li>
+<li>fftw</li>
+</ul>
+<p>学其中一个软件。Trilinos ,PETsc的开头，或者fftw的全部。</p>
+<p>Dead Line： 考试当天晚上十二点之前。</p>
+</div>
+<div class="section" id="id9">
+<h4>5.1.12.3. 最后一个作业<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p>对于前面两个软件，需要写个代码求解一个稀疏矩阵。</p>
+<p>对于fftw求解一个适合于使用谱方法的偏微分方程，要求使用串行接口。</p>
+<p>Dead Line： 考试当天晚上十二点之前。</p>
+<p>非重叠区域分解：</p>
+<div class="math">
+<p><img src="_images/math/4eb6e0270deb6623af705f5fb947b19fff36fbf2.png" alt="\frac{\partial}{\partial x^i}(a^{ij} \frac{\partial u}{\partial x^j}) =0 , in\, \Omega \\
+u|_{\partial\Omega}=u_b" /></p>
+</div><p>在子区域的边界面上有：</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">(a_1 I \downtriangle u |^+_\Gamma_in-a_2I\downtriangle u|^-_\Gamma)\cdot \arrow{n}</tt>)</p>
+latex exited with error:
+[stderr]
+
+[stdout]
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010)
+ restricted \write18 enabled.
+entering extended mode
+(./math.tex
+LaTeX2e &lt;2009/09/24&gt;
+Babel &lt;v3.8l&gt; and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, arabic, armenian
+, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutch, u
+kenglish, usenglishmax, esperanto, estonian, farsi, finnish, french, galician, 
+german, ngerman, swissgerman, monogreek, greek, hungarian, icelandic, assamese,
+ bengali, gujarati, hindi, kannada, malayalam, marathi, oriya, panjabi, tamil, 
+telugu, indonesian, interlingua, irish, italian, kurmanji, lao, latin, latvian,
+ lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, polish, portuguese, roma
+nian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turkish,
+ turkmen, ukrainian, uppersorbian, welsh, loaded.
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/size12.clo))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/ucs/utf8x.def))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/ucs/ucs.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/ucs/data/uni-global.def))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?&#8217; option.
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/bm.sty) (./math.aux)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/ucs/ucsencs.def)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsfonts/umsb.fd)
+! Undefined control sequence.
+&lt;argument&gt;  \begin {split}(a_1 I \downtriangle 
+                                               u |^+_\Gamma _in-a_2I\downtri...
+l.14 \end{gather}
+                 
+! Double subscript.
+&lt;argument&gt; ...}(a_1 I \downtriangle u |^+_\Gamma _
+                                                  in-a_2I\downtriangle u|^-_...
+l.14 \end{gather}
+                 
+! Undefined control sequence.
+&lt;argument&gt; ... u |^+_\Gamma _in-a_2I\downtriangle 
+                                                  u|^-_\Gamma )\cdot \arrow ...
+l.14 \end{gather}
+                 
+! Undefined control sequence.
+&lt;argument&gt; ...ntriangle u|^-_\Gamma )\cdot \arrow 
+                                                  {n}\end {split}\notag 
+l.14 \end{gather}
+                 
+! Undefined control sequence.
+&lt;argument&gt;  \begin {split}(a_1 I \downtriangle 
+                                               u |^+_\Gamma _in-a_2I\downtri...
+l.14 \end{gather}
+                 
+! Double subscript.
+&lt;argument&gt; ...}(a_1 I \downtriangle u |^+_\Gamma _
+                                                  in-a_2I\downtriangle u|^-_...
+l.14 \end{gather}
+                 
+! Undefined control sequence.
+&lt;argument&gt; ... u |^+_\Gamma _in-a_2I\downtriangle 
+                                                  u|^-_\Gamma )\cdot \arrow ...
+l.14 \end{gather}
+                 
+! Undefined control sequence.
+&lt;argument&gt; ...ntriangle u|^-_\Gamma )\cdot \arrow 
+                                                  {n}\end {split}\notag 
+l.14 \end{gather}
+                 
+[1] (./math.aux) )
+(see the transcript file for additional information)
+Output written on math.dvi (1 page, 552 bytes).
+Transcript written on math.log.
+</div>
+<p>求解方案：</p>
+<ol class="arabic simple">
+<li>在 <cite>:math: Omega_1</cite> 上求解Dirichlet边值问题</li>
+<li>在 <cite>:math: Omega_2</cite> 上求解混合边值问题</li>
+<li>回到1</li>
+</ol>
+<div class="math">
+<p><img src="_images/math/75fef477097f06c7f55a7a2d187a555e7c2cf2a5.png" alt="\Omega &amp;= [0,1]\times [0,1]\\
+\Omega_1 = (0,1/2)\times(0,1), &amp; \Omega_2(1/2,1)\times (0,1)\\
+a_1=1&amp; a_2=10\\
+u_b=0,f=1" /></p>
+</div><p>要求：</p>
+<ul class="simple">
+<li>另个节点并行；</li>
+<li>使用五点中心差分格式；</li>
+<li>子区域内部矩阵求解方法自选；</li>
+</ul>
+</div>
 </div>
 </div>
 </div>

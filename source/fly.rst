@@ -29,6 +29,10 @@ linux cmd memorandum
 :dmidecode --type memory:
  查看内存类型。
 
+:df -h:
+
+ 查看硬盘空间
+
 AWK
 ==============
 

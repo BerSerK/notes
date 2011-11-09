@@ -72,6 +72,7 @@
 <li><a class="reference internal" href="#start-the-svn-server-as-daemon">3.9.4. Start the SVN Server as Daemon</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#evince-pdf">3.10. 文档查看器（Evince）打开中文PDF显示方块的问题</a></li>
 </ul>
 </li>
 </ul>
@@ -321,6 +322,19 @@ cache_peer_access server_1 allow all</pre>
 </div>
 <p>Since we set anon-access to none you should be prompted for username and password which you created in the file /svnrepos/conf/passwd.</p>
 </div>
+</div>
+<div class="section" id="evince-pdf">
+<h2>3.10. 文档查看器（Evince）打开中文PDF显示方块的问题<a class="headerlink" href="#evince-pdf" title="Permalink to this headline">¶</a></h2>
+<p>使用Evince打开部分pdf文件，特别是中国知网上下载的pdf论文时，常常显示为方块。
+evince,okular, epdfview的pdf功能均由xpdf的分支poppler提供。poppler官方网站：http://poppler.freedesktop.org</p>
+<p>必须先安装poppler-data:</p>
+<div class="highlight-python"><pre>sudo apt-get install poppler-data</pre>
+</div>
+<p>如果已经安装了文泉驿正黑字体，使用下面的方法解决显示方块问题:</p>
+<div class="highlight-python"><pre>sudo gedit  /etc/fonts/conf.d/49-sansserif.conf</pre>
+</div>
+<p>将倒数第四行的sans-serif修改为WenQuanYi Zen Hei就可以了。</p>
+<p>修改为其他的中文字体名称应该也是可以的。</p>
 </div>
 </div>
 
