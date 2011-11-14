@@ -434,10 +434,9 @@ All-to-All 花费时间:
  n行n进程；
  少于n进程：每个进程n/p行；
 
-作业
-------------------
+Cannon 算法， DNS(Dekel, Nassimi and Sahni)算法。
 
-解偏微分方程
+作业
 ``````````````````````
 
 .. math::
@@ -454,6 +453,7 @@ All-to-All 花费时间:
 
  \frac{d^2u(x_i)}{dx^2}=\sum_{i=-3}^{i=3}\alpha^i u_i +o(\Delta x^6)
 
+ `七点差分格式 <http://www.holoborodko.com/pavel/numerical-methods/numerical-derivative/central-differences/>`_ 
 文档要求：
 
 怎么得到方程，怎么分割，怎么交换数据。
