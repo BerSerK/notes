@@ -445,7 +445,6 @@ Cannon 算法， DNS(Dekel, Nassimi and Sahni)算法。
 
 .. math::
  
- T=(t_s+t_w m)log p
  &-\frac{d}{dx}(a(x)\frac{du}{dx}) \frac{1}{2}(u(x-0.25) + u (x+0.25)) = f(x)\\
  &a(x)=1\\
  &f(x)=exp(x^2(1-x^2))\\
