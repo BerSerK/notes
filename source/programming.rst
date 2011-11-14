@@ -352,6 +352,7 @@ MPI进程管理和域间通信
 
 客户服务器模式（Client/Server）：
 服务器端::
+
  int MPI_Open_port(...)
  int MPI_Close_port(...)
  int MPI_Comm_accept(...)
@@ -386,7 +387,7 @@ Socket 模式::
 
 加速比作为进程个数的函数不是常数;
 加速比也是依赖与机器硬件；
-  加速比<=1；
+加速比<=1；
 
 造成加速比小于1的原因：
 
