@@ -433,7 +433,22 @@ All-to-All 花费时间:
  矩阵按行分配给进程；
  n行n进程；
  少于n进程：每个进程n/p行；
- http://www.holoborodko.com/pavel/numerical-methods/numerical-derivative/central-differences/>`_
+
+作业
+------------------
+
+解偏微分方程
+``````````````````````
+
+.. math::
+ 
+ T=(t_s+t_w m)log p
+ &-\frac{d}{dx}(a(x)\frac{du}{dx}) \frac{1}{2}(u(x-0.25) + u (x+0.25)) = f(x)\\
+ &a(x)=1\\
+ &f(x)=exp(x^2(1-x^2))\\
+ &periodic boundary condition on [0,1]\\ 
+
+`七点中心差分格式 <http://www.holoborodko.com/pavel/numerical-methods/numerical-derivative/central-differences/>`_
 
 .. math::
 
@@ -478,7 +493,7 @@ Dead Line： 考试当天晚上十二点之前。
 
 .. math::
 
- (a_1 I \downtriangle u |^+_\Gamma_in-a_2I\downtriangle u|^-_\Gamma)\cdot \arrow{n}
+.. (a_1 I \downtriangle u \|^+_\Gamma_in-a_2I\downtriangle u\|^-_\Gamma)\cdot \arrow{n}
 
 求解方案：
 
@@ -501,3 +516,40 @@ Dead Line： 考试当天晚上十二点之前。
 - 另个节点并行；
 - 使用五点中心差分格式；
 - 子区域内部矩阵求解方法自选；
+
+
+非重叠区域分解：
+-------------------
+.. math::
+
+ \frac{\partial}{\partial x^i}(a^{ij} \frac{\partial u}{\partial x^j}) =0 , in\, \Omega \\
+ u|_{\partial\Omega}=u_b
+
+在子区域的边界面上有：
+
+.. math::
+
+ (a_1 I \downtriangle u |^+_\Gamma_in-a_2I\downtriangle u|^-_\Gamma)\cdot \arrow{n}
+
+求解方案：
+
+1. 在 :math:`\Omega_1` 上求解Dirichlet边值问题
+
+2. 在 :math:`\Omega_2` 上求解混合边值问题
+
+3. 回到1
+
+.. .. math::
+.. 
+.. \Omega &= [0,1]\times [0,1]\\
+.. \Omega_1 = (0,1/2)\times(0,1), & \Omega_2(1/2,1)\times (0,1)\\
+..  a_1=1& a_2=10\\
+..  u_b=0,f=1
+
+
+要求：
+ 
+- 另个节点并行；
+- 使用五点中心差分格式；
+- 子区域内部矩阵求解方法自选；
+
