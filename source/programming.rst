@@ -528,9 +528,9 @@ Dead Line： 考试当天晚上十二点之前。
 
 在子区域的边界面上有：
 
-.. math::
+... .. math::
 
- (a_1 I \downtriangle u |^+_\Gamma_in-a_2I\downtriangle u|^-_\Gamma)\cdot \arrow{n}
+...  (a_1 I \downtriangle u |^+_\Gamma_in-a_2I\downtriangle u|^-_\Gamma)\cdot \arrow{n}
 
 求解方案：
 
