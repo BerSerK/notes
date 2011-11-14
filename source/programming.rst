@@ -437,7 +437,10 @@ All-to-All 花费时间:
 Cannon 算法， DNS(Dekel, Nassimi and Sahni)算法。
 
 作业
-``````````````````````
+-------------------------
+
+解方程
+```````````````````````````````
 
 .. math::
  
@@ -446,8 +449,6 @@ Cannon 算法， DNS(Dekel, Nassimi and Sahni)算法。
  &a(x)=1\\
  &f(x)=exp(x^2(1-x^2))\\
  &periodic boundary condition on [0,1]\\ 
-
-`七点中心差分格式 <http://www.holoborodko.com/pavel/numerical-methods/numerical-derivative/central-differences/>`_
 
 .. math::
 
@@ -491,9 +492,9 @@ Dead Line： 考试当天晚上十二点之前。
 
 在子区域的边界面上有：
 
-.. math::
+... .. math::
 
-.. (a_1 I \downtriangle u \|^+_\Gamma_in-a_2I\downtriangle u\|^-_\Gamma)\cdot \arrow{n}
+... (a_1 I \downtriangle u \|^+_\Gamma_in-a_2I\downtriangle u\|^-_\Gamma)\cdot \arrow{n}
 
 求解方案：
 
