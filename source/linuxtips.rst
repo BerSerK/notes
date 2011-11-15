@@ -169,6 +169,10 @@ with::
 
     apt-get install poppler-data
 
+- `xelatex template </doc.tar.gz>`_ （中文模板）
+ 
+
+
 SVN
 ==================================================
 
