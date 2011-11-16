@@ -1123,8 +1123,8 @@ MATLAB
 handle files
 ----------------------
 
-.. code::
-
+.. highlight::
+ 
  % Create a file with an exponential table
  x = 0:.1:1;
  y = [x; exp(x)];
