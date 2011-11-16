@@ -1023,6 +1023,11 @@ Cannon 算法， DNS(Dekel, Nassimi and Sahni)算法。
 
 Dead Line： 2011.11.20
 
+我的程序::
+
+ svn co svn://lab.yeshiwei.com/svnrepos/practice/mpi/homework/
+
+
 学习其他计算软件：
 `````````````````````````
 
