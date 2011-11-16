@@ -1120,10 +1120,7 @@ Dead Line： 考试当天晚上十二点之前。
 MATLAB
 ==============
 
-handle files
-----------------------
-
-.. highlight::
+handle files::
  
  % Create a file with an exponential table
  x = 0:.1:1;
@@ -1144,3 +1141,4 @@ handle files
  % Transpose so that A matches
  % the orientation of the file
  A = A';
+
