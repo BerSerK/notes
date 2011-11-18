@@ -15,14 +15,12 @@
 
 :FTP: 
     提供一些linux软件包括Matlab之类的软件，以及一些我自己从六维空间下载下来的电影。
-    如果用流览器不能下载本 站资源, 可以用FTP客户端(例如flashfxp)连接lab.yeshiwei.com.
-    可以匿名上传文件到anon目录。
+    如果用流览器不能下载本 站资源, 可以用FTP客户端(例如flashfxp)连接ftp://lab.yeshiwei.com.
 :goagent: 一个帮助你轻松使用GOOGLE(Gmail, Google+...)的 `代理服务 <./proxy.html>`_ 。
 :gappproxy: 另一个帮助你上所有GFW外网站的 `代理服务`_ 。
-:Apache: 本站，使用python的文档工具sphinx生成。
-:Deal.II: Here is a copy of the deal.ii 7.0.0 Documentation `deal.ii </notes/dealii>`_, and you can download deal.ii from FTP : ftp://lab.yeshiwei.com/deal.II-7.0.0.tar.gz
-:osqa: 这是一个开源的问答网站. Just For Fun.
-
+:Apache: 本站，使用python的文档工具sphinx生成。同时，apache还给 http://www.cnmath.org 提供了反向代理。
+:osqa: http://lab.yeshiwei.com 这是一个开源的问答网站. Just For Fun.
+:Music: http://notes.yeshiwei.com/Music/ 我喜欢的一些音乐 
 .. 建议ipv6用户注册 `六维空间 <http://bt.neu6.edu.cn/?fromuser=berserk>`_
 
 .. _aboutme:
