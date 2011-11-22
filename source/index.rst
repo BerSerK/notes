@@ -41,6 +41,7 @@ Contents:
    linuxtips
    mathnotes
    programming
+   lectures
    sphinx
 
 Other Notes

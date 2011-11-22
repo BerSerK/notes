@@ -9,6 +9,16 @@
 sphinx介绍
 ====================
 
+rst（reStructuredText）标记语言
+--------------------------------------------------
+
+使用sphinx必须得会用`rst <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_ 标记语言写文本。
+这个可以通过这个文档在半个小时内基本上手： http://docutils.sourceforge.net/docs/user/rst/quickref.html
+
+sphinx
+--------------------------------------------------
+然后通过 http://sphinx.pocoo.org/ 可以了解sphinx的使用细节。
+
 
 Using xelatex in Sphinx
 ===============================
