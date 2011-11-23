@@ -1,3 +1,5 @@
+.. index::linux tips
+
 ******************************************
 A collection of my linux tips
 ******************************************
@@ -119,6 +121,9 @@ I. `menumaker <http://menumaker.sourceforge.net/>`_ for IceWM:
 
 .. _doxygen:
 
+
+.. index:: doxygen
+
 Doxygen
 ====================
 
@@ -214,7 +219,7 @@ Import Your Project
  svn import /projects/myrailsproject file:///svnrepos/myrailsproject
 
 Start the SVN Server as Daemon
---------------------------------------------------
+----------------------------------------------------------------------------------------------------
 ::
 
  svnserve -d
@@ -228,7 +233,7 @@ Try checking it out of the repository::
 Since we set anon-access to none you should be prompted for username and password which you created in the file /svnrepos/conf/passwd.
 
 文档查看器（Evince）打开中文PDF显示方块的问题
-==========================================
+====================================================================================
 
 使用Evince打开部分pdf文件，特别是中国知网上下载的pdf论文时，常常显示为方块。
 evince,okular, epdfview的pdf功能均由xpdf的分支poppler提供。poppler官方网站：http://poppler.freedesktop.org

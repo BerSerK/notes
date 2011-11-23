@@ -36,13 +36,14 @@ Contents:
    :glob:
    :numbered:
 
-   proxy
-   fly
+   programming
    linuxtips
    mathnotes
-   programming
+   fftw
    lectures
    sphinx
+   proxy
+   fly
 
 Other Notes
 ===============
