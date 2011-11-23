@@ -39,6 +39,15 @@ AWK
 - `wiki <http://en.wikipedia.org/wiki/AWK>`_ 
 - 
 
+From 傅国生
+=====================
+
+* http://www.math.umn.edu/~garrett/m/mfms/notes/09_sobolev.pdf
+
+* http://fenicsproject.org
+
+* http://scientificlinux.org/
+
 Tubes
 =====================
 
