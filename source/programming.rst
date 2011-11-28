@@ -573,14 +573,49 @@ Dead Line： 考试当天晚上十二点之前。
 
 对于前面两个软件，需要写个代码求解一个稀疏矩阵。
 
-对于fftw求解一个适合于使用谱方法的偏微分方程，要求使用串行接口。
+对于fftw求解一个适合于使用谱方法的偏微分方程，要求使用串行接口::
+
+ Boussinsq方程
+ 原始变量形式
+ 流函数-涡量形式
+
+原始变量形式：
+
+.. math::
+
+ &\frac{\partial\rho}{\partial t}+u\cdot \triangledown \rho = 0\\
+ &\frac{\partial u}{\partial t}+u\cdot \triangledown u +\triangledown p 
+ = \left( \begin{array}{c}0\\p\\ \end{array}\right)\\
+ &\triangledown \cdot u = 0
+
+
+- 使用FFTW一维串行函数
+- 手工实现二维的fft并行
+- 计算规模最低要求512*512， 期望做到4096*4096
+- :math:`t\in [0,3.16]` 初值为：
+
+.. math::
+
+ w(x,y;0)=0
+ \rho(x,y;0)=50\rho_1(x,y)\rho_2(x,y)(1-\rho_1(x,y))
+
+其中：
+
+.. math::
+
+ \rho_1(x,y)=\begin{cases} exp(1-\frac{\pi^2}{\pi^2-x^2-(y-\pi)^2}),if x^2+(y-\pi)^2<\pi^2\\
+ 0,otherwise
+ \end{cases}\\
+ \rho_2(x,y)=\begin{cases} exp(1-\frac{(1.95 \pi)^2}{(1.95 \pi)^2-(x-2\pi)^2}),if (x-2\pi)^2<(1.95\pi)^2\\
+ 0,otherwise
+ \end{cases}\\
 
 
 Dead Line： 考试当天晚上十二点之前。
 
 
-非重叠区域分解：
-
+练习：非重叠区域分解
+`````````````````````````````````````````````````
 .. math::
 
  \frac{\partial}{\partial x^i}(a^{ij} \frac{\partial u}{\partial x^j}) =0 , in\, \Omega \\
