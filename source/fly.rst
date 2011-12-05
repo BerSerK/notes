@@ -53,6 +53,11 @@ Tubes
 
 `Four order <http://www.mf100.org/4-4-4/4-4-4.php>`_
 
+List of numerical analysis software
+==================================================
+
+http://en.wikipedia.org/wiki/List_of_numerical_analysis_software
+
 .. king of fight
 .. ==================
 .. 草雉京 （实际上“雉”应为“薙”，读“ti”，而不是“zhi”）
