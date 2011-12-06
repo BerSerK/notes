@@ -18,7 +18,7 @@ latex
 
 设置行高::
 　　
-　　\renewcommand{\arraystretch}{1.3}
+ \renewcommand{\arraystretch}{1.3}
 
 .. _other:
 

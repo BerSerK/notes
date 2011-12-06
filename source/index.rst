@@ -15,7 +15,7 @@
 
 :FTP: 
     提供一些linux软件包括Matlab之类的软件，以及一些我自己从六维空间下载下来的电影。
-    如果用流览器不能下载本 站资源, 可以用FTP客户端(例如flashfxp)连接ftp://lab.yeshiwei.com.
+    如果用流览器不能下载本 站资源, 可以用FTP客户端(例如flashfxp)连接 ftp://lab.yeshiwei.com .
 :goagent: 一个帮助你轻松使用GOOGLE(Gmail, Google+...)的 `代理服务 <./proxy.html>`_ 。
 :gappproxy: 另一个帮助你上所有GFW外网站的 `代理服务`_ 。
 :Apache: 本站，使用python的文档工具sphinx生成。同时，apache还给 http://www.cnmath.org 提供了反向代理。
@@ -53,6 +53,7 @@ Some home works:
 	- `Applied PDE <http://notes.yeshiwei.com/APDEhomeworks/>`_
 	- `Learning scipy <http://notes.yeshiwei.com/scipy/>`_
 	- `FFTW学习笔记 </fftw/>`_
+	- `Cluster Algorithms for the Ising Model </metropolis/>`_	
 
 `Latex Short <ftp://lab.yeshiwei.com/Ebooks/Tech/lshort-zh-cn/lshort-zh-cn.pdf>`_
 
