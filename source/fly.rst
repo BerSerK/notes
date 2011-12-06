@@ -12,6 +12,14 @@ reStructuredText Notes
 
 - `Quick reStructuredText <http://docutils.sourceforge.net/docs/user/rst/quickref.html#bullet-lists>`_
 
+
+latex
+========================
+
+设置行高::
+　　
+　　\renewcommand{\arraystretch}{1.3}
+
 .. _other:
 
 Other important notes
