@@ -4,7 +4,7 @@ code='''<script type="text/javascript"><!--
 google_ad_client = "ca-pub-7043162859045080";
 /* notes */
 google_ad_slot = "1612399913";
-google_ad_width = 728;
+google_ad_width = 1103;
 google_ad_height = 90;
 //-->
 </script>
