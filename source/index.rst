@@ -56,6 +56,7 @@ Some home works:
 	- `Cluster Algorithms for the Ising Model </metropolis/>`_	
 
 `Latex Short <ftp://lab.yeshiwei.com/Ebooks/Tech/lshort-zh-cn/lshort-zh-cn.pdf>`_
+`Latex Math symbols <ftp://lab.yeshiwei.com/Ebooks/Tech/Symbols.pdf>`_
 
 互联网上其他地方找我
 ====================
