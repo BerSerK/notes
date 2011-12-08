@@ -570,6 +570,8 @@ Dead Line： 考试当天晚上十二点之前。
 
 最后一个作业
 ````````````````````
+`伪谱方法解boussinsq方程 </pseudo_spectral_method/>`_
+
 
 对于前面两个软件，需要写个代码求解一个稀疏矩阵。
 
@@ -612,6 +614,13 @@ Dead Line： 考试当天晚上十二点之前。
 
 
 Dead Line： 考试当天晚上十二点之前。
+参考资料：
+
+.. [1] Here is a nice `tutorial for pseudo spectral<_static/pseudo-spectral_2.pdf>`_
+.. [2] `Wikipedia page for pseudo spectral method <http://en.wikipedia.org/wiki/Pseudo-spectral_method>`_
+.. [3] Press, WH; Teukolsky, SA; Vetterling, WT; Flannery, BP (2007). "Section 20.7. Spectral Methods". `Numerical Recipes: The Art of Scientific Computing (3rd ed.) <ftp://lab.yeshiwei.com/Ebooks/Programming/Numerical_Recipes__The_Art_of_Scientific_Computing__Third_Edition.pdf>`_ . New York: Cambridge University Press. ISBN 978-0-521-88068-8.
+.. [4] `The course ppt </_statics/parallel_homework.pdf>`_
+
 
 
 练习：非重叠区域分解
