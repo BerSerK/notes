@@ -59,6 +59,7 @@ GPU编程，需要对硬件充分了解，优化内存读写，尽量少的逻�
 编程模型：
  - 节点间，消息通信
  - 节点内，共享内存
+
   1.线程级并行，开发cpu的多核和GPU的纵核并行
   2.CPU与GPU协同计算,编译器自动优化，手工调优。
    
@@ -74,9 +75,11 @@ GPU编程，需要对硬件充分了解，优化内存读写，尽量少的逻�
 - 全球气候
 - 全球大气浅水波
 - 磁约束巨变应用的研究：
+
  1. ITER-CN计划
  2. 与美国能源部“美洲豹”系统比较
  3. 北大，浙大聚变中心联合开发
+
 - 最大规模的湍流的模拟
 - 硅警惕院子模拟与尺度效应分析——分子动力学
 
@@ -112,7 +115,8 @@ xubin{at}nscc-ty.gov.cn
 - 用户根目录 /vol-th/home/
 - 常用软件: /vol-th/software/
 - 常用的动态链接库： /vol-th/
-- Intel 编译器::
+- Intel 编译器
+::
 
  C /opt/intel/cce/10.1.018/
  source /otp/intel/cce/10.1.018/bin/iccevars.sh
@@ -128,11 +132,11 @@ xubin{at}nscc-ty.gov.cn
 - CUDA
   version 4.0 
 - MPI 编译器
- intel  版本::
+intel  版本::
 
   /usr/local/mpi/
 
- gcc 版本::
+gcc 版本::
 
   /usr/local/mpi-gcc/
 
