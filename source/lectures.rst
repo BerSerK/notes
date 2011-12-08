@@ -116,6 +116,7 @@ xubin{at}nscc-ty.gov.cn
 - 常用软件: /vol-th/software/
 - 常用的动态链接库： /vol-th/
 - Intel 编译器
+
 ::
 
  C /opt/intel/cce/10.1.018/
@@ -132,6 +133,7 @@ xubin{at}nscc-ty.gov.cn
 - CUDA
   version 4.0 
 - MPI 编译器
+
 intel  版本::
 
   /usr/local/mpi/
@@ -148,37 +150,46 @@ gcc 版本::
  putty, secureCRT, Xmanage, SSHSecureShell等等
 
 - vpn登录
+
  推荐使用ie浏览器
  1. 添加可信站点，工具-》Ineternet选项-》安全-》可信站点-》站点。
  2. 自定义可信站点 安全级别 确定开启ACtivex选项
  3. 访问Web地址 https://vpn.nscc-tj.cn 登录过程中允许插件运行
 
 - 终端登录：
+
  1. 通过vpn页面查看登陆权限
  2. 打开终端软件，输入可用的资源字符串用户名,密码
- 3. 文件传输登录
-  协议：ssh2
+ 3. 文件传输登录,协议：ssh2
 
 
 作业管理：
 
 - 资源权限（GrpJobs,Grpodes,GrpCPUs,GrpSubmit,GrpCPUMins）
-- 分区（alloc idle)::
+- 分区（alloc idle)
+
+::
 
  yhi
 
-- 作业状态(PD R)::
+- 作业状态(PD R)
+
+::
  
  yhq
 
-- 队列(AssociationResourceLimit Resources Priority)::
+- 队列(AssociationResourceLimit Resources Priority)
+
+::
 
  yhq
 
 - 作业提交：
 
- 三种方式： yhrun, yhbatch yhalloc
-1. yhrun 交互作业提交方式，关闭当前终端会导致程序退出::
+三种方式： yhrun, yhbatch yhalloc
+1. yhrun 交互作业提交方式，关闭当前终端会导致程序退出
+
+::
  
  yhrun -n 240 -N 20 -p TH_NET ./a.out
  -n 进程数
@@ -201,7 +212,9 @@ gcc 版本::
 
  退出是需要在当前终端下输出exit。
  
-- 取消已经提交的作业::
+- 取消已经提交的作业
+
+::
 
  yhq
  yhcancel [id]
