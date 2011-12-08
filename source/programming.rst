@@ -616,10 +616,10 @@ Dead Line： 考试当天晚上十二点之前。
 Dead Line： 考试当天晚上十二点之前。
 参考资料：
 
-.. [1] Here is a nice `tutorial for pseudo spectral<_static/pseudo-spectral_2.pdf>`_
+.. [1] Here is a nice `tutorial for pseudo spectral <_static/pseudo-spectral_2.pdf>`_
 .. [2] `Wikipedia page for pseudo spectral method <http://en.wikipedia.org/wiki/Pseudo-spectral_method>`_
 .. [3] Press, WH; Teukolsky, SA; Vetterling, WT; Flannery, BP (2007). "Section 20.7. Spectral Methods". `Numerical Recipes: The Art of Scientific Computing (3rd ed.) <ftp://lab.yeshiwei.com/Ebooks/Programming/Numerical_Recipes__The_Art_of_Scientific_Computing__Third_Edition.pdf>`_ . New York: Cambridge University Press. ISBN 978-0-521-88068-8.
-.. [4] `The course ppt </_statics/parallel_homework.pdf>`_
+.. [4] `The course ppt </_static/parallel_homework.pdf>`_
 
 
 
