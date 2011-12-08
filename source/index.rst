@@ -35,7 +35,7 @@ Contents:
    :glob:
    :numbered:
 
-   programming
+   programming/index
    linuxtips
    mathnotes
    fftw

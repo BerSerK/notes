@@ -1,11 +1,8 @@
-**************************************************
-My Programming Notes
-**************************************************
-
 .. index:: MPI
 
+**************************************************
 MPI
-===========================
+**************************************************
 
 Rocommended Materials:
 
@@ -693,30 +690,3 @@ Dead Line： 考试当天晚上十二点之前。
 - 另个节点并行；
 - 使用五点中心差分格式；
 - 子区域内部矩阵求解方法自选；
-
-
-MATLAB
-==============
-
-handle files::
- 
- % Create a file with an exponential table
- x = 0:.1:1;
- y = [x; exp(x)];
-
- fid = fopen('exp.txt', 'w');
- fprintf(fid, '%6.2f %12.8f\n', y);
- fclose(fid);
-
- % Read the data, filling A in column order
- % First line of the file:
- %    0.00    1.00000000
-
- fid = fopen('exp.txt');
- A = fscanf(fid, '%g %g', [2 inf]);
- fclose(fid);
- 
- % Transpose so that A matches
- % the orientation of the file
- A = A';
-
