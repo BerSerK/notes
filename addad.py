@@ -9,7 +9,8 @@ google_ad_height = 90;
 </script>
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>'''
+</script>
+'''
 
 code1='''<script type="text/javascript">
 
@@ -23,7 +24,8 @@ code1='''<script type="text/javascript">
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>'''
+</script>
+'''
 
 def ad(f):
     origin=open(f,'r')
