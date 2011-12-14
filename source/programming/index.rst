@@ -8,4 +8,5 @@ Programming notes
 
    mpi
    matlab
+   fftw
 

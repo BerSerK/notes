@@ -38,7 +38,6 @@ Contents:
    programming/index
    linuxtips
    mathnotes
-   fftw
    lectures
    sphinx
    proxy
