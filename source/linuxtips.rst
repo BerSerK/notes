@@ -318,3 +318,42 @@ TERMINAL COMMANDS::
  ctrl + c
  dir
  aircrack-ng [filename]
+
+Extract audio from video
+=================================================
+
+假如在欣赏电影过程中出现了一段美妙的插曲（特别是印度电影，一般都会有很多歌舞片段），很多时候我们都想将其截取下来并作为mp3格式保存！利用mencoder可以很容易的实现这一愿望::
+
+ mencoder -o out.mp3 -ovc frameno -oac mp3lame -lameopts cbr:br=128 -of rawaudio -ss 1:30 -endpos 2:45 test.rmvb
+
+在实际操作中，用户需要更改的就是那两个时间参数值了！该命令参数的详细说明如下::
+
+ -o out.mp3 输出的目标文件名称
+ -ovc frameno 不处理视频编码
+ -oac mp3lame 输出的音频编码格式为mp3
+ -lameopts cbr:br=128 音频附件选项，cbr(常量比特率)编码格式，音频码流为128bps(对于mp3来说，128已经足够了)
+ -of rawaudio 输出文件为原始音频流
+ -ss 1:30 音频截取的起始时间(表示从影片的第1分30秒开始截取)
+ -endpos 2:45 预截取音频的长度(表示预截取的音频长度是2分45秒，那么可以计算出其结束时间是4:15)
+ test.rmvb 输入源文件
+
+举个简单例子：如果想截取影片中1:28:10~1:30:25这段时间的音频，则 -ss参数的值应该是88:10(1小时28分等于88分)，-endpos参数的值应该是2:15(就是上面两个时间段的差值了)，然后将实际参数值代入上面命令即可！
+
+上面的示例选用的输入源文件是rmvb格式，当然了，像avi、mp4等格式的多媒体文件肯定也是可行的！
+
+上面展示的仅是提取音频，如果想保存为MTV，那就更简单了：
+对于rmvb文件：mencoder -o mtv.avi -ovc lavc -oac mp3lame -ss 1:30 -endpos 2:45 test.rmvb
+对于 avi 文件：mencoder -o mtv.avi -ovc copy -oac copy -ss 1:30 -endpos 2:45 test.rmvb
+
+-ss参数使用参考示例::
+
+ -ss 10 从10秒开始
+ -ss 10:10 从10分10秒开始
+ -ss 1:10:10 从1小时10分10秒开始
+
+-endpos参数使用参考示例::
+
+ -endpos 10 编码的时间为10秒
+ -endpos 10:10 编码的时间为10分10秒
+ -endpos 1:10:10 编码的时间为1小时10分10秒
+ -endpos 10mb 编码数据量为10M
