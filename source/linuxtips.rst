@@ -163,6 +163,15 @@ auto-complete
 
 http://cx4a.org/software/auto-complete/#Downloads
 
+无法打开ibus输入法的问题
+----------------------------
+
+通过把 LC_CTYPE 设置为 zh_CN 才可以在 Emacs 里使用输入法，例如，可以通过如下方式启动 Emacs ：
+
+LC_CTYPE=zh_CN.utf8 emacs
+
+http://blog.pluskid.org/?p=328
+
 TexLive Tips
 ==================
 
