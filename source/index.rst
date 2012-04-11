@@ -21,6 +21,7 @@
 :Apache: 本站，使用python的文档工具sphinx生成。同时，apache还给 http://www.cnmath.org 提供了反向代理。
 :osqa: http://lab.yeshiwei.com 这是一个开源的问答网站. Just For Fun.
 :Music: http://notes.yeshiwei.com/Music/ 我喜欢的一些音乐 
+:Moive: http://notes.yeshiwei.com/Movie/ 杂七杂八的一些电影、视频。
 :SVN: 托管我的一些代码以及其他的一些笔记之类的东西，可以通过svn匿名获取: svn checkout svn://lab.yeshiwei.com/svnrepos/
 :Packages: `FFTW </fftwdoc/html/>`_ `deal.II </dealII/>`_
 
@@ -60,15 +61,21 @@ Some home works:
 互联网上其他地方找我
 ====================
 
-- `Blog <http://www.yeshiwei.com>`_
-- `Math Forum <http://www.cnmath.org>`_ 支持Latex公式的中文数学论坛。
-- `Facebook <http://www.facebook.com/people/%E5%8F%B6%E6%97%B6%E7%82%9C/100001169251731>`_
-- `Twitter <http://www.twitter.com/yeshiwei>`_
-- `微博 <http://www.weibo.com/yeshiwei>`_
-- `人人 <http://www.renren.com/yeshiwei>`_
-- `Gmail <yeshiwei.math@gmail.com>`_
-- `About.me <http://about.me/yeshiwei>`_
 
++-------------+-------------+------------+-------------+
+|     Blog_   | Math-Forum_ | Facebook_  | Gmail_      |
++-------------+-------------+------------+-------------+
+|   Twitter_  |  微博_      | 人人_      | About.me_   |
++-------------+-------------+------------+-------------+
+
+.. _Blog: http://www.yeshiwei.com
+.. _Math-Forum: http://www.cnmath.org
+.. _Facebook: http://www.facebook.com/people/%E5%8F%B6%E6%97%B6%E7%82%9C/100001169251731
+.. _Gmail: yeshiwei.math@gmail.com
+.. _Twitter: http://www.twitter.com/yeshiwei
+.. _微博: http://www.weibo.com/yeshiwei
+.. _人人: http://www.renren.com/yeshiwei
+.. _About.me: http://about.me/yeshiwei
 
 Indices and tables
 ==================
