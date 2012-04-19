@@ -61,6 +61,11 @@ Tubes
 
 `Four order <http://www.mf100.org/4-4-4/4-4-4.php>`_
 
+Way to Open source comunity
+==================================
+`14 Ways to Contribute to Open Source without Being a Programming Genius or a Rock Star <http://www.softwarequalityconnection.com/2012/03/14-ways-to-contribute-to-open-source-without-being-a-programming-genius-or-a-rock-star/>`_
+
+
 List of numerical analysis software
 ==================================================
 

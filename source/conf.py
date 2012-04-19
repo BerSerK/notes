@@ -110,7 +110,7 @@ html_title = "Alex\'s Notes"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+# html_logo = None
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -132,7 +132,7 @@ html_static_path = ['_static']
 
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
-   '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html','adsense.html'],
+   '**': ['googleplus.html','globaltoc.html', 'sourcelink.html', 'searchbox.html','adsense.html','jiathis.html'],
    'using/windows': ['windowssidebar.html', 'searchbox.html'],
 }
 # Additional templates that should be rendered to pages, maps page names to
