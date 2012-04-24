@@ -4,6 +4,13 @@
 A collection of my linux tips
 ******************************************
 
+rm argument list too long
+===============================
+
+USE find::
+
+ find . -name '*.txt' | xargs rm
+
 Setup commands for Service on my desktop
 ======================================================
 
