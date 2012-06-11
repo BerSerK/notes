@@ -36,7 +36,9 @@ Goagent
 hosts
 =============================
 
-当然许多网站是可以通过改hosts来上其ipv6服务器的。这是我的 `hosts <./_static/hosts>`_ 你可以直接下载覆盖你的hosts文件。如果你的电脑是联通ipv6的话，加入我这个hosts文件之后可以登录包括facebook，twitter，google，youtube等国外主流网站
+当然许多网站是可以通过改hosts来上其ipv6服务器的。这是我的 `hosts <./_static/hosts>`_ 你可以直接下载覆盖你的hosts文件。如果你的电脑是联通ipv6的话（直接连接北大校园网都是连通ipv6的），加入我这个hosts文件之后可以登录包括facebook，twitter，google，youtube等国外主流网站::
+    windows hosts文件的位置是：C:\WINDOWS\system32\drivers\etc\hosts
+    linux的是：/etc/hosts
 
 .. _GFW:
 
