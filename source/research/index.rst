@@ -1,4 +1,4 @@
-Programming notes
+Research Notes
 ==================================================
 
 .. toctree::
@@ -6,4 +6,4 @@ Programming notes
    :glob:
    :numbered:
 
-   vsh.rst
+   vsh
