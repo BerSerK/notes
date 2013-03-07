@@ -157,6 +157,19 @@ Use Chinse in Doxygen Latex:
 Emacs tips
 ================
 
+install under ubuntu
+-----------------------
+
+comand & package::
+
+ sudo apt-get install emacs ecb auctex doxymacs
+
+my .emacs configure file
+-----------------------------
+
+`.emacs <_static/.emacs>`_
+
+
 doxymacs
 -----------------------
 
