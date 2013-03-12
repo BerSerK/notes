@@ -386,3 +386,40 @@ Extract audio from video
  -endpos 10:10 编码的时间为10分10秒
  -endpos 1:10:10 编码的时间为1小时10分10秒
  -endpos 10mb 编码数据量为10M
+
+repair grub after reinstall win7
+============================================================
+
+When you install Windows, Windows assumes it's the only OS on the machine--or at least it doesn't account for Linux. So, it replaces grub with its own boot loader. What you have to do is replace the Windows boot loader with grub. I've seen various instructions for replacing grub by mucking around with grub commands or some such, but to me the easiest way is to simply chroot into your install and run update-grub. chroot is great because it allows you to work on your actual install, instead of trying to redirect things here and there. It's really clean.
+
+Here's how:
+
+Boot from the live CD.
+Determine the partition number of your main partition. GParted can help you here. I'm going to assume in this answer that it's /dev/sda2, but make sure you use the correct partition number for your system!
+Mount your partition:
+
+sudo mount /dev/sda2 /mnt  # make sure that sda2 is correct!
+Bind mount some other necessary stuff:
+
+for i in /sys /proc /run /dev; do sudo mount --bind "$i" "/mnt$i"; done
+chroot into your Ubuntu install:
+
+sudo chroot /mnt
+At this point, you're in your install, not the live CD, and running as root. Update grub:
+
+update-grub
+If you get errors, go to step 7. (Otherwise, it is optional.)
+
+Depending on your situation, you might have to reinstall grub:
+
+grub-install /dev/sda
+update-grub # I'm not sure if this is necessary, but it doesn't hurt.
+If everything worked without errors, then you're all set:
+
+exit
+sudo reboot
+At this point, you should be able to boot normally.
+
+If you cannot boot normally, and didn't do step 7 because there were no error messages, try again with step 7.
+
+Sometimes giving GRUB2 the correct configuration for your partitions is not enough, and you must actually install it (or reinstall it) to the Master Boot Record, which step 7 does. Experience helping users in chat has shown that step 7 is sometimes necessary even when no error messages are shown.
