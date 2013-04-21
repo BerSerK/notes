@@ -10,3 +10,4 @@ Programming notes
    matlab
    fftw
    tc
+   swig_python
