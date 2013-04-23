@@ -423,3 +423,8 @@ At this point, you should be able to boot normally.
 If you cannot boot normally, and didn't do step 7 because there were no error messages, try again with step 7.
 
 Sometimes giving GRUB2 the correct configuration for your partitions is not enough, and you must actually install it (or reinstall it) to the Master Boot Record, which step 7 does. Experience helping users in chat has shown that step 7 is sometimes necessary even when no error messages are shown.
+
+Use Monit to keep application alive
+============================================================
+
+`Monit <http://mmonit.com/monit/documentation/monit.html>`_
