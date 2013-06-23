@@ -38,12 +38,14 @@ Contents:
 
    programming/index
    research/index
+   scipy/index   
    linuxtips
    mathnotes
    lectures
    sphinx
    proxy
    fly
+
 
 Other Notes
 ===============
