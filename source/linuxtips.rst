@@ -324,6 +324,33 @@ A note from one of our readers: Depending on your version of SSH you might also 
  Change the permissions of .ssh to 700
  Change the permissions of .ssh/authorized_keys2 to 640
 
+Some Problems
+---------------------------------
+
+1. Error: Agent admitted failure to sign
+   For most users, simply running ssh-add to load your keys into the SSH agent will fix this issue:
+
+    $ssh-add
+    Enter passphrase for /home/you/.ssh/id_rsa: [tippy tap]
+    Identity added: /home/you/.ssh/id_rsa (/home/you/.ssh/id_rsa)
+
+2. You need to verify the permissions of the authorized_keys file and the folder / parent folders in which it is located::
+
+    cd ~
+    cd .ssh
+    chmod og-rw authorized_keys
+    chmod a-x authorized_keys
+    cd ~
+    chmod 700 .ssh
+
+You also need to change/verify the permissions of your home directory. SSH doesn't want it to be too open. Let's say your username is foobar:
+
+    cd /home
+    chmod go-wrx foobar
+
+For more information see http://www.openssh.org/faq.html#3.14
+
+
 How to hack wireless
 ==========================
 
