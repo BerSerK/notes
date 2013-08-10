@@ -279,6 +279,19 @@ evince,okular, epdfview的pdf功能均由xpdf的分支poppler提供。poppler官
 
 修改为其他的中文字体名称应该也是可以的。
 
+利用autossh 监视ssh 隧道
+=================================================
+
+自从买了vps就一直在用ssh隧道做端口转发挂代理:
+
+   ssh -L 2600:vps.yeshiwei.com:3128 alex@vps.yeshiwei.com -g -N
+
+可是这个进程经常自己就断开，查到 `autossh <http://www.harding.motd.ca/autossh/>`_ 可以监视ssh连接，并保持ssh连接，具体命令:
+
+   autossh  -M 9000 -f -L 2600:vps.yeshiwei.com:3128 alex@vps.yeshiwei.com -g -N
+
+其中-M 后面是监听端口，随便设置一个没有在用的端口就行了。 -f 表示后台运行，既然后台运行就只能用ssh-agent登录了。
+
 设置 SSH 不用密码登录另一台电脑
 ============================================================
 
