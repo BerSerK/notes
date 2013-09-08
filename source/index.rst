@@ -17,11 +17,11 @@
 .. :goagent: 一个帮助你轻松使用GOOGLE(Gmail, Google+...)的 `代理服务 <./proxy.html>`_ 。
 .. :gappproxy: 另一个帮助你上所有GFW外网站的 `代理服务`_ 。
 
-:Music: http://notes.yeshiwei.com/Music/ 我喜欢的一些音乐 
-:Ebooks: http://notes.yeshiwei.com/Ebooks/ 一些电子书
-:Moive: http://notes.yeshiwei.com/Movie/ 杂七杂八的一些电影、视频。
-:Pictures: http://notes.yeshiwei.com/Picture/ 
-:SVN: 托管我的一些代码以及其他的一些笔记之类的东西，可以通过svn匿名获取: svn checkout svn://lab.yeshiwei.com/svnrepos/
+.. :Music: http://notes.yeshiwei.com/Music/ 我喜欢的一些音乐 
+.. :Ebooks: http://notes.yeshiwei.com/Ebooks/ 一些电子书
+.. :Moive: http://notes.yeshiwei.com/Movie/ 杂七杂八的一些电影、视频。
+.. :Pictures: http://notes.yeshiwei.com/Picture/ 
+.. :SVN: 托管我的一些代码以及其他的一些笔记之类的东西，可以通过svn匿名获取: svn checkout svn://lab.yeshiwei.com/svnrepos/
 
 .. :Packages: `FFTW </fftwdoc/html/>`_ `deal.II </dealII/>`_
 
@@ -39,6 +39,7 @@ Contents:
    programming/index
    research/index
    scipy/index   
+   Music/index
    linuxtips
    mathnotes
    lectures
