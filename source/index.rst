@@ -11,6 +11,7 @@
 ******************************
 
 
+=======
 .. :FTP: 
     提供一些linux软件包括Matlab之类的软件，以及一些我自己从六维空间下载下来的电影。
     如果用流览器不能下载本 站资源, 可以用FTP客户端(例如flashfxp)连接 ftp://lab.yeshiwei.com .
@@ -24,6 +25,7 @@
 .. :SVN: 托管我的一些代码以及其他的一些笔记之类的东西，可以通过svn匿名获取: svn checkout svn://lab.yeshiwei.com/svnrepos/
 
 .. :Packages: `FFTW </fftwdoc/html/>`_ `deal.II </dealII/>`_
+
 
 .. _aboutme:
 

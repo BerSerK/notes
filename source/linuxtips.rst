@@ -468,3 +468,12 @@ Use Monit to keep application alive
 ============================================================
 
 `Monit <http://mmonit.com/monit/documentation/monit.html>`_
+
+
+Activate Java for Chrome in Ubuntu 
+==================================================
+
+After download and uncompress the tar-ball to /opt/java/jre1.6.0_19, follow this::
+   sudo mkdir /opt/google/chrome/plugins
+   cd /opt/google/chrome/plugins
+   ln -s /opt/java/jre1.6.0_19/lib/i386/libnpjp2.so
