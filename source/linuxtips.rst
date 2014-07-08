@@ -113,7 +113,37 @@ Add the following lines to squid.conf::
     cache_peer <ip.of.webserver2> parent 80 0 no-query originserver name=server_1
     acl sites_server_1 dstdomain <domain.for.webserver2>
     cache_peer_access server_1 allow all
-    
+
+Minimal setup for a auth squid
+------------------------------------------
+
+Install squid3::
+
+ sudo apt-get install squid3
+
+/etc/squid3/squid.conf::
+
+ auth_param digest program /usr/lib/squid3/digest_pw_auth -c /etc/squid3/passwords
+ auth_param digest realm proxy
+ acl authenticated proxy_auth REQUIRED
+ http_access allow authenticated
+ http_port 3128
+
+On Ubuntu 14.04, digest_pw_auth has been renamed to digest_file_auth, i.e. use::
+
+ auth_param digest program /usr/lib/squid3/digest_file_auth -c /etc/squid3/passwords
+
+These 5 lines, sure beats the INSANE 5539 LOC of squid.conf.dpkg-dist and I found a bug in the process!
+
+Setting up a user::
+
+ htdigest -c /etc/squid3/passwords proxy user
+
+Drop the -c for your subsequent users.
+
+tail -f /var/log/squid3/access.log to see who is using your proxy.
+
+http://dabase.com/blog/Minimal_squid3_proxy_configuration/
 
 
 Little softwares
