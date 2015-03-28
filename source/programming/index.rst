@@ -8,6 +8,7 @@ Programming notes
 
    mpi
    matlab
-   fftw
    tc
    swig_python
+   FFTW/index
+   scipy/index
