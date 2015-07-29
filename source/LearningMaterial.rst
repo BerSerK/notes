@@ -66,13 +66,14 @@ What you can do, when you have got all the above skills:
 3. Get to be a Data Scientist.
 4. Start your own mini Hedge Fund within a few Months. Let me show you the steps:
 
-   a. Go to WorldQuant websim system to practice and develop some usefull strategies;
+   a. Go to WorldQuant websim system to practice and develop some useful strategies;
    b. Buy a VPS from `Budget VM`_ , `Digital Ocean`_ or `Linode <http://www.linode.com/‎>`_, install Ubuntu on it;
    c. Go to `OANDA <http://www.oanda.com>`_ , and sign up an practice account;
    d. Learn about the free `API of OANDA <http://developer.oanda.com/rest-live/introduction/>`_;
    e. Download historical data of your interested Investment Target (EUR/USD, Gold/USD, etc. suggested.);
    f. Back test your strategies developed at WorldQuant websim on these historical data.
-   g. Develop your trading bot with the OANDA free API, and host it on your VPS, then make money automatically.
+   g. Develop your trading bot with the OANDA free API, and host it on your VPS, then put some money into your account and make money automatically.
+   h. When you get some trading experience and $10000, you can shift your account to `Interactive Brokers <https://www.interactivebrokers.com/>`_ . And do some real trading.
 
 Just kidding. GLHF with your learning.
 
