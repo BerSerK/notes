@@ -33,7 +33,7 @@
    c. Documentation Tools.
       
       I. `Python-Sphinx <http://sphinx-doc.org/>`_ Sphinx is a tool that makes it easy to create intelligent and beautiful documentation, written by Georg Brandl and licensed under the BSD license. And it's the tool `this site <http://notes.yeshiwei.com>`_ built with.
-      II. `Doxygen <http://www.stack.nl/~dimitri/doxygen/>`_ Doxygen is the de facto standard tool for generating documentation from annotated C++ sources, but it also supports other popular programming languages such as C, Objective-C, C#, PHP, Java, Python, IDL (Corba, Microsoft, and UNO/OpenOffice flavors), Fortran, VHDL, Tcl, and to some extent D.
+      II. `Doxygen <http://www.stack.nl/~dimitri/doxygen/>`_ is the de facto standard tool for generating documentation from annotated C++ sources, but it also supports other popular programming languages such as C, Objective-C, C#, PHP, Java, Python, IDL (Corba, Microsoft, and UNO/OpenOffice flavors), Fortran, VHDL, Tcl, and to some extent D.
 
 6. Suggested Reading:
 
@@ -42,5 +42,5 @@
    c. 去 `知乎 <http://www.zhihu.com>`_ 去关注你感兴趣的人和话题.
 
 
-.. [1] 如果对这种量化流派感兴趣建议去找九坤投资(Ubiquant), 三年二十倍从10M做到0.2B不是吹的. 要求比较高, 一般只要清北研究生.
+.. [1] 如果对这种量化流派感兴趣建议去找九坤投资(Ubiquant), 三年二十倍从10M做到0.2B不是吹的. 要求比较高, 一般只要清北研究生. 有实力的话, 实习生都能拿到百万年薪哟.
 .. [2] 对这个感兴趣的可以投简历到 quantbjhr@gmail.com 具体要求请点击 `量化招募 <quant_recruiting.html>`_
