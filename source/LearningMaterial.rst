@@ -23,6 +23,12 @@
    
    a. `WebSim of WorldQuant <https://websim.worldquantchallenge.com/>`_ provides many usefull videos and ideas. [1]_
    b. `Quantitative Equity Portfolio Management <http://book.douban.com/subject/2799221/>`_ ( `证券组合定量管理 <http://book.douban.com/subject/6715019/>`_ ) shows another Genre of Quantitative Finance different from the " `WorldQuant <https://www.worldquant.com/>`_ way". [2]_
+   c. Learn from your practical trading experience.
+   d. Dig ideas from forums, social medias.
+   e. Find wisdom from Books, e. g. `股票大作手回忆录 <http://book.douban.com/subject/5382213/>`_ , `短线交易大师 <http://book.douban.com/subject/6307974/>`_ , `海龟交易法则 <http://book.douban.com/subject/5377571/>`_
+   f. Get intelligence from conversation with smart man.
+   g. Some strategy research paper also provides many useful trading rules.
+
 
 5. Other skills:
 
@@ -51,6 +57,7 @@
    d. `Solidot <http://solidot.org/>`_;
    e. `浪潮之巅 <https://book.douban.com/subject/6709783/>`_;
    f. `黑客与画家 <https://book.douban.com/subject/6021440/>`_.
+   g. `数学、常识和好运——2014年美国数学协会举办的AMS上西蒙斯的发言 <http://mp.weixin.qq.com/s?__biz=MjM5MDIwODQ0OA==&mid=202900378&idx=1&sn=87d64a84b4d880e94737867d622c4e94&scene=1&key=0acd51d81cb052bceda9f4350afb8400c04a8a67e7448b3d74e3bd994f0f3036f926b9bf35d3c5b1d838c4808403f1ea&ascene=0&uin=NTU3ODAwNQ%3D%3D&devicetype=iMac+MacBookAir6%2C2+OSX+OSX+10.10.3+build(14D136)&version=11020012&pass_ticket=AmmbBc3DYCCkpQkWRTyN19NAcKWFPUm%2FKBYc1Tebj90%3D>`_ , `数学、常识和好运——2014年美国数学协会举办的AMS上西蒙斯的发言（下） <http://mp.weixin.qq.com/s?__biz=MjM5MDIwODQ0OA==&mid=203442012&idx=2&sn=412d007de3d5b0d94d3b036e2e2a89a8&scene=1&key=0acd51d81cb052bc50d70b8bd542e18980f550fce0e2db40ba4c8a55f3c39ce3608d0dc90bdab087fafc1befcd74834b&ascene=0&uin=NTU3ODAwNQ%3D%3D&devicetype=iMac+MacBookAir6%2C2+OSX+OSX+10.10.3+build(14D136)&version=11020012&pass_ticket=AmmbBc3DYCCkpQkWRTyN19NAcKWFPUm%2FKBYc1Tebj90%3D>`_
 
 What you can do, when you have got all the above skills:
 
@@ -69,6 +76,14 @@ What you can do, when you have got all the above skills:
 
 Just kidding. GLHF with your learning.
 
+学习做投资犹如练习华山剑法, 量化就是剑宗, 基本面分析就是气宗. 真正大咖如风清扬, 表面虽然是剑宗, 实际他的气功也是一等一的. 要成事, 必须剑气并重.
 
 .. [1] 如果对这种量化流派感兴趣建议去找九坤投资(Ubiquant), 三年二十倍从10M做到0.2B不是吹的. 要求比较高, 一般只要清北研究生. 有实力的话, 实习生都能拿到百万年薪哟.
 .. [2] 对这个感兴趣的可以投简历到 quantbjhr@gmail.com 具体要求请点击 `量化招募 <quant_recruiting.html>`_
+
+
+.. Comment from 马文玉: 中午聊过之后，感觉心里有些激动，非常感谢学长的指点与分享。
+   因为刚刚决定往量化方面发展不久，之前身边也没有学长或者朋友精通金融工程，所以对这个发展方向需要的知识储备以及编程、数学方面的要求都并不很了解，虽然在websim上看了几篇编写alpha策略的文章，但仍旧觉得懵懵懂懂，不知道一个合格的策略应当怎样编写，甚至都不了解应该参考哪些资料。
+   看到学长的分享，颇有一些茅塞顿开的感觉，不仅对“金融工程”专业有了更为具体全面的感知，比如对数学的哪一方面要求比较高、计算机中哪些语言比较实用，更看到自己在各个方面有哪些差距需要弥补，应该怎样弥补。看到了之后努力的方向。学长的推荐，可以说，既丰富又实用。
+   除了弥补认知之外，学长以往的“奇遇”，也让我认识到，有些时候功利地追求大多数人所追求的并不明智。最重要的，是做好一件事，有一技之长，成为一个方面的专家，才最被人认可，引发了我对求学新的思考。
+   总而言之，今天的一番交流，让我受益良多，真是万分感谢！
