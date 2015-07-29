@@ -25,7 +25,7 @@
    b. Text Editor: 
 
       I. `GNU Emacs <https://en.wikipedia.org/wiki/Emacs>`_ is an extensible, customizable text editor—and more.
-      II. `Vim <https://en.wikipedia.org/wiki/Vim_(text_editor)>` Vim (/vɪm/; a contraction of Vi IMproved) is a clone of Bill Joy's vi editor for Unix.
+      II. `Vim <https://en.wikipedia.org/wiki/Vim_(text_editor)>`_ (/vɪm/; a contraction of Vi IMproved) is a clone of Bill Joy's vi editor for Unix.
       III. `Sublime Text <http://www.sublimetext.com/>`_ is a sophisticated text editor for code, markup and prose.
       
       I'm an Emacs User since 2010. 俗话说: "Vim是编辑器之神, Emacs是神之编辑器." For new coder, I recommend you to start with Sublime which is more fashion 'and more'.
