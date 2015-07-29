@@ -73,7 +73,7 @@ What you can do, when you have got all the above skills:
    e. Download historical data of your interested Investment Target (EUR/USD, Gold/USD, etc. suggested.);
    f. Back test your strategies developed at WorldQuant websim on these historical data.
    g. Develop your trading bot with the OANDA free API, and host it on your VPS, then put some money into your account and make money automatically.
-   h. When you get some trading experience and $10000, you can shift your account to `Interactive Brokers <https://www.interactivebrokers.com/>`_ . And do some real trading.
+   h. When you get some trading experience and 10000 USD, you can shift your account to `Interactive Brokers <https://www.interactivebrokers.com/>`_ . And do some real trading.
 
 Just kidding. GLHF with your learning.
 
