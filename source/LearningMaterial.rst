@@ -1,5 +1,5 @@
-推荐学习材料
-========================================
+推荐学习材料, 全学会之后可以自己一个人起一个微型Hedge Fund你信不信?
+================================================================================
 
 1. 统计, 大数据(Big Data), 机器学习, 人工智能 (这几个概念在我们数学出身的人看来都是一个东西): 
 
@@ -26,7 +26,7 @@
 
 5. Other skills:
 
-   a. Linux/Unix, Just get one and use it and google the problems you meet;
+   a. Linux/Unix, Just get one and use it and google the problems you meet. Maybe you can buy a VPS and host the services(shadowsocks, blog, trading bot etc.) you need on it. `Digital Ocean <https://www.digitalocean.com/?refcode=60fc2dbd0ad6>`_ have a lowest $5/month plan, `Budget VM <https://www.budgetvm.com/account/aff.php?aff=1421>`_ provides plan with price as low as $15/year; 
    b. Version Control, `Git <https://en.wikipedia.org/wiki/Git_(software)>`_ (/ɡɪt/) is a distributed revision control system with an emphasis on speed, data integrity, and support for distributed, non-linear workflows. `Github <https://github.com/>`_ is a web-based Git repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features. And you can learn Git In a quick way from `Pro Git <http://git-scm.com/book/zh/v1>`_ ;
    c. Text Editor: 
 
@@ -51,6 +51,24 @@
    d. `Solidot <http://solidot.org/>`_;
    e. `浪潮之巅 <https://book.douban.com/subject/6709783/>`_;
    f. `黑客与画家 <https://book.douban.com/subject/6021440/>`_.
+
+What you can do, when you have got all the above skills:
+
+1. Go to an IT company like Google, Facebook, BAT to be a Computer Science Engineer.
+2. Go to a Quantitative Investment Company and turn into a Quantitative Trader or Back-End Developer.
+3. Get to be a Data Scientist.
+4. Start your own mini Hedge Fund within a few Months. Let me show you the steps:
+
+   a. Go to WorldQuant websim system to practice and develop some usefull strategies;
+   b. Buy a VPS from `Budget VM`_ , `Digital Ocean`_ or `Linode <http://www.linode.com/‎>`_, install Ubuntu on it;
+   c. Go to `OANDA <http://www.oanda.com>`_ , and sign up an practice account;
+   d. Learn about the free `API of OANDA <http://developer.oanda.com/rest-live/introduction/>`_;
+   e. Download historical data of your interested Investment Target (EUR/USD, Gold/USD, etc. suggested.);
+   f. Back test your strategies developed at WorldQuant websim on these historical data.
+   g. Develop your trading bot with the OANDA free API, and host it on your VPS, then make money automatically.
+
+Just kidding. GLHF with your learning.
+
 
 .. [1] 如果对这种量化流派感兴趣建议去找九坤投资(Ubiquant), 三年二十倍从10M做到0.2B不是吹的. 要求比较高, 一般只要清北研究生. 有实力的话, 实习生都能拿到百万年薪哟.
 .. [2] 对这个感兴趣的可以投简历到 quantbjhr@gmail.com 具体要求请点击 `量化招募 <quant_recruiting.html>`_
