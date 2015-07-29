@@ -48,7 +48,8 @@ Contents:
    sphinx
    proxy
    fly
-
+   LearningMaterial
+   quant_recruiting
 
 Other Notes
 ===============
