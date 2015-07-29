@@ -38,6 +38,7 @@ Contents:
 
    programming/index
    research/index
+   quant/index
    pseudo_spectral_method/index
    ASA_homeworks/index
    Music/index
@@ -49,7 +50,7 @@ Contents:
    proxy
    fly
    LearningMaterial
-   quant_recruiting
+
 
 Other Notes
 ===============
