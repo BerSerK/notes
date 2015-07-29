@@ -5,8 +5,8 @@
 2. Coding, we need to learn at least two Programming Language, a low level one like C++, and a high level one Python. We can develop compute-intensive projects with the low level one, and we can finish projects in a fast way with the high level one. :
 
    a. C++ Primer. Hell not C++ Primer Plus. If you don't want to be a pure C++ Programmer, any C++ book is OK.
-   b. `Python <https://docs.python.org/2/tutorial/index.html>`_ as a scripting language, can highly enhance our working efficiency.
-   c. Maybe you will be like to know about R, MATLAB, Mathematica, Fortran, Java. Even you need to know something about Erlang, LISP, Haskell, which are known as `Functional programming <https://en.wikipedia.org/wiki/Functional_programming>`_ .
+   b. `Python <https://www.python.org/>`_ as a scripting language, can highly enhance our working efficiency. You can Learn it from `Python Tutorial<https://docs.python.org/2/tutorial/index.html>`_ in a week, if you know some thing about programming.
+   c. Maybe you will be like to know about R, MATLAB, Mathematica, Fortran, Java, Ruby. Even you need to know something about Erlang, LISP, Haskell, which are known as `Functional programming <https://en.wikipedia.org/wiki/Functional_programming>`_ .
 
 3. Algorithm: 
 
