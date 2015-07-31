@@ -28,9 +28,14 @@
    e. Find wisdom from Books, e. g. `股票大作手回忆录 <http://book.douban.com/subject/5382213/>`_ , `短线交易大师 <http://book.douban.com/subject/6307974/>`_ , `海龟交易法则 <http://book.douban.com/subject/5377571/>`_
    f. Get intelligence from conversation with smart man.
    g. Some strategy research paper also provides many useful trading rules.
+   h. `量化投资 <http://book.douban.com/subject/10583167/>`_ 是国内第一本量化投资的专著, 值得买来收藏. 作者 `丁鹏博士 <http://weibo.com/dingpeng999>`_ 帅得不可方物.
 
+5. Financial Knowledge (not must know, because you can learn in your work laterly.):
+   
+   a. `Options, Futures and Other Derivatives (6th Edition) <http://book.douban.com/subject/1422217/>`_ ( `期权、期货和其他衍生品 <http://book.douban.com/subject/3623696/>`_ ),
+   b. Try to get a `Chartered Financial Analyst <https://en.wikipedia.org/wiki/Chartered_Financial_Analyst>`_ license, Level one is easy for most of us.
 
-5. Other skills:
+6. Other skills:
 
    a. Linux/Unix, Just get one and use it and google the problems you meet. Maybe you can buy a VPS and host the services(shadowsocks, blog, trading bot etc.) you need on it. `Digital Ocean <https://www.digitalocean.com/?refcode=60fc2dbd0ad6>`_ have a lowest $5/month plan, `Budget VM <https://www.budgetvm.com/account/aff.php?aff=1421>`_ provides plan with price as low as $15/year; 
    b. Version Control, `Git <https://en.wikipedia.org/wiki/Git_(software)>`_ (/ɡɪt/) is a distributed revision control system with an emphasis on speed, data integrity, and support for distributed, non-linear workflows. `Github <https://github.com/>`_ is a web-based Git repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features. And you can learn Git In a quick way from `Pro Git <http://git-scm.com/book/zh/v1>`_ ;
@@ -49,7 +54,7 @@
 	  
    e. `GNU Make <https://en.wikipedia.org/wiki/Make_(software)>`_ is a tool which controls the generation of executables and other non-source files of a program from the program's source files.
 
-6. Suggested Reading:
+7. Suggested Reading:
 
    a. `How to Become a Hacker <http://catb.org/esr/faqs/hacker-howto.html#why_this>`_ ;
    b. Go to `Quora <http://quora.com/>`_ to follow topics and and people you interested in;
