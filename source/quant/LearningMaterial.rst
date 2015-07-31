@@ -21,12 +21,12 @@
 
 4. Quantitative Strategy:
    
-   a. `WebSim of WorldQuant <https://websim.worldquantchallenge.com/>`_ provides many usefull videos and ideas. [1]_
-   b. `Quantitative Equity Portfolio Management <http://book.douban.com/subject/2799221/>`_ ( `证券组合定量管理 <http://book.douban.com/subject/6715019/>`_ ) shows another Genre of Quantitative Finance different from the " `WorldQuant <https://www.worldquant.com/>`_ way". [2]_
-   c. Learn from your practical trading experience.
-   d. Dig ideas from forums, social medias.
-   e. Find wisdom from Books, e. g. `股票大作手回忆录 <http://book.douban.com/subject/5382213/>`_ , `短线交易大师 <http://book.douban.com/subject/6307974/>`_ , `海龟交易法则 <http://book.douban.com/subject/5377571/>`_
-   f. Get intelligence from conversation with smart man.
+   a. `WebSim of WorldQuant <https://websim.worldquantchallenge.com/>`_ provides many usefull videos and ideas, [1]_
+   b. `Quantitative Equity Portfolio Management <http://book.douban.com/subject/2799221/>`_ ( `证券组合定量管理 <http://book.douban.com/subject/6715019/>`_ ) shows another Genre of Quantitative Finance different from the " `WorldQuant <https://www.worldquant.com/>`_ way", [2]_
+   c. Learn from your practical trading experience,
+   d. Dig ideas from forums, social medias, e. g. `韬客 <http://www.talkforex.com>`_, `FX168 <http://www.fx168.com>`_,
+   e. Find wisdom from Books, e. g. `股票大作手回忆录 <http://book.douban.com/subject/5382213/>`_ , `短线交易大师 <http://book.douban.com/subject/6307974/>`_ , `海龟交易法则 <http://book.douban.com/subject/5377571/>`_,
+   f. Get intelligence from conversation with smart men,
    g. Some strategy research paper also provides many useful trading rules.
    h. `量化投资 <http://book.douban.com/subject/10583167/>`_ 是国内第一本量化投资的专著, 值得买来收藏. 作者 `丁鹏博士 <http://weibo.com/dingpeng999>`_ 帅得不可方物.
 
