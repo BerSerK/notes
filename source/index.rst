@@ -45,7 +45,7 @@ Contents:
    linuxtips
    linux/index
    mathnotes
-   lectures
+   lectures/index
    sphinx
    proxy
    fly

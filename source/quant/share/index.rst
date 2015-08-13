@@ -1,4 +1,4 @@
-Quantitative Investment Notes
+A collection of Interesting Articles 
 ==================================================
 
 .. toctree::
@@ -6,7 +6,5 @@ Quantitative Investment Notes
    :glob:
    :numbered:
 
-   LearningMaterial
-   quant_recruiting
-   resource
-   share/index
+   data20
+   python4r

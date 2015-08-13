@@ -5,29 +5,34 @@
 代理服务
 ***************
 
+.. index:: shadowsocks
 
-Gappproxy
+`Shadowsocks <http://shadowsock.org>`_ (影梭)
+==================================================
+这是我目前在用的代理服务, 自己在国外有服务器的同学可以自己去搭建一个服务自己用. 如果你认识我, 可以用我的, 联系我要我的服务器配置参数. 强烈建议喜欢倒腾Linux服务器的同学自己买一个VPS去搭建一些自己喜欢的服务, e. g. 网站, 代理, 代码仓库, 爬虫等等.
+`Digital Ocean <https://www.digitalocean.com/?refcode=60fc2dbd0ad6>`_ have a lowest $5/month plan, `Budget VM <https://www.budgetvm.com/account/aff.php?aff=1421>`_ provides plan with price as low as $15/year; 
+
+Gappproxy (不用了)
 =============================
 
-这个是搭建在Google App Engine上的一个服务，用于翻墙。
-代理地址为:notes.yeshiwei.com:8001
+这个是搭建在Google App Engine上的一个服务，用于翻墙。 
+.. 代理地址为:notes.yeshiwei.com:8001
 
 .. _squid:
 
-Squid
+Squid 
 =============================
 
 `How to config squid <http://www.linux.gov.cn/netweb/squid.htm>`_
 这个代理现在已经关闭不用了。
-你的ip如果在我的允许范围内（如果你和我同一个实验室或者一个宿舍就应该可以），那么将你的代理设置为 lab.yeshiwei.com:3129
+你的ip如果在我的允许范围内（如果你和我同一个实验室或者一个宿舍就应该可以），那么将你的代理设置为 vps.yeshiwei.com:3128
 就可以通过本机的网络上网了。
 
 
-Goagent
+Goagent(不用了)
 =============================
 
 这个也是搭建在Google App Engine上的服务，可用于访问大部分google的服务。
-
 
 此代理的端口为3128。在北大校内网，将你的代理设置成lab.yeshiwei.com:3128，
 就可以轻松使用google搜索、gmail、Google+, 不用太担心防火长城了。
@@ -50,9 +55,6 @@ hosts
 
 在校园网环境下最好的翻墙办法是我上面提到的 `Gappproxy <http://code.google.com/p/gappproxy/>`_ 和 `Goagent <http://code.google.com/p/goagent/>`_ 。可以通过ipv6翻墙。
 其中gappproxy甚至可以通过ipv6直接翻过学校网关和GFW两道墙，只要把local client的配置文件中的本地代理（local proxy）设置成ipv6.google.com:80就可以了。而通过goagent可以完美的使用Google+。
-
-
-
 
 
 比较常规的翻墙办法就是用所谓的zy门了，是轮子的东西，就不做介绍了。
