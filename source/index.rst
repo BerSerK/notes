@@ -50,18 +50,18 @@ Contents:
    proxy
    fly
    LearningMaterial
-
+   fenjia/index
 
 Other Notes
 ===============
 
 Some home works:
 
-	- `Applied Stotistic Analysis <http://notes.yeshiwei.com/ASAhomeworks/>`_
+	- `Applied Stotistic Analysis <http://notes.yeshiwei.com/ASA_homeworks/>`_
 	- `Applied PDE <http://notes.yeshiwei.com/APDEhomeworks/>`_
 	- `Learning scipy <http://notes.yeshiwei.com/scipy/>`_
 	- `FFTW学习笔记 </fftw/>`_
-	- `Cluster Algorithms for the Ising Model </metropolis/>`_	
+	- `Cluster Algorithms for the Ising Model </Cluster_Algorithms_for_the_Ising_Model/>`_	
 
 `Latex Short <ftp://lab.yeshiwei.com/Ebooks/Tech/lshort-zh-cn/lshort-zh-cn.pdf>`_
 `Latex Math symbols <ftp://lab.yeshiwei.com/Ebooks/Tech/Symbols.pdf>`_
