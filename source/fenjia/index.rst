@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to 分级基金优先份额Monte Carlo模拟定价C++实现's documentation!
+分级基金优先份额Monte Carlo模拟定价C++实现
 ================================================================================================================
 
 Contents:

@@ -7,6 +7,7 @@ Quantitative Investment Notes
    :numbered:
 
    LearningMaterial
-   quant_recruiting
    resource
    share/index
+      
+..   quant_recruiting

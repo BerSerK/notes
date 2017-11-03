@@ -21,8 +21,8 @@
 
 4. Quantitative Strategy:
    
-   a. `WebSim of WorldQuant <https://websim.worldquantchallenge.com/>`_ provides many usefull videos and ideas, [1]_
-   b. `Quantitative Equity Portfolio Management <http://book.douban.com/subject/2799221/>`_ ( `证券组合定量管理 <http://book.douban.com/subject/6715019/>`_ ) shows another Genre of Quantitative Finance different from the " `WorldQuant <https://www.worldquant.com/>`_ way", [2]_
+   a. `WebSim of WorldQuant <https://websim.worldquantchallenge.com/>`_ provides many usefull videos and ideas,
+   b. `Quantitative Equity Portfolio Management <http://book.douban.com/subject/2799221/>`_ ( `证券组合定量管理 <http://book.douban.com/subject/6715019/>`_ ) shows another Genre of Quantitative Finance different from the " `WorldQuant <https://www.worldquant.com/>`_ way",
    c. Learn from your practical trading experience,
    d. Dig ideas from forums, social medias, e. g. `韬客 <http://www.talkforex.com>`_, `FX168 <http://www.fx168.com>`_,
    e. Find wisdom from Books, e. g. `股票大作手回忆录 <http://book.douban.com/subject/5382213/>`_ , `短线交易大师 <http://book.douban.com/subject/6307974/>`_ , `海龟交易法则 <http://book.douban.com/subject/5377571/>`_,
@@ -83,9 +83,6 @@ What you can do, when you have got all the above skills:
 Just kidding. GLHF with your learning.
 
 学习做投资犹如练习华山剑法, 量化就是剑宗, 基本面分析就是气宗. 真正大咖如风清扬, 表面虽然是剑宗, 实际他的气功也是一等一的. 要成事, 必须剑气并重.
-
-.. [1] 如果对这种量化流派感兴趣建议去找九坤投资(Ubiquant), 三年二十倍从10M做到0.2B不是吹的. 要求比较高, 一般只要清北研究生. 有实力的话, 实习生都能拿到百万年薪哟.
-.. [2] 对这个感兴趣的可以投简历到 quantbjhr@gmail.com 具体要求请点击 `量化招募 <quant_recruiting.html>`_
 
 
 .. Comment from 马文玉: 中午聊过之后，感觉心里有些激动，非常感谢学长的指点与分享。
