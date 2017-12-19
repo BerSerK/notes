@@ -8,7 +8,9 @@ Programming notes
 
    mpi
    matlab
+   vba   
    tc
    swig_python
    FFTW/index
    scipy/index
+   database
