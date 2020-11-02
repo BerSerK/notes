@@ -37,6 +37,7 @@ Contents:
    :numbered:
 
    programming/index
+   MachineLearning/index
    research/index
    quant/index
    pseudo_spectral_method/index
