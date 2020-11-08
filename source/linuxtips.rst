@@ -507,3 +507,15 @@ After download and uncompress the tar-ball to /opt/java/jre1.6.0_19, follow this
    sudo mkdir /opt/google/chrome/plugins
    cd /opt/google/chrome/plugins
    ln -s /opt/java/jre1.6.0_19/lib/i386/libnpjp2.so
+
+nodebb forum tips
+=================================================
+how migrate nodebb
+-----------------------------------
+
+- use mongodump and mongostore to migrate mongodb data to new server.
+- copy folder /var/www/nodebb to new server. tar thn scp might be faster than scp -r.
+- create user nodebb
+- `chown -R nodebb:nodebb /var/www/nodebb`
+- `su nodebb` then `./nodebb start`
+- set up nignx and port access
