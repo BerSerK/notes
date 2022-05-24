@@ -1,4 +1,5 @@
-#管理员权限运行cmd
+```
+# 管理员权限运行cmd
 wsl --shutdown
 diskpart
 # open window Diskpart
@@ -7,3 +8,4 @@ attach vdisk readonly
 compact vdisk
 detach vdisk
 exit
+```
