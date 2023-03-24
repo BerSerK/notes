@@ -12,19 +12,19 @@
 
 2. Coding, we need to learn at least two Programming Language, a low level one like C++, and a high level one Python. We can develop compute-intensive projects with the low level one, and we can finish projects in a fast way with the high level one. :
 
-   a. C++ Primer. Hell not C++ Primer Plus. If you don't want to be a pure C++ Programmer, any C++ book is OK.
+   a. C++ Primer. Hell not C++ Primer Plus. If you don't want to be a pure C++ Programmer, any C++ book is OK. 其实如果程序大框架不用你设计, 而且也不是完全没接触过编程, 这个 `《简明教程》 <https://blog.csdn.net/qq_35034604/article/details/83543624>`_ 就够了。
    b. `Python <https://www.python.org/>`_ as a scripting language, can highly enhance our working efficiency. You can Learn it from `Python Tutorial <https://docs.python.org/3/tutorial/>`_ in a week, if you know about programming.
    c. Maybe you will be like to know about R, MATLAB, Mathematica, Fortran, Java, Ruby. Even you need to know something about Erlang, LISP, Haskell, which are known as `Functional programming <https://en.wikipedia.org/wiki/Functional_programming>`_ 这些就饭后谈资，用到再学.
 
 3. Algorithm: 
 
    a. `LeetCode <https://leetcode.com/>`_ is a shortcut to both coding and algorithm.
-   b. `Introduction to Algorithms, third edition <https://mitpress.mit.edu/books/introduction-algorithms>`_ `算法导论(原书第2版) <http://book.douban.com/subject/1885170/>`_ is a comprehensive book, including basic algorithm and some deep topics like "linear programming" 计算机专业的算法课大多数都不教这么难，看完就可以吹牛了.
+   b. `Introduction to Algorithms, third edition <https://mitpress.mit.edu/books/introduction-algorithms>`_ `算法导论(原书第2版) <http://book.douban.com/subject/1885170/>`_ is a comprehensive book, including basic algorithm and some deep topics like "linear programming" 计算机专业的算法课大多数都不教这么难，看完搞懂就可以吹牛了.
    c. `The Art of Computer Programming <https://en.wikipedia.org/wiki/The_Art_of_Computer_Programming>`_ `计算机程序设计艺术 <https://zh.wikipedia.org/zh/计算机程序设计艺术>`_ is a seiries of books consist of 7 volumes. It's author `高德纳（Donald Ervin Knuth) <https://zh.wikipedia.org/wiki/高德纳>`_ is truely a legendary figure who invented `TeX <https://en.wikipedia.org/wiki/TeX>`_ 太多肯定看不完, 列在这里以表敬意.
 
 4. Quantitative Strategy:
    
-   a. `WebSim of WorldQuant <https://websim.worldquantchallenge.com/>`_ provides many usefull videos and ideas,
+   a. `WebSim of WorldQuant <https://websim.worldquantchallenge.com/>`_ provides many usefull videos and ideas, 
    b. `Quantitative Equity Portfolio Management <http://book.douban.com/subject/2799221/>`_ ( `证券组合定量管理 <http://book.douban.com/subject/6715019/>`_ ) shows another Genre of Quantitative Finance different from the " `WorldQuant <https://www.worldquant.com/>`_ way",
    c. Learn from your practical trading experience,
    d. Dig ideas from forums, social medias, e. g. `韬客 <http://www.talkforex.com>`_, `FX168 <http://www.fx168.com>`_,
@@ -40,6 +40,7 @@
    
    a. `Options, Futures and Other Derivatives (6th Edition) <http://book.douban.com/subject/1422217/>`_ ( `期权、期货和其他衍生品 <http://book.douban.com/subject/3623696/>`_ ),
    b. Try to get a `Chartered Financial Analyst <https://en.wikipedia.org/wiki/Chartered_Financial_Analyst>`_ license, Level one is easy for most of us. FRM maybe also useful.
+   c. 最近几年好像又出了一个CQF
 
 6. Other skills:
 
@@ -53,9 +54,9 @@
       
       I'm an Emacs User since 2010. 俗话说: "Vim是编辑器之神, Emacs是神之编辑器." For new coder, I recommend you to start with Sublime which is more fashion 'and more';
       上面是原文档写的时候Sublime刚流行起来, 现在可能没那么前卫了. 
-      现在都用vscode了. vim可以学一下, 有时候登录黑屏终端要改文本文件是需要用到.
+      现在都用vscode了. vim可以学一下, 有时候登录黑屏终端要改文本文件是需要用到, 甚至有的服务器上只有vim.
       
-   d. Documentation Tools(可有可无, 我只是说建议记记笔记):
+   d. Documentation Tools(可有可无, 我只是说建议记记笔记, 用markdown写, 用git管理, 用sphinx生成网站都是很好的习惯):
       
       I. `Python-Sphinx <http://sphinx-doc.org/>`_ Sphinx is a tool that makes it easy to create intelligent and beautiful documentation, written by Georg Brandl and licensed under the BSD license. And it's the tool `this site <http://notes.yeshiwei.com>`_ built with.
       II. `Doxygen <http://www.stack.nl/~dimitri/doxygen/>`_ is the de facto standard tool for generating documentation from annotated C++ sources, but it also supports other popular programming languages such as C, Objective-C, C#, PHP, Java, Python, IDL (Corba, Microsoft, and UNO/OpenOffice flavors), Fortran, VHDL, Tcl, and to some extent D.
@@ -67,15 +68,15 @@
    a. `How to Become a Hacker <http://catb.org/esr/faqs/hacker-howto.html#why_this>`_ ;
    b. Go to `Quora <http://quora.com/>`_ to follow topics and and people you interested in;
    c. 去 `知乎 <http://www.zhihu.com>`_ 去关注你感兴趣的人和话题;
-   d. `Solidot <http://solidot.org/>`_; 此文档初版中, 恐怕这一行最有价值了, solidot最喜欢报道BTC了, 2015年才几百美元一个.
-   e. `浪潮之巅 <https://book.douban.com/subject/6709783/>`_;
-   f. `黑客与画家 <https://book.douban.com/subject/6021440/>`_.
-   g. `数学、常识和好运——2014年美国数学协会举办的AMS上西蒙斯的发言 <http://mp.weixin.qq.com/s?__biz=MjM5MDIwODQ0OA==&mid=202900378&idx=1&sn=87d64a84b4d880e94737867d622c4e94&scene=1&key=0acd51d81cb052bceda9f4350afb8400c04a8a67e7448b3d74e3bd994f0f3036f926b9bf35d3c5b1d838c4808403f1ea&ascene=0&uin=NTU3ODAwNQ%3D%3D&devicetype=iMac+MacBookAir6%2C2+OSX+OSX+10.10.3+build(14D136)&version=11020012&pass_ticket=AmmbBc3DYCCkpQkWRTyN19NAcKWFPUm%2FKBYc1Tebj90%3D>`_ , `数学、常识和好运——2014年美国数学协会举办的AMS上西蒙斯的发言（下） <http://mp.weixin.qq.com/s?__biz=MjM5MDIwODQ0OA==&mid=203442012&idx=2&sn=412d007de3d5b0d94d3b036e2e2a89a8&scene=1&key=0acd51d81cb052bc50d70b8bd542e18980f550fce0e2db40ba4c8a55f3c39ce3608d0dc90bdab087fafc1befcd74834b&ascene=0&uin=NTU3ODAwNQ%3D%3D&devicetype=iMac+MacBookAir6%2C2+OSX+OSX+10.10.3+build(14D136)&version=11020012&pass_ticket=AmmbBc3DYCCkpQkWRTyN19NAcKWFPUm%2FKBYc1Tebj90%3D>`_
+   d. `Solidot <http://solidot.org/>`_; 此文档初版中, 恐怕这一行最有价值了, solidot最喜欢报道BTC了, 2015年才几百美元一个. 不过, 我认为数字货币是一种反政府技术, 不建议继续参与, 各国政府陆续都会禁掉的; 但是, 你可以去看看solidot上的讨论, solidot 是一个价值观很正的热衷报道新鲜事物尤其是新技术的网站;
+   e. `浪潮之巅 <https://book.douban.com/subject/6709783/>`_; 吴军的书, 有些东西还是很有价值的;
+   f. `黑客与画家 <https://book.douban.com/subject/6021440/>`_. 一本很好的书; 因为我小时候画过很多年素描, 长大又写了很多代码, 所以看到这本书, 我就很喜欢了; 里面有一些很有意思的东西, 你可以去看看; 比如，画画可以胸有成竹再画，也可以边画边改, 写程序也一样。
+   g. `数学、常识和好运——2014年美国数学协会举办的AMS上西蒙斯的发言 <http://mp.weixin.qq.com/s?__biz=MjM5MDIwODQ0OA==&mid=202900378&idx=1&sn=87d64a84b4d880e94737867d622c4e94&scene=1&key=0acd51d81cb052bceda9f4350afb8400c04a8a67e7448b3d74e3bd994f0f3036f926b9bf35d3c5b1d838c4808403f1ea&ascene=0&uin=NTU3ODAwNQ%3D%3D&devicetype=iMac+MacBookAir6%2C2+OSX+OSX+10.10.3+build(14D136)&version=11020012&pass_ticket=AmmbBc3DYCCkpQkWRTyN19NAcKWFPUm%2FKBYc1Tebj90%3D>`_ , `数学、常识和好运——2014年美国数学协会举办的AMS上西蒙斯的发言（下） <http://mp.weixin.qq.com/s?__biz=MjM5MDIwODQ0OA==&mid=203442012&idx=2&sn=412d007de3d5b0d94d3b036e2e2a89a8&scene=1&key=0acd51d81cb052bc50d70b8bd542e18980f550fce0e2db40ba4c8a55f3c39ce3608d0dc90bdab087fafc1befcd74834b&ascene=0&uin=NTU3ODAwNQ%3D%3D&devicetype=iMac+MacBookAir6%2C2+OSX+OSX+10.10.3+build(14D136)&version=11020012&pass_ticket=AmmbBc3DYCCkpQkWRTyN19NAcKWFPUm%2FKBYc1Tebj90%3D>`_ 常识很重要。
 
 What you can do, when you have got all the above skills:
 
-1. Go to an IT company like Google, Facebook, BAT to be a Computer Science Engineer.
-2. Go to a Quantitative Investment Company and turn into a Quantitative Trader or Back-End Developer.
+1. Go to an IT(internet) company like Google, Facebook, BAT, etc to be a Computer Science Engineer.
+2. Go to a Quantitative Investment Company and turn into a Quantitative Trader/Analyst or Back-End Developer.
 3. Get to be a Data Scientist.
 
 .. 4. Start your own mini Hedge Fund within a few Months. Let me show you the steps:
@@ -91,7 +92,7 @@ What you can do, when you have got all the above skills:
 
 Just Kidding. GLHF with your learning.
 
-学习做投资犹如练习华山剑法, 量化就是剑宗, 基本面分析就是气宗. 真正大咖如风清扬, 表面虽然是剑宗, 实际他的气功也是一等一的. 要成事, 必须剑气并重.
+学习做投资犹如练习华山剑法, 量化就是剑宗, 基本面分析就是气宗. 真正大咖如风清扬, 表面虽然是剑宗, 实际他的气功也是一等一的. 要成事, 必须剑气并重. 而且要做到两个敬畏: 敬畏市场涨跌带来的风险, 更敬畏建立自由市场本身的意义(交易所存在的意义不是给你投机挣钱的)。这样才能做到长久的成功。
 
 
 .. Comment from 马同学: 中午聊过之后，感觉心里有些激动，非常感谢学长的指点与分享。
