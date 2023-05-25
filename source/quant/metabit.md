@@ -57,7 +57,7 @@ Part 1
 Part 2
 -----------------
 
-1. Inside the Black Box: A Simple Guide to Quantitative and High Frequency Trading (中文翻译《打开量化投资的黑箱》)
+1. [Inside the Black Box: A Simple Guide to Quantitative and High Frequency Trading (中文翻译《打开量化投资的黑箱》)](./%E5%BE%AE%E8%A7%82%E6%9A%91%E6%9C%9F%E9%A1%B9%E7%9B%AE-%E7%94%B5%E5%AD%90%E4%B9%A6-2023/2%20%E6%89%93%E5%BC%80%E9%87%8F%E5%8C%96%E6%8A%95%E8%B5%84%E7%9A%84%E9%BB%91%E7%AE%B1%20%E8%8B%B1%E6%96%87.pdf)
     - 作者：Rishi K. Narang
     - 推荐等级：入门级
     - 推荐理由：大名鼎鼎的“打开量化交易的黑箱”，作者站在非技术研究的角度，介绍了量化策略从数据到因子到风险控制到投资组合再到下单执行的全流程，深入浅出地介绍了“高深莫测”的量化交易到底是什么。如果有一些同学在考虑是否有能力加入或者是否适合加入量化交易这个领域，那么相信这本书会令你茅塞顿开。
