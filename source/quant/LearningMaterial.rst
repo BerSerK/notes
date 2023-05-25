@@ -72,6 +72,8 @@
    e. `浪潮之巅 <https://book.douban.com/subject/6709783/>`_; 吴军的书, 有些东西还是很有价值的;
    f. `黑客与画家 <https://book.douban.com/subject/6021440/>`_. 一本很好的书; 因为我小时候画过很多年素描, 长大又写了很多代码, 所以看到这本书, 我就很喜欢了; 里面有一些很有意思的东西, 你可以去看看; 比如，画画可以胸有成竹再画，也可以边画边改, 写程序也一样。
    g. `数学、常识和好运——2014年美国数学协会举办的AMS上西蒙斯的发言 <http://mp.weixin.qq.com/s?__biz=MjM5MDIwODQ0OA==&mid=202900378&idx=1&sn=87d64a84b4d880e94737867d622c4e94&scene=1&key=0acd51d81cb052bceda9f4350afb8400c04a8a67e7448b3d74e3bd994f0f3036f926b9bf35d3c5b1d838c4808403f1ea&ascene=0&uin=NTU3ODAwNQ%3D%3D&devicetype=iMac+MacBookAir6%2C2+OSX+OSX+10.10.3+build(14D136)&version=11020012&pass_ticket=AmmbBc3DYCCkpQkWRTyN19NAcKWFPUm%2FKBYc1Tebj90%3D>`_ , `数学、常识和好运——2014年美国数学协会举办的AMS上西蒙斯的发言（下） <http://mp.weixin.qq.com/s?__biz=MjM5MDIwODQ0OA==&mid=203442012&idx=2&sn=412d007de3d5b0d94d3b036e2e2a89a8&scene=1&key=0acd51d81cb052bc50d70b8bd542e18980f550fce0e2db40ba4c8a55f3c39ce3608d0dc90bdab087fafc1befcd74834b&ascene=0&uin=NTU3ODAwNQ%3D%3D&devicetype=iMac+MacBookAir6%2C2+OSX+OSX+10.10.3+build(14D136)&version=11020012&pass_ticket=AmmbBc3DYCCkpQkWRTyN19NAcKWFPUm%2FKBYc1Tebj90%3D>`_ 常识很重要。
+   h. `乾象基金推荐 <./metabit.md>`_ 乾象基金推荐的书籍, 有些书籍还是很有价值的;
+   i. `wgby 推荐书籍 <./微观暑期项目-电子书-2023>`_;
 
 What you can do, when you have got all the above skills:
 
