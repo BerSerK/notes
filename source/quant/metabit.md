@@ -72,6 +72,8 @@ Part 2
     - 推荐等级：入门级
     - 推荐理由：大名鼎鼎的Worldquant公司，描述了他们是如何寻找市场中的“alpha”的一些例子，以及该公司用于alpha research的方法论，比较适合刚接触量化交易的小伙伴们去熟悉“因子”这个概念。
 
+[寻找Alpha：量化交易策略](./metabit2/寻找Alpha：量化交易策略.pdf)
+
 4. [Hands-on Machine Learning for Algorithmic Trading](./metabit2/Machine_Learning_for_Algorithmic_Trading_Predictive.pdf)
     - 作者：Stefan Jansen
     - 推荐等级：入门级

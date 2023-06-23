@@ -1,6 +1,6 @@
 量化投资学习资料推荐
 ================================================================================
-.. 原标题: 《推荐学习材料, 全学会之后可以自己一个人起一个微型Hedge Fund你信不信?》 天狂有雨, 人狂有祸。
+.. 原标题: 《推荐学习材料, 全学会之后可以自己一个人起一个微型Hedge Fund你信不信?》 天狂有雨, 人狂有祸, 故不再用这个标题.
 
 本文最早起源于2015年在银华基金量化部门实习时, 一个清华经管的同学问我量化需要学习什么东西, 我花了一下午写的。
 
@@ -37,6 +37,9 @@
    i. `中国期货市场量化交易 <https://book.douban.com/subject/30380889/>`_ 是大中华区第一量化培训IP李尉babyquant的专著。 
    j. `101 Formulaic Alphas <https://arxiv.org/pdf/1601.00991.pdf>`_
    k. `151 Estrategias de Trading (151 Trading Strategies) <https://arxiv.org/abs/1912.04492>`_
+   l. `The 10 Laws of Technical Trading <https://arxiv.org/abs/1912.04492>`_
+   m. `这有一批别人的推荐 <https://github.com/BerSerK/notes/blob/master/source/quant/metabit.md>`_
+   n. `这还有一批别人的推荐 <https://github.com/BerSerK/notes/tree/master/source/quant/%E5%BE%AE%E8%A7%82%E6%9A%91%E6%9C%9F%E9%A1%B9%E7%9B%AE-%E7%94%B5%E5%AD%90%E4%B9%A6-2023>`_
 
 5. Financial Knowledge (not must know, because you can learn in your work laterly.):
    
@@ -106,4 +109,4 @@ Just Kidding. GLHF with your learning.
    除了弥补认知之外，学长以往的“奇遇”，也让我认识到，有些时候功利地追求大多数人所追求的并不明智。最重要的，是做好一件事，有一技之长，成为一个方面的专家，才最被人认可，引发了我对求学新的思考。
    总而言之，今天的一番交流，让我受益良多，真是万分感谢！
 
-.. 本文档初版放了某坤2015, 年薪百万广招英才的英雄帖, 帮他们吸引到了一位我的一位院友. 多年以后, 这位院友自立门户, 颇为成功.
+.. 本文档初版放了某坤2015年年薪百万广招英才的英雄帖, 帮他们从我微信朋友圈吸引到了一位我的院友. 多年以后, 这位院友自立门户, 颇为成功.
