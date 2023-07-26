@@ -107,7 +107,7 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "Alex\'s Notes"
+html_title = "Alex Ye\'s Notes"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -136,7 +136,7 @@ html_static_path = ['_static','fenjia/_static']
 
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
-   '**': ['googleplus.html','globaltoc.html', 'sourcelink.html', 'searchbox.html', 'analytics.html', 'disqus.html'],
+   '**': ['qrcode.html', 'googleplus.html','globaltoc.html', 'sourcelink.html', 'searchbox.html', 'analytics.html', 'disqus.html'],
    'using/windows': ['windowssidebar.html', 'searchbox.html'],
 }
 # Additional templates that should be rendered to pages, maps page names to
