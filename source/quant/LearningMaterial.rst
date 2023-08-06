@@ -80,6 +80,21 @@
    h. `乾象基金推荐 <./metabit.md>`_ 乾象基金推荐的书籍, 有些书籍还是很有价值的;
    i. `wgby 推荐书籍 <./微观暑期项目-电子书-2023>`_;
 
+8. 数据:
+
+   a. joinquant.com 聚宽
+   b. tushare.org
+   c. 米匡: https://www.ricequant.com/welcome/
+   d. 优矿: https://uqer.datayes.com/
+   e. 掘金量化: https://www.myquant.cn/terminal
+   f. AkShare
+   g. BaoStock
+   h. wind, 万得
+   i. choice 金融数据终端是东方财富旗下的付费终端. 
+   j. bloomberg
+   h. 路透, 有免费的数据, 但是不好下载, 你可以去看看;
+
+
 What you can do, when you have got all the above skills:
 
 1. Go to an IT(internet) company like Google, Facebook, BAT, etc to be a Computer Science Engineer.
