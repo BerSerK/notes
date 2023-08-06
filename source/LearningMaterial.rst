@@ -1,2 +1,1 @@
-This page is moved to `here <quant/LearningMaterial.html>`_.
-================================================================================
+quant/LearningMaterial.rst

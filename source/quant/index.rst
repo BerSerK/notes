@@ -9,5 +9,6 @@ Quantitative Investment Notes
    LearningMaterial
    resource
    share/index
+   cta_funds
       
 ..   quant_recruiting
