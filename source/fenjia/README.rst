@@ -12,3 +12,5 @@ html网页是比较方面管理使用的形式, 如下命令可以编译出来�
  make html
 
 编译出来的网页在 *./_build/html* 目录里面. 打开这个目录里的 *index.html* 就可以顺着目录浏览整个文档。
+
+源码: https://github.com/BerSerK/FenJi-A-Pricing
