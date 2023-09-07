@@ -14,3 +14,4 @@ Programming notes
    FFTW/index
    scipy/index
    database
+   mysql
