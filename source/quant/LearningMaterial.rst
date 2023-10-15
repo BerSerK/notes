@@ -49,17 +49,18 @@
 
 6. Other skills:
 
-   a. Linux/Unix, Just get one and use it and google the problems you meet. Maybe you can buy a VPS and host the services(shadowsocks, blog, trading bot etc.) you need on it. `Digital Ocean <https://www.digitalocean.com/?refcode=60fc2dbd0ad6>`_ have a lowest $5/month plan, `Budget VM <https://www.budgetvm.com/account/aff.php?aff=1421>`_ provides plan with price as low as $15/year; 
+   a. Linux/Unix, Just get one and use it and google the problems you meet. Maybe you can buy a VPS and host the services(blog, trading bot etc.) you need on it. `腾讯云首单1.9折一百来块就能买一个 <https://curl.qcloud.com/YxChd7hj>`_ , `阿里云新客也一百来块就能弄个 2CPU2G的轻量. <https://www.aliyun.com/daily-act/ecs/ecs_trial_benefits?userCode=drt1fveu>`_; 
    b. Version Control, `Git <https://en.wikipedia.org/wiki/Git_(software)>`_ (/ɡɪt/) is a distributed revision control system with an emphasis on speed, data integrity, and support for distributed, non-linear workflows. `Github <https://github.com/>`_ is a web-based Git repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features. And you can learn Git In a quick way from `Pro Git <http://git-scm.com/book/zh/v1>`_ ;
    c. Text Editor: 
 
       I. `GNU Emacs <https://en.wikipedia.org/wiki/Emacs>`_ is an extensible, customizable text editor—and more.
       II. `Vim <https://en.wikipedia.org/wiki/Vim_(text_editor)>`_ (/vɪm/; a contraction of Vi IMproved) is a clone of Bill Joy's vi editor for Unix.
       III. `Sublime Text <http://www.sublimetext.com/>`_ is a sophisticated text editor for code, markup and prose.
+      IV. 现在vscode应该是最流行的了.
       
       I'm an Emacs User since 2010. 俗话说: "Vim是编辑器之神, Emacs是神之编辑器." For new coder, I recommend you to start with Sublime which is more fashion 'and more';
       上面是原文档写的时候Sublime刚流行起来, 现在可能没那么前卫了. 
-      现在都用vscode了. vim可以学一下, 有时候登录黑屏终端要改文本文件是需要用到, 甚至有的服务器上只有vim.
+      现在vscode应该是最流行的了. vim可以学一下, 有时候登录黑屏终端要改文本文件是需要用到, 甚至有的服务器上只有vim.
       
    d. Documentation Tools(可有可无, 我只是说建议记记笔记, 用markdown写, 用git管理, 用sphinx生成网站都是很好的习惯):
       
@@ -67,6 +68,7 @@
       II. `Doxygen <http://www.stack.nl/~dimitri/doxygen/>`_ is the de facto standard tool for generating documentation from annotated C++ sources, but it also supports other popular programming languages such as C, Objective-C, C#, PHP, Java, Python, IDL (Corba, Microsoft, and UNO/OpenOffice flavors), Fortran, VHDL, Tcl, and to some extent D.
 	  
    e. `GNU Make <https://en.wikipedia.org/wiki/Make_(software)>`_ is a tool which controls the generation of executables and other non-source files of a program from the program's source files. 主要是C++程序会用到。
+   f. chatGPT, 没条件的话用百度文心一言估计也行. 可以大大提高你的工作效率.
 
 7. Suggested Reading:
 
@@ -83,7 +85,7 @@
 8. 数据:
 
    a. joinquant.com 聚宽
-   b. tushare.org
+   b. tushare.org tushare.pro
    c. 米匡: https://www.ricequant.com/welcome/
    d. 优矿: https://uqer.datayes.com/
    e. 掘金量化: https://www.myquant.cn/terminal
@@ -101,7 +103,6 @@ What you can do, when you have got all the above skills:
 3. Get to be a Data Scientist.
 
 .. 4. Start your own mini Hedge Fund within a few Months. Let me show you the steps:
-
    a. Go to JoinQuant 聚宽 system to practice and develop some useful strategies;
    b. Buy a VPS from 阿里云, or amazon aws;
    c. Go to `OANDA <http://www.oanda.com>`_ , and sign up an practice account;
