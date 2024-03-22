@@ -40,6 +40,7 @@
    l. `The 10 Laws of Technical Trading <https://arxiv.org/abs/1912.04492>`_
    m. `这有一批别人的推荐 <https://github.com/BerSerK/notes/blob/master/source/quant/metabit.md>`_
    n. `这还有一批别人的推荐 <https://github.com/BerSerK/notes/tree/master/source/quant/%E5%BE%AE%E8%A7%82%E6%9A%91%E6%9C%9F%E9%A1%B9%E7%9B%AE-%E7%94%B5%E5%AD%90%E4%B9%A6-2023>`_
+   o. `准星投资-汪沛藏书 <汪沛藏书>`_
 
 5. Financial Knowledge (not must know, because you can learn in your work laterly.):
    

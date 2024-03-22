@@ -6,7 +6,7 @@ My Music
 
 - `纯音乐 <https://music.163.com/playlist?id=7247493294&userid=3294914508>`_ 一位大哥整理的纯音乐，很不错。
 - `英文歌单 <https://music.163.com/playlist?id=7688756030&userid=3294914508>`_ 一位大哥整理的英文歌单，很不错。
-- `我的豆瓣fm爱心转存 <https://music.163.com/playlist?id=7688756030&userid=3294914508>`_ 我的豆瓣fm爱心转存到网易云音乐的歌单。
+- `我的豆瓣fm爱心转存 <https://music.163.com/playlist?id=8801022861&userid=3294914508>`_ 我的豆瓣fm爱心转存到网易云音乐的歌单。
 
 QQ音乐
 --------------------
