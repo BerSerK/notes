@@ -33,8 +33,12 @@
    e. Find wisdom from Books, e. g. `股票大作手回忆录 <http://book.douban.com/subject/5382213/>`_ , `短线交易大师 <http://book.douban.com/subject/6307974/>`_ , `海龟交易法则 <http://book.douban.com/subject/5377571/>`_,
    f. Get intelligence from conversation with smart men,
    g. Some strategy research paper also provides many useful trading rules.
-   h. `量化投资 <http://book.douban.com/subject/10583167/>`_ 是国内第一本量化投资的专著, 值得买来收藏. 作者 `丁鹏博士 <http://weibo.com/dingpeng999>`_ 帅得不可方物.
+   h. `量化投资 <http://book.douban.com/subject/10583167/>`_ 是国内第一本量化投资的专著, 值得买来收藏. 作者 `丁鹏博士 <http://weibo.com/dingpeng999>`_ 帅得不可方物. 
+   .. 注意, 我买来基本没看, 只收藏了。
+
    i. `中国期货市场量化交易 <https://book.douban.com/subject/30380889/>`_ 是大中华区第一量化培训IP李尉babyquant的专著。 
+   .. 大网红, 自己打听打听再确定要不要买来看。
+
    j. `101 Formulaic Alphas <https://arxiv.org/pdf/1601.00991.pdf>`_
    k. `151 Estrategias de Trading (151 Trading Strategies) <https://arxiv.org/abs/1912.04492>`_
    l. `The 10 Laws of Technical Trading <https://arxiv.org/abs/1912.04492>`_
