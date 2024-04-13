@@ -42,9 +42,8 @@
    j. `101 Formulaic Alphas <https://arxiv.org/pdf/1601.00991.pdf>`_
    k. `151 Estrategias de Trading (151 Trading Strategies) <https://arxiv.org/abs/1912.04492>`_
    l. `The 10 Laws of Technical Trading <https://arxiv.org/abs/1912.04492>`_
-   m. `这有一批别人的推荐 <https://github.com/BerSerK/notes/blob/master/source/quant/metabit.md>`_
-   n. `这还有一批别人的推荐 <https://github.com/BerSerK/notes/tree/master/source/quant/%E5%BE%AE%E8%A7%82%E6%9A%91%E6%9C%9F%E9%A1%B9%E7%9B%AE-%E7%94%B5%E5%AD%90%E4%B9%A6-2023>`_
-   o. `准星投资-汪沛藏书 <汪沛藏书>`_
+   m. `准星投资-汪沛藏书 <汪沛藏书>`_
+   n. `Finding Alphas <https://book.douban.com/subject/26613752/>`_
 
 5. Financial Knowledge (not must know, because you can learn in your work laterly.):
    
@@ -72,8 +71,9 @@
       I. `Python-Sphinx <http://sphinx-doc.org/>`_ Sphinx is a tool that makes it easy to create intelligent and beautiful documentation, written by Georg Brandl and licensed under the BSD license. And it's the tool `this site <http://notes.yeshiwei.com>`_ built with.
       II. `Doxygen <http://www.stack.nl/~dimitri/doxygen/>`_ is the de facto standard tool for generating documentation from annotated C++ sources, but it also supports other popular programming languages such as C, Objective-C, C#, PHP, Java, Python, IDL (Corba, Microsoft, and UNO/OpenOffice flavors), Fortran, VHDL, Tcl, and to some extent D.
 	  
-   e. `GNU Make <https://en.wikipedia.org/wiki/Make_(software)>`_ is a tool which controls the generation of executables and other non-source files of a program from the program's source files. 主要是C++程序会用到。
-   f. chatGPT, 没条件的话用百度文心一言估计也行. 可以大大提高你的工作效率.
+   .. e. `GNU Make <https://en.wikipedia.org/wiki/Make_(software)>`_ is a tool which controls the generation of executables and other non-source files of a program from the program's source files. 主要是C++程序会用到。
+   
+   e. chatGPT, 没条件的话用kimi、百度文心一言估计也行. 可以大大提高你的工作效率.
 
 7. Suggested Reading:
 
