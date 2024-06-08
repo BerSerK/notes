@@ -44,7 +44,8 @@
    l. `The 10 Laws of Technical Trading <https://arxiv.org/abs/1912.04492>`_
    m. `准星投资-汪沛藏书 <汪沛藏书>`_
    n. `Finding Alphas <https://book.douban.com/subject/26613752/>`_
-
+   o. `大地飞歌推荐 <大地飞歌的推荐>`_
+   
 5. Financial Knowledge (not must know, because you can learn in your work laterly.):
    
    a. `Options, Futures and Other Derivatives (6th Edition) <http://book.douban.com/subject/1422217/>`_ ( `期权、期货和其他衍生品 <http://book.douban.com/subject/3623696/>`_ ),
