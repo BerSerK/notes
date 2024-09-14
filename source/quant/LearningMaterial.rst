@@ -2,7 +2,12 @@
 ================================================================================
 .. 原标题: 《推荐学习材料, 全学会之后可以自己一个人起一个微型Hedge Fund你信不信?》 天狂有雨, 人狂有祸, 故不再用这个标题.
 
-本文最早起源于2015年在银华基金量化部门实习时, 一个清华经管的同学问我量化需要学习什么东西, 我花了一下午写的。
+.. raw:: html
+
+   <h3 style="text-align:center; padding-bottom:20px;">逐行讲解视频</h3><br>
+   <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=1803140971&bvid=BV1dt42177up&cid=1506039567&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: auto;"></iframe><br>
+ 
+本文最早起源于2015年在银华基金量化部门实习时, 一个清华经管的同学问我量化需要学习什么东西, 我花了一下午写的, 后时常更新.
 
 1. 统计, 大数据(Big Data), 机器学习, 人工智能 (这几个概念在我们数学出身的人看来都是一个东西): 
 
